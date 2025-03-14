@@ -2,8 +2,10 @@ from flask import Flask, request, jsonify
 import pandas as pd
 import pickle
 import numpy as np
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Load saved model, scaler, and encoders
 with open("best_model.pkl", "rb") as f:
@@ -51,4 +53,4 @@ def predict_lesson():
     return jsonify({"predicted_lesson": predicted_lesson})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5003)

@@ -8,6 +8,7 @@ import Profile from "./screens/Profile";
 import Navbar from "./screens/Navbar"; // Import Navbar
 import PredictionForm from "./screens/LessonPrediction";
 import PeerPrediction from "./screens/PeerPrediction";
+import ContentPrefer from "./screens/ContentPreference";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/lesson" element={<PredictionForm />} />
           <Route path="/peer" element={<PeerPrediction />} />
+          <Route path="/content" element={<ContentPrefer />} />
         </Routes>
       </Container>
     </Router>
