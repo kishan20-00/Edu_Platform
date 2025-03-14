@@ -7,6 +7,7 @@ import Home from "./screens/Home";
 import Profile from "./screens/Profile";
 import Navbar from "./screens/Navbar"; // Import Navbar
 import PredictionForm from "./screens/LessonPrediction";
+import PeerPrediction from "./screens/PeerPrediction";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/lesson" element={<PredictionForm />} />
+          <Route path="/peer" element={<PeerPrediction />} />
         </Routes>
       </Container>
     </Router>

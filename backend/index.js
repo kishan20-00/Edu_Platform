@@ -23,5 +23,8 @@ app.use("/api/auth", authRoutes);
 const lessonPreferenceRoutes = require("./routes/lessonPreferenceRoutes");
 app.use("/api/lesson", lessonPreferenceRoutes);
 
+const PeerPreference = require("./routes/peerRoutes");
+app.use("/api/peer", PeerPreference);
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { TextField, Button, Container, Typography, MenuItem, Grid } from "@mui/material";
 import axios from "axios";
 
@@ -13,13 +13,30 @@ const PredictionForm = () => {
   const [formData, setFormData] = useState({});
   const [predictions, setPredictions] = useState([]);
   const [error, setError] = useState(null);
+  const [userEmail, setUserEmail] = useState("");
+
+  // Simulating getting user email from authentication (adjust based on your setup)
+  const getUserEmail = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const res = await axios.get("https://edu-platform-ten.vercel.app/api/auth/profile", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      setUserEmail(res.data.email);
+      console.log(res.data.email);
+    } catch (error) {
+      console.error("Error fetching profile:", error);
+    }
+  };
+
+  useEffect(() => {
+    getUserEmail();
+  }, []);
+
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-
-    // Convert to number if the field is numeric
     const numericValue = !isNaN(value) && value.trim() !== "" ? Number(value) : value;
-
     setFormData({ ...formData, [name]: numericValue });
   };
 
@@ -28,11 +45,20 @@ const PredictionForm = () => {
       setError(null);
       setPredictions([]);
 
+      // Step 1: Make prediction request
       const response = await axios.post("http://127.0.0.1:5001/predict", formData);
       const data = response.data;
 
       if (data && Array.isArray(data["Top 5 Predicted Lessons"])) {
         setPredictions(data["Top 5 Predicted Lessons"]);
+
+        // Step 2: Save prediction results to backend
+        if (userEmail) {
+          await axios.post("https://edu-platform-ten.vercel.app/api/lesson/save", {
+            email: userEmail,
+            preferences: data["Top 5 Predicted Lessons"],
+          });
+        }
       } else {
         setError("Unexpected response format from the server.");
       }
@@ -45,51 +71,36 @@ const PredictionForm = () => {
   return (
     <Container maxWidth="md" sx={{ mt: 5, textAlign: "center" }}>
       <Typography variant="h4">Lesson Preference Prediction</Typography>
+      
+      {/* Display user email */}
+      {userEmail && (
+        <Typography variant="subtitle1" sx={{ mt: 2 }}>
+          Logged in as: <strong>{userEmail}</strong>
+        </Typography>
+      )}
+
       <Grid container spacing={2} sx={{ mt: 3 }}>
         {featureColumns.map((feature, index) => (
           <Grid item xs={12} sm={6} key={index}>
             {feature === "Male/Female" ? (
-              <TextField
-                select
-                fullWidth
-                label={feature}
-                name={feature}
-                value={formData[feature] || ""}
-                onChange={handleChange}
-              >
+              <TextField select fullWidth label={feature} name={feature} value={formData[feature] || ""} onChange={handleChange}>
                 <MenuItem value="M">Male</MenuItem>
                 <MenuItem value="F">Female</MenuItem>
               </TextField>
             ) : feature === "Preferred Study Method" || feature === "Disliked lesson" ? (
-              <TextField
-                fullWidth
-                label={feature}
-                name={feature}
-                value={formData[feature] || ""}
-                onChange={handleChange}
-              />
+              <TextField fullWidth label={feature} name={feature} value={formData[feature] || ""} onChange={handleChange} />
             ) : (
-              <TextField
-                type="number"
-                fullWidth
-                label={feature}
-                name={feature}
-                value={formData[feature] || ""}
-                onChange={handleChange}
-              />
+              <TextField type="number" fullWidth label={feature} name={feature} value={formData[feature] || ""} onChange={handleChange} />
             )}
           </Grid>
         ))}
       </Grid>
+
       <Button variant="contained" color="primary" sx={{ mt: 3 }} onClick={handleSubmit}>
-        Predict
+        Predict & Save
       </Button>
 
-      {error && (
-        <Typography color="error" sx={{ mt: 2 }}>
-          {error}
-        </Typography>
-      )}
+      {error && <Typography color="error" sx={{ mt: 2 }}>{error}</Typography>}
 
       {Array.isArray(predictions) && predictions.length > 0 && (
         <Container sx={{ mt: 3, textAlign: "left" }}>
