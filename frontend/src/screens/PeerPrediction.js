@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { TextField, Button, Container, Typography, Grid, Paper } from "@mui/material";
 
@@ -28,6 +28,26 @@ function PeerPrediction() {
     "Male/Female": "",
     "Preferred Study Method": ""
   });
+
+  const [userEmail, setUserEmail] = useState("");
+
+   // Simulating getting user email from authentication (adjust based on your setup)
+   const getUserEmail = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const res = await axios.get("https://edu-platform-ten.vercel.app/api/auth/profile", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      setUserEmail(res.data.email);
+      console.log(res.data.email);
+    } catch (error) {
+      console.error("Error fetching profile:", error);
+    }
+  };
+
+  useEffect(() => {
+      getUserEmail();
+    }, []);
 
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
@@ -68,8 +88,15 @@ function PeerPrediction() {
       });
 
       setResult(response.data["Predicted Class"]);
-      console.log(response.data);
       setError(null);
+      if (userEmail) {
+        await axios.post("https://edu-platform-ten.vercel.app/api/peer/save", {
+          email: userEmail,
+          preferences: response.data["Predicted Class"],
+        });
+      } else {
+        setError("Unexpected response format from the server.");
+      }
     } catch (error) {
       setError("Error sending request. Please try again.");
     }

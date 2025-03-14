@@ -1,32 +1,36 @@
 const PeerPreference = require("../models/Peer");
 
-// Save lesson preferences
-exports.saveLessonPreference = async (req, res) => {
+// Save peer preferences
+exports.savePeerPreference = async (req, res) => {
   try {
     const { email, preferences } = req.body;
 
-    if (!email || !preferences || !Array.isArray(preferences)) {
-      return res.status(400).json({ message: "Invalid input data." });
+    // Validate input
+    if (!email || !preferences) {
+      return res.status(400).json({ message: "Email and preferences are required." });
     }
 
+    // Create a new preference entry
     const newPreference = new PeerPreference({ email, preferences });
     await newPreference.save();
-    
+
     res.status(201).json({ message: "Preferences saved successfully!" });
   } catch (error) {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
 
-// Get lesson preferences for a specific email
-exports.getLessonPreferences = async (req, res) => {
+// Get peer preferences for a specific email
+exports.getPeerPreferences = async (req, res) => {
   try {
     const { email } = req.params;
-    
+
+    // Validate input
     if (!email) {
       return res.status(400).json({ message: "Email is required." });
     }
 
+    // Find preferences for the given email
     const preferences = await PeerPreference.find({ email });
 
     if (!preferences.length) {

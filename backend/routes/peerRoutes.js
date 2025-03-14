@@ -1,9 +1,9 @@
 const express = require("express");
-const { saveLessonPreference, getLessonPreferences } = require("../controllers/peerController");
+const { savePeerPreference, getPeerPreferences } = require("../controllers/peerController");
 
 const router = express.Router();
 
-router.post("/save", saveLessonPreference);
-router.get("/:email", getLessonPreferences);
+router.post("/save", savePeerPreference);
+router.get("/:email", getPeerPreferences);
 
 module.exports = router;
