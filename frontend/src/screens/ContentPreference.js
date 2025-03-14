@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {
   Container,
@@ -19,20 +19,40 @@ function LessonPrediction() {
   const [formData, setFormData] = useState({
     stress_level: "",
     cognitive_performance: "",
-    "number sequences marks": "",
-    "perimeter marks": "",
-    "ratio marks": "",
-    "fractions/decimals marks": "",
-    "indices marks": "",
-    "algebra marks": "",
-    "angles marks": "",
-    "volume and capacity marks": "",
-    "area marks": "",
-    "probability marks": "",
+    "number sequences marks": 0,
+    "perimeter marks": 0,
+    "ratio marks": 0,
+    "fractions/decimals marks": 0,
+    "indices marks": 0,
+    "algebra marks": 0,
+    "angles marks": 0,
+    "volume and capacity marks": 0,
+    "area marks": 0,
+    "probability marks": 0,
   });
 
+  const [userEmail, setUserEmail] = useState("");
   const [prediction, setPrediction] = useState(null);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  // Fetch user email from authentication
+  const getUserEmail = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const res = await axios.get("https://edu-platform-ten.vercel.app/api/auth/profile", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      setUserEmail(res.data.email);
+    } catch (error) {
+      console.error("Error fetching profile:", error);
+      setError("Failed to fetch user email. Please try again.");
+    }
+  };
+
+  useEffect(() => {
+    getUserEmail();
+  }, []);
 
   // Define categorical options
   const stressLevelOptions = ["Low", "Medium", "High"];
@@ -44,19 +64,67 @@ function LessonPrediction() {
     setFormData({ ...formData, [name]: value });
   };
 
+  // Validate and convert form data
+  const validateAndConvertFormData = (data) => {
+    const processedData = { ...data };
+
+    // Convert numerical fields to numbers
+    const numericalFields = [
+      "number sequences marks",
+      "perimeter marks",
+      "ratio marks",
+      "fractions/decimals marks",
+      "indices marks",
+      "algebra marks",
+      "angles marks",
+      "volume and capacity marks",
+      "area marks",
+      "probability marks",
+    ];
+
+    for (const field of numericalFields) {
+      if (processedData[field] === "" || isNaN(processedData[field])) {
+        processedData[field] = 0; // Default to 0 if empty or invalid
+      } else {
+        processedData[field] = parseFloat(processedData[field]);
+      }
+    }
+
+    return processedData;
+  };
+
   // Handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
     setError(null);
     setPrediction(null);
+    setLoading(true);
 
     try {
-      // Send data to the Flask backend
-      const response = await axios.post("http://127.0.0.1:5003/predict", formData);
-      setPrediction(response.data.predicted_lesson);
+      // Validate and convert form data
+      const processedData = validateAndConvertFormData(formData);
+
+      // Send data to the Flask backend for prediction
+      const response = await axios.post("http://127.0.0.1:5003/predict", processedData);
+      const predictedLesson = response.data.predicted_lesson;
+      setPrediction(predictedLesson);
+
+      // Send prediction and user data to the backend API
+      if (userEmail) {
+        await axios.post("https://edu-platform-ten.vercel.app/api/content/save", {
+          email: userEmail,
+          preferences: predictedLesson,
+          stressLevel: formData.stress_level,
+          cognitive: formData.cognitive_performance,
+        });
+      } else {
+        setError("User email not found. Please log in again.");
+      }
     } catch (error) {
-      setError("Error making prediction. Please try again.");
+      setError("Error making prediction or saving data. Please try again.");
       console.error(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -134,8 +202,14 @@ function LessonPrediction() {
 
             {/* Submit Button */}
             <Grid item xs={12}>
-              <Button type="submit" variant="contained" color="primary" fullWidth>
-                Predict Lesson
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                fullWidth
+                disabled={loading}
+              >
+                {loading ? "Predicting..." : "Predict Lesson"}
               </Button>
             </Grid>
           </Grid>
