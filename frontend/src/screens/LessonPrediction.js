@@ -16,16 +16,29 @@ const PredictionForm = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
+
+    // Convert to number if the field is numeric
+    const numericValue = !isNaN(value) && value.trim() !== "" ? Number(value) : value;
+
+    setFormData({ ...formData, [name]: numericValue });
   };
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("http://127.0.0.1:5000/predict", formData);
-      setPredictions(response.data["Top 5 Predicted Lessons"]);
       setError(null);
+      setPredictions([]);
+
+      const response = await axios.post("http://127.0.0.1:5001/predict", formData);
+      const data = response.data;
+
+      if (data && Array.isArray(data["Top 5 Predicted Lessons"])) {
+        setPredictions(data["Top 5 Predicted Lessons"]);
+      } else {
+        setError("Unexpected response format from the server.");
+      }
     } catch (err) {
-      setError("Error making prediction. Please check inputs.");
+      setError("Error making prediction. Please check inputs and try again.");
+      console.error("Prediction error:", err);
     }
   };
 
@@ -44,8 +57,8 @@ const PredictionForm = () => {
                 value={formData[feature] || ""}
                 onChange={handleChange}
               >
-                <MenuItem value="Male">Male</MenuItem>
-                <MenuItem value="Female">Female</MenuItem>
+                <MenuItem value="M">Male</MenuItem>
+                <MenuItem value="F">Female</MenuItem>
               </TextField>
             ) : feature === "Preferred Study Method" || feature === "Disliked lesson" ? (
               <TextField
@@ -71,12 +84,20 @@ const PredictionForm = () => {
       <Button variant="contained" color="primary" sx={{ mt: 3 }} onClick={handleSubmit}>
         Predict
       </Button>
-      {error && <Typography color="error" sx={{ mt: 2 }}>{error}</Typography>}
-      {predictions.length > 0 && (
+
+      {error && (
+        <Typography color="error" sx={{ mt: 2 }}>
+          {error}
+        </Typography>
+      )}
+
+      {Array.isArray(predictions) && predictions.length > 0 && (
         <Container sx={{ mt: 3, textAlign: "left" }}>
           <Typography variant="h5">Top 5 Predicted Lessons:</Typography>
           {predictions.map((prediction, index) => (
-            <Typography key={index}>{prediction.lesson} - {Math.round(prediction.probability * 100)}%</Typography>
+            <Typography key={index}>
+              {prediction.lesson} - {Math.round(prediction.probability * 100)}%
+            </Typography>
           ))}
         </Container>
       )}

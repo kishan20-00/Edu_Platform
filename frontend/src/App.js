@@ -6,6 +6,7 @@ import Signup from "./screens/Signup";
 import Home from "./screens/Home";
 import Profile from "./screens/Profile";
 import Navbar from "./screens/Navbar"; // Import Navbar
+import PredictionForm from "./screens/LessonPrediction";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/lesson" element={<PredictionForm />} />
         </Routes>
       </Container>
     </Router>

@@ -2,8 +2,10 @@ from flask import Flask, request, jsonify
 import pickle
 import pandas as pd
 import numpy as np
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Load saved model, encoders, and scaler
 with open("best_model.pkl", "rb") as model_file:
@@ -29,6 +31,7 @@ def predict():
     try:
         data = request.get_json()
         sample_df = pd.DataFrame([data], columns=feature_columns)
+        print(data);
         
         # Encode categorical variables
         for col in sample_df.select_dtypes(include=['object']).columns:
@@ -53,4 +56,4 @@ def predict():
         return jsonify({"error": str(e)})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
