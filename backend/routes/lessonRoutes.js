@@ -1,5 +1,6 @@
 const express = require('express');
 const Course = require('../models/Lesson');
+const ContentPreference = require('../models/Content'); 
 const router = express.Router();
 
 // Create a new course content
@@ -59,9 +60,31 @@ router.delete('/delete/:id', async (req, res) => {
 // Get all course content by subject
 router.get('/filter/:subject', async (req, res) => {
   const { subject } = req.params;
+  const { email } = req.query; // Get email from query parameters
+
   try {
+    // Fetch user's cognitive performance from the content backend
+    const contentPreference = await ContentPreference.findOne({ email });
+    const cognitivePerformance = contentPreference ? contentPreference.cognitive : null;
+
+    // Fetch courses by subject
     const courses = await Course.find({ subject });
-    res.json(courses);
+
+    // Sort courses based on cognitive performance and learningMaterial
+    const sortedCourses = courses.sort((a, b) => {
+      if (cognitivePerformance === 'Very High') {
+        // If cognitive is Very High, prioritize quiz
+        if (a.learningMaterial === 'quiz' && b.learningMaterial !== 'quiz') return -1;
+        if (a.learningMaterial !== 'quiz' && b.learningMaterial === 'quiz') return 1;
+      } else {
+        // If cognitive is not Very High, move quiz to the bottom
+        if (a.learningMaterial === 'quiz' && b.learningMaterial !== 'quiz') return 1;
+        if (a.learningMaterial !== 'quiz' && b.learningMaterial === 'quiz') return -1;
+      }
+      return 0; // Maintain original order for other cases
+    });
+
+    res.json(sortedCourses);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

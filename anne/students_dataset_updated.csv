@@ -1,0 +1,3001 @@
+student_id,stress_level,cognitive_performance,number sequences marks,perimeter marks,ratio marks,fractions/decimals marks,indices marks,algebra marks,angles marks,volume and capacity marks,area marks,probability marks,recommended_lesson
+S00001,High,Low,3,2,2,1,3,1,4,4,5,1,fractions/decimals
+S00002,Low,Average,3,7,4,7,4,4,4,6,4,4,number sequences
+S00003,Low,Average,6,4,6,7,3,6,5,5,5,7,indices
+S00004,Medium,Very High,5,6,7,8,6,8,9,6,7,6,number sequences
+S00005,High,Low,0,1,2,2,3,0,3,1,1,0,number sequences
+S00006,Low,Average,7,6,7,8,6,6,6,8,8,6,perimeter
+S00007,Medium,Average,4,7,8,6,5,5,6,4,5,8,number sequences
+S00008,Medium,Average,2,5,3,3,6,4,5,6,5,6,number sequences
+S00009,Medium,Average,4,4,5,6,3,5,5,5,5,3,indices
+S00010,High,Average,3,5,2,5,6,4,6,4,4,3,ratio
+S00011,Medium,Average,7,5,6,6,8,6,6,7,9,7,perimeter
+S00012,Low,High,8,7,8,10,9,8,9,10,10,9,perimeter
+S00013,Low,Low,9,9,6,9,6,9,8,5,9,5,volume and capacity
+S00014,Low,High,7,6,6,7,10,7,6,8,9,7,perimeter
+S00015,Medium,High,7,9,8,7,9,7,7,9,6,8,area
+S00016,Medium,Average,4,8,5,4,8,5,5,5,7,7,number sequences
+S00017,Medium,High,5,7,7,7,8,6,4,8,8,7,angles
+S00018,Medium,High,8,6,8,7,5,4,7,8,8,7,algebra
+S00019,High,Low,3,3,3,5,3,5,4,4,5,3,number sequences
+S00020,Low,Average,4,8,5,4,5,4,8,6,6,7,number sequences
+S00021,Medium,Low,2,2,5,4,4,4,5,3,4,3,number sequences
+S00022,Medium,Average,2,4,6,5,5,5,3,3,2,5,number sequences
+S00023,Low,Low,3,4,3,5,6,5,4,5,5,6,number sequences
+S00024,High,High,6,6,5,8,6,6,5,8,5,6,ratio
+S00025,Medium,Average,6,4,4,2,4,6,4,5,5,6,fractions/decimals
+S00026,High,Average,5,4,5,6,5,3,3,4,4,2,probability
+S00027,Medium,High,8,7,8,5,7,5,5,6,5,6,fractions/decimals
+S00028,Medium,Low,4,6,5,4,5,4,3,3,2,6,area
+S00029,High,Average,1,2,1,5,5,2,5,4,4,1,number sequences
+S00030,Low,Average,5,4,5,3,3,2,5,2,3,5,algebra
+S00031,High,Low,1,4,4,3,0,2,2,4,1,0,indices
+S00032,Medium,Low,7,7,4,6,3,6,4,4,3,4,indices
+S00033,Low,Average,9,9,5,7,8,5,7,9,7,9,ratio
+S00034,Medium,High,5,8,7,8,6,8,5,6,5,6,number sequences
+S00035,Medium,High,4,4,6,7,7,6,6,6,3,3,area
+S00036,Low,High,8,10,10,10,9,10,10,8,10,7,probability
+S00037,High,High,2,3,4,2,5,6,6,6,5,3,number sequences
+S00038,High,High,7,9,5,8,5,7,9,6,6,9,ratio
+S00039,Medium,Very High,3,2,3,4,3,6,2,6,6,6,perimeter
+S00040,Medium,High,5,2,6,4,2,4,2,2,5,2,perimeter
+S00041,High,Low,3,1,2,0,4,2,1,2,0,0,fractions/decimals
+S00042,High,Low,0,1,0,3,4,4,4,1,1,2,number sequences
+S00043,Medium,Average,7,9,5,5,7,9,8,7,6,8,ratio
+S00044,Medium,Average,4,4,5,5,6,7,5,3,4,3,volume and capacity
+S00045,Low,Very High,8,9,10,8,9,9,9,9,8,10,number sequences
+S00046,Low,High,9,5,5,6,8,8,7,7,7,9,perimeter
+S00047,High,Average,6,5,3,5,4,3,5,6,6,4,ratio
+S00048,Medium,Low,5,3,5,3,2,4,5,5,6,3,indices
+S00049,Medium,Average,5,6,6,5,2,2,6,5,5,2,indices
+S00050,High,Low,4,6,4,2,5,3,4,5,2,6,fractions/decimals
+S00051,Low,Average,4,7,4,4,5,7,4,4,4,6,number sequences
+S00052,High,High,5,5,3,6,7,7,6,5,5,3,ratio
+S00053,Low,Very High,6,8,7,7,7,7,7,8,7,8,number sequences
+S00054,Low,Very High,10,8,9,10,9,7,10,7,10,8,algebra
+S00055,Low,High,5,6,5,8,5,7,5,9,8,9,number sequences
+S00056,Medium,Average,5,7,5,7,8,7,8,9,6,7,number sequences
+S00057,Low,High,9,8,8,10,6,7,9,8,9,10,indices
+S00058,Medium,Very High,3,3,5,5,5,3,4,2,2,2,volume and capacity
+S00059,High,Low,2,0,2,2,2,2,0,0,2,0,perimeter
+S00060,High,Low,1,0,2,1,0,2,0,0,2,0,perimeter
+S00061,High,Low,3,2,1,1,1,1,4,2,0,4,area
+S00062,High,Average,4,2,1,3,4,4,1,1,2,2,ratio
+S00063,Medium,Low,4,4,3,4,5,2,5,5,3,3,algebra
+S00064,Low,Low,5,8,7,9,9,8,6,9,8,5,number sequences
+S00065,High,High,7,5,8,4,6,7,5,5,4,6,fractions/decimals
+S00066,Medium,Average,5,4,3,7,4,4,7,7,5,5,ratio
+S00067,Low,High,9,9,10,8,10,10,10,10,8,7,probability
+S00068,Low,Very High,5,9,5,7,6,5,7,7,8,5,number sequences
+S00069,Low,Low,7,6,8,4,6,4,6,6,7,5,fractions/decimals
+S00070,Medium,Average,7,9,6,5,6,7,5,8,8,8,fractions/decimals
+S00071,High,Low,4,4,1,0,1,3,2,2,2,0,fractions/decimals
+S00072,High,High,5,6,7,9,6,7,7,6,5,9,number sequences
+S00073,Medium,Low,9,6,9,9,7,8,6,8,7,9,perimeter
+S00074,Medium,High,6,4,5,7,5,4,7,7,5,7,perimeter
+S00075,Medium,Low,3,5,4,6,2,5,3,2,3,3,indices
+S00076,Medium,Low,6,8,6,6,7,6,6,8,8,6,number sequences
+S00077,High,Average,6,5,5,4,4,5,5,3,6,6,volume and capacity
+S00078,High,High,8,6,4,5,6,6,4,5,8,6,ratio
+S00079,Low,Average,8,9,9,6,9,5,8,5,5,8,algebra
+S00080,High,Low,1,3,0,1,0,3,2,1,4,0,ratio
+S00081,High,Average,5,4,3,5,2,6,5,5,4,5,indices
+S00082,Medium,Average,8,8,8,5,5,8,4,8,4,8,angles
+S00083,High,Average,1,2,1,0,2,2,0,2,0,2,fractions/decimals
+S00084,Medium,Average,6,4,4,7,5,3,7,7,3,4,algebra
+S00085,Low,Average,9,7,8,8,9,6,7,5,8,8,volume and capacity
+S00086,Medium,Average,6,9,9,8,9,6,9,6,7,8,number sequences
+S00087,Medium,Very High,9,6,5,7,6,8,8,9,6,9,ratio
+S00088,High,High,6,7,5,5,5,7,7,3,7,5,volume and capacity
+S00089,High,Average,1,4,3,5,4,2,2,5,5,2,number sequences
+S00090,Low,Very High,8,10,10,7,10,10,7,7,7,10,fractions/decimals
+S00091,Low,Average,8,8,8,8,9,9,5,5,9,5,angles
+S00092,High,Low,0,0,0,0,0,3,0,1,0,0,number sequences
+S00093,High,Average,3,2,6,5,4,3,2,4,4,2,perimeter
+S00094,Low,Average,7,5,8,7,8,8,7,8,8,8,perimeter
+S00095,Low,High,9,9,8,7,8,6,8,7,6,6,algebra
+S00096,Medium,Average,5,3,6,4,7,7,3,5,5,3,perimeter
+S00097,High,Average,2,2,2,3,1,2,5,4,3,2,indices
+S00098,Medium,High,5,8,7,5,8,7,8,7,8,8,number sequences
+S00099,Low,High,9,8,10,8,10,10,9,8,10,8,perimeter
+S00100,Medium,Average,5,2,2,2,3,2,2,2,4,3,perimeter
+S00101,Medium,Very High,8,8,8,5,7,8,4,8,7,8,angles
+S00102,High,Low,6,4,3,4,3,5,6,2,5,5,volume and capacity
+S00103,Medium,Average,7,3,6,4,7,6,5,7,3,3,perimeter
+S00104,Low,Very High,6,7,7,6,9,10,9,10,9,8,number sequences
+S00105,Medium,Low,4,4,4,4,5,3,7,4,7,7,algebra
+S00106,Low,High,10,8,9,6,8,8,7,9,6,6,fractions/decimals
+S00107,Low,High,7,8,9,7,10,10,8,10,10,8,number sequences
+S00108,Low,High,9,10,6,9,6,8,7,9,9,6,ratio
+S00109,Medium,Average,5,8,9,6,9,9,9,8,5,8,number sequences
+S00110,Medium,Low,6,4,2,4,6,5,6,4,6,5,ratio
+S00111,Medium,Average,5,3,4,2,5,5,3,3,3,3,fractions/decimals
+S00112,High,Low,3,3,2,5,5,6,6,5,6,4,ratio
+S00113,Low,High,10,10,10,6,6,10,6,8,10,7,fractions/decimals
+S00114,Low,High,8,7,5,5,5,7,9,7,6,6,ratio
+S00115,Low,High,7,7,8,6,8,8,6,7,6,9,fractions/decimals
+S00116,Medium,High,7,5,7,6,6,6,4,8,6,5,angles
+S00117,Medium,Average,4,3,6,2,3,4,4,4,3,2,fractions/decimals
+S00118,Low,Average,5,4,6,6,3,6,4,6,3,7,indices
+S00119,Low,Very High,10,6,6,7,10,10,9,6,6,6,perimeter
+S00120,Low,Average,4,6,3,4,7,7,4,6,5,4,ratio
+S00121,Medium,High,8,7,7,8,4,6,8,5,6,7,indices
+S00122,High,High,7,5,8,6,9,8,5,6,5,9,perimeter
+S00123,Low,High,9,6,7,6,6,9,6,9,6,5,probability
+S00124,High,Low,2,1,3,1,2,4,0,2,3,4,angles
+S00125,Medium,Average,4,7,4,7,4,5,7,6,8,7,number sequences
+S00126,High,Average,3,3,1,0,0,0,1,1,1,2,fractions/decimals
+S00127,Medium,Average,6,4,3,7,3,6,6,5,5,5,ratio
+S00128,Medium,High,4,5,5,6,2,3,5,2,3,3,indices
+S00129,Medium,Very High,5,7,5,6,8,5,5,6,6,6,number sequences
+S00130,Low,Very High,6,8,10,8,10,8,9,10,10,8,number sequences
+S00131,Low,Average,4,5,6,8,5,4,6,7,7,7,number sequences
+S00132,Low,High,6,7,7,6,8,5,6,8,9,6,algebra
+S00133,High,Low,5,5,3,3,4,5,1,3,3,4,angles
+S00134,Medium,High,8,4,4,6,8,5,4,5,8,6,perimeter
+S00135,Medium,Low,7,9,6,8,6,9,8,6,7,6,ratio
+S00136,High,Average,0,0,2,3,1,2,0,2,1,0,number sequences
+S00137,High,Low,3,4,1,4,4,3,3,1,0,2,area
+S00138,High,Low,1,4,5,2,4,3,2,5,5,4,number sequences
+S00139,Medium,Low,2,5,3,4,5,3,5,2,3,6,number sequences
+S00140,High,Average,3,0,2,0,0,1,3,0,0,0,perimeter
+S00141,Low,High,8,7,10,7,9,10,9,7,8,10,perimeter
+S00142,Medium,High,8,8,8,8,4,5,4,5,4,4,indices
+S00143,Medium,High,5,8,5,6,9,7,6,8,8,5,number sequences
+S00144,High,Average,1,3,2,2,1,0,0,0,1,3,algebra
+S00145,Low,High,8,8,9,7,9,9,8,8,9,8,fractions/decimals
+S00146,Low,Average,7,9,7,8,9,7,8,6,6,8,volume and capacity
+S00147,Medium,Very High,6,6,5,2,5,5,2,5,5,4,fractions/decimals
+S00148,Medium,High,7,6,7,6,6,4,4,5,5,5,algebra
+S00149,Medium,Average,8,9,6,9,7,9,5,5,9,5,angles
+S00150,Low,Average,3,6,4,4,4,4,5,3,5,2,probability
+S00151,High,High,5,9,6,5,8,8,8,7,6,9,number sequences
+S00152,Medium,Average,3,3,3,7,7,7,5,7,7,6,number sequences
+S00153,Low,Average,5,4,6,4,3,3,5,2,4,2,volume and capacity
+S00154,High,Average,5,1,3,5,4,1,5,1,2,1,perimeter
+S00155,High,Low,1,1,4,4,1,4,4,2,3,3,number sequences
+S00156,Medium,High,3,3,3,6,7,5,7,6,5,4,number sequences
+S00157,High,Low,2,2,6,5,5,5,4,4,3,6,number sequences
+S00158,Medium,Average,4,5,3,6,6,7,5,3,5,4,ratio
+S00159,Medium,Very High,4,6,2,4,6,6,6,6,3,3,ratio
+S00160,High,Low,3,0,4,0,0,4,3,2,0,2,perimeter
+S00161,Low,Very High,8,8,6,9,6,5,7,9,7,8,algebra
+S00162,High,Low,1,3,4,2,0,3,3,3,0,0,indices
+S00163,Medium,Average,7,3,7,5,5,7,5,3,6,6,perimeter
+S00164,Low,Average,6,9,6,7,8,7,7,6,9,7,number sequences
+S00165,High,Low,3,0,1,2,0,0,1,2,0,3,perimeter
+S00166,Low,High,5,6,5,9,7,9,5,7,7,8,number sequences
+S00167,Medium,Average,5,8,7,5,8,5,8,7,8,8,number sequences
+S00168,Medium,Average,8,7,7,7,6,7,4,7,4,7,angles
+S00169,Medium,Low,2,5,2,3,5,4,5,5,3,3,number sequences
+S00170,Medium,Average,5,2,6,2,6,6,2,4,5,5,perimeter
+S00171,High,Low,3,1,4,5,2,1,1,1,3,1,perimeter
+S00172,High,Low,5,1,5,2,4,5,2,1,3,1,perimeter
+S00173,Medium,High,6,6,2,2,3,6,5,5,2,4,ratio
+S00174,Medium,High,7,5,5,6,5,4,7,7,3,7,area
+S00175,Medium,Low,5,8,7,5,7,7,9,8,7,8,number sequences
+S00176,Low,Low,8,8,6,6,8,6,7,5,5,6,volume and capacity
+S00177,Medium,High,8,8,5,5,5,7,9,6,7,8,ratio
+S00178,Medium,Average,3,3,2,2,2,3,4,4,2,3,ratio
+S00179,Medium,High,8,4,8,4,7,8,8,7,7,4,perimeter
+S00180,Medium,Low,4,5,3,2,6,4,2,3,2,5,fractions/decimals
+S00181,Medium,Average,3,3,6,5,6,3,3,6,4,5,number sequences
+S00182,High,High,3,2,2,5,6,5,2,2,3,6,perimeter
+S00183,Medium,Very High,8,9,9,7,8,6,5,6,9,6,angles
+S00184,Low,Very High,7,10,7,10,7,8,10,10,7,9,number sequences
+S00185,High,Low,3,2,4,2,3,4,1,2,1,3,angles
+S00186,Low,High,9,9,7,5,6,8,7,9,6,6,fractions/decimals
+S00187,Low,Average,6,7,6,7,7,7,6,6,6,6,number sequences
+S00188,High,Low,0,0,0,3,0,3,3,1,0,0,number sequences
+S00189,Low,High,7,7,6,5,9,9,8,7,8,5,fractions/decimals
+S00190,High,Low,1,0,3,0,0,3,1,1,0,1,perimeter
+S00191,Medium,Low,5,5,7,5,6,5,7,6,4,5,area
+S00192,High,Low,3,5,2,4,2,2,2,5,2,5,ratio
+S00193,Medium,Low,6,8,4,6,4,6,4,4,6,8,ratio
+S00194,Low,High,7,5,9,9,9,6,6,7,8,7,perimeter
+S00195,Low,Very High,10,7,10,9,8,8,10,7,7,10,perimeter
+S00196,Medium,Average,7,5,3,5,5,5,5,6,3,6,ratio
+S00197,Medium,Average,7,6,7,3,7,5,5,4,4,4,fractions/decimals
+S00198,Low,Very High,7,10,8,8,7,8,7,10,10,10,number sequences
+S00199,Low,Low,7,7,7,7,5,5,4,6,7,4,angles
+S00200,Medium,Low,9,9,5,8,6,8,8,8,7,5,ratio
+S00201,Low,Very High,7,7,8,7,6,6,8,6,7,10,indices
+S00202,Low,Average,8,4,5,6,6,7,8,7,5,8,perimeter
+S00203,Low,High,7,6,7,7,9,5,8,6,6,9,algebra
+S00204,Low,High,6,7,5,6,7,8,7,9,8,5,ratio
+S00205,High,Average,0,3,3,0,3,0,0,3,1,0,number sequences
+S00206,Low,Low,8,7,6,9,5,5,6,6,7,7,indices
+S00207,Medium,High,6,5,5,4,3,5,5,3,5,4,indices
+S00208,Medium,High,8,8,5,5,5,7,6,9,7,9,ratio
+S00209,Low,Average,7,8,6,5,4,5,8,4,8,7,indices
+S00210,Medium,Average,6,6,2,5,6,2,5,4,5,4,ratio
+S00211,High,Low,2,2,1,4,0,2,2,3,1,4,indices
+S00212,Low,Average,8,7,5,9,6,8,5,9,6,5,ratio
+S00213,High,Low,2,6,4,2,3,6,6,5,2,2,number sequences
+S00214,High,High,7,3,5,3,3,4,3,6,7,3,perimeter
+S00215,Medium,Average,5,6,5,5,6,4,8,6,8,6,algebra
+S00216,High,Average,4,2,3,2,2,2,1,4,0,3,area
+S00217,High,Low,3,5,4,6,6,2,4,5,6,5,algebra
+S00218,Low,High,7,8,8,9,6,9,9,7,8,6,indices
+S00219,High,High,8,7,6,5,6,7,8,7,5,4,probability
+S00220,Medium,High,6,7,5,7,6,7,6,7,3,5,area
+S00221,Medium,High,4,4,5,4,4,2,3,4,2,3,algebra
+S00222,Medium,Average,6,5,8,6,9,5,7,9,5,7,perimeter
+S00223,Medium,Low,4,7,5,4,3,5,4,6,3,6,indices
+S00224,High,Average,2,3,5,5,3,3,4,5,4,4,number sequences
+S00225,High,Average,3,3,3,1,2,3,3,5,1,3,fractions/decimals
+S00226,Medium,High,4,7,4,7,4,7,3,6,7,3,angles
+S00227,Medium,High,6,6,4,3,3,7,5,3,3,3,fractions/decimals
+S00228,High,Low,3,4,2,5,2,3,4,4,3,5,ratio
+S00229,Medium,Average,5,3,4,5,2,3,3,4,3,2,indices
+S00230,High,High,5,2,2,3,3,6,4,2,5,4,perimeter
+S00231,Medium,Low,3,4,2,6,2,3,2,5,4,5,ratio
+S00232,High,Low,0,3,1,0,0,0,0,1,3,1,number sequences
+S00233,Medium,Very High,5,5,4,4,6,5,5,5,4,4,ratio
+S00234,Low,Average,8,7,7,5,7,7,6,8,8,9,fractions/decimals
+S00235,Low,High,6,5,6,7,8,5,5,7,7,7,perimeter
+S00236,Medium,High,5,3,2,6,4,5,2,4,5,6,ratio
+S00237,High,High,5,6,6,9,5,7,5,9,6,5,number sequences
+S00238,High,Low,6,2,5,3,4,6,3,3,3,2,perimeter
+S00239,High,Average,4,4,2,6,4,4,5,6,6,2,ratio
+S00240,Medium,Low,7,4,3,7,4,7,5,7,7,5,ratio
+S00241,High,Average,1,3,0,0,0,0,0,0,0,3,ratio
+S00242,Medium,Very High,6,2,6,6,6,5,3,6,2,6,perimeter
+S00243,Low,High,10,8,7,9,8,10,8,10,8,6,probability
+S00244,Medium,Average,6,6,6,6,5,3,3,4,4,3,algebra
+S00245,Low,High,10,9,7,7,10,10,8,7,10,7,ratio
+S00246,High,Average,0,0,3,0,1,0,3,0,1,1,number sequences
+S00247,High,Average,4,3,2,3,4,3,2,5,4,4,ratio
+S00248,Medium,Low,6,5,6,5,7,6,8,7,7,5,perimeter
+S00249,Low,Very High,9,8,6,6,6,5,6,9,7,9,algebra
+S00250,High,Average,4,6,2,6,3,6,6,3,6,4,ratio
+S00251,Medium,High,4,6,3,4,5,6,3,2,6,6,volume and capacity
+S00252,Low,Average,4,5,5,7,8,6,6,4,5,4,number sequences
+S00253,Low,Average,6,7,5,6,7,5,6,4,8,8,volume and capacity
+S00254,Low,Very High,5,5,5,8,5,8,5,6,9,7,number sequences
+S00255,Medium,Average,6,4,3,4,4,5,6,3,3,6,ratio
+S00256,High,Average,6,3,5,3,2,2,5,5,3,5,indices
+S00257,High,Low,2,0,3,3,0,0,0,3,1,2,perimeter
+S00258,Medium,High,3,4,5,6,6,4,6,4,6,2,probability
+S00259,High,Average,3,2,4,2,5,1,4,2,5,1,algebra
+S00260,Medium,Low,8,6,4,7,6,8,8,8,6,6,ratio
+S00261,High,Low,1,1,1,2,0,3,0,0,1,0,indices
+S00262,Low,High,10,9,8,10,8,7,9,8,10,8,algebra
+S00263,High,Low,4,0,2,1,2,0,1,3,4,3,perimeter
+S00264,High,Low,3,0,2,0,2,2,0,2,0,0,perimeter
+S00265,Medium,High,7,8,5,8,8,9,5,8,8,8,ratio
+S00266,Low,Average,8,8,5,7,6,5,6,8,5,8,ratio
+S00267,Medium,High,9,7,5,8,9,7,8,7,9,6,ratio
+S00268,Low,Average,7,3,3,6,6,5,7,5,6,6,perimeter
+S00269,Medium,Low,7,8,9,7,8,7,7,7,8,9,number sequences
+S00270,High,Low,1,5,5,3,5,2,1,1,3,2,number sequences
+S00271,Medium,Average,5,5,4,4,5,4,4,6,7,6,ratio
+S00272,High,Low,2,4,2,2,1,1,1,5,2,3,indices
+S00273,Medium,Average,2,3,2,2,6,3,2,2,6,5,number sequences
+S00274,Medium,High,6,4,6,4,4,8,4,6,8,4,perimeter
+S00275,Low,Average,5,3,3,2,5,2,4,3,2,3,fractions/decimals
+S00276,Medium,Average,5,6,4,6,7,5,5,5,5,5,ratio
+S00277,Medium,High,5,8,9,8,8,9,9,6,8,5,number sequences
+S00278,High,Low,3,2,2,0,2,3,0,1,0,3,fractions/decimals
+S00279,High,High,2,4,6,4,3,2,2,6,4,4,number sequences
+S00280,Low,High,9,9,9,5,9,8,6,6,8,6,fractions/decimals
+S00281,Medium,High,5,6,3,5,5,6,6,6,3,4,ratio
+S00282,Medium,Low,3,3,7,3,7,6,3,5,5,7,number sequences
+S00283,Medium,Average,5,4,3,5,6,6,6,6,5,2,probability
+S00284,High,Average,4,2,4,1,3,2,4,1,0,0,area
+S00285,High,High,4,5,7,4,7,5,5,5,4,7,number sequences
+S00286,Medium,High,7,9,9,5,8,8,6,5,7,6,fractions/decimals
+S00287,Low,Average,9,8,6,8,9,6,5,8,6,7,angles
+S00288,Medium,Very High,6,9,9,5,8,8,9,7,6,9,fractions/decimals
+S00289,Medium,Average,5,6,8,5,8,5,6,8,8,6,number sequences
+S00290,Medium,Low,4,6,6,5,7,5,6,5,5,7,number sequences
+S00291,Medium,High,7,7,4,3,3,5,7,5,5,5,fractions/decimals
+S00292,Medium,Low,6,5,9,7,5,7,6,9,7,8,perimeter
+S00293,Medium,High,5,4,2,5,3,3,4,6,4,2,ratio
+S00294,Low,Average,4,3,6,3,5,2,5,6,4,6,algebra
+S00295,Medium,Average,3,7,7,3,6,3,5,6,5,6,number sequences
+S00296,Low,Very High,10,10,8,10,8,7,8,8,7,8,algebra
+S00297,Low,Very High,8,6,7,6,9,5,5,5,6,6,algebra
+S00298,Medium,Average,6,3,3,6,3,5,2,2,6,5,angles
+S00299,High,Average,3,5,2,2,2,2,6,3,3,2,ratio
+S00300,High,Low,2,1,5,4,3,5,5,3,2,2,perimeter
+S00301,High,Average,2,5,2,6,6,6,6,6,3,5,number sequences
+S00302,Medium,Very High,4,5,5,4,2,3,4,3,2,2,indices
+S00303,Medium,Very High,7,3,7,3,6,7,4,7,5,3,perimeter
+S00304,Medium,High,6,6,5,7,6,4,8,4,5,8,algebra
+S00305,Medium,Average,6,6,5,5,8,6,6,5,7,8,ratio
+S00306,Medium,Low,6,6,4,4,2,2,5,3,2,6,indices
+S00307,Medium,Low,3,3,3,5,3,3,5,2,5,5,volume and capacity
+S00308,Low,Very High,9,7,8,7,9,9,9,8,6,5,probability
+S00309,Medium,Low,3,2,6,6,6,2,2,6,3,3,perimeter
+S00310,Medium,Very High,5,5,5,5,3,5,5,7,5,6,indices
+S00311,Medium,High,5,6,7,6,9,6,9,6,7,8,number sequences
+S00312,High,Average,2,4,6,4,6,5,6,4,6,5,number sequences
+S00313,High,Average,6,5,5,6,4,6,5,2,4,4,volume and capacity
+S00314,Medium,Very High,3,3,3,3,2,6,5,5,6,3,indices
+S00315,Medium,Average,7,8,7,8,6,8,6,8,6,9,indices
+S00316,Medium,Average,6,3,5,2,3,6,5,2,2,2,fractions/decimals
+S00317,Low,Very High,8,10,8,10,7,7,10,7,10,7,indices
+S00318,Medium,Average,8,8,7,6,4,4,6,5,4,5,indices
+S00319,Low,High,7,8,8,9,10,10,9,8,7,10,number sequences
+S00320,Medium,High,4,3,5,6,4,6,6,4,7,6,perimeter
+S00321,Medium,High,5,4,7,3,6,4,5,6,5,7,fractions/decimals
+S00322,Medium,High,5,4,3,6,4,3,2,5,6,3,angles
+S00323,Low,Low,2,6,2,3,3,4,6,6,6,5,number sequences
+S00324,Low,Very High,10,8,10,9,10,10,9,10,10,7,probability
+S00325,Medium,High,7,5,5,7,7,7,7,7,5,6,perimeter
+S00326,Low,Very High,7,10,10,10,10,10,7,9,8,7,number sequences
+S00327,Low,High,10,10,8,7,8,10,8,7,10,10,fractions/decimals
+S00328,Medium,Average,7,4,4,3,3,7,4,4,4,4,fractions/decimals
+S00329,Medium,Low,9,9,5,5,8,5,9,8,9,7,ratio
+S00330,Low,Very High,9,8,8,8,5,6,5,5,8,8,indices
+S00331,Medium,High,3,4,4,2,2,2,2,4,6,2,fractions/decimals
+S00332,Medium,Average,4,6,2,6,3,5,2,2,5,4,ratio
+S00333,High,Average,3,2,1,2,1,1,4,4,4,3,ratio
+S00334,Medium,High,5,5,8,6,8,6,6,6,6,8,number sequences
+S00335,Medium,High,4,6,2,5,2,6,3,3,5,4,ratio
+S00336,Medium,High,5,3,4,4,6,3,4,3,3,2,probability
+S00337,Low,High,8,10,8,9,10,10,8,9,10,8,number sequences
+S00338,Low,Average,7,8,6,6,7,9,8,6,8,5,probability
+S00339,Medium,Average,5,3,3,6,5,3,3,2,6,3,volume and capacity
+S00340,Low,Average,6,5,6,8,7,6,6,9,7,8,perimeter
+S00341,Medium,Average,7,8,5,8,8,6,7,8,6,6,ratio
+S00342,Low,High,6,6,7,7,8,10,10,6,8,10,number sequences
+S00343,High,Average,1,2,2,1,2,4,1,2,4,3,number sequences
+S00344,Low,High,8,5,6,8,8,8,7,7,7,8,perimeter
+S00345,Low,Average,7,6,5,7,8,7,8,5,8,7,ratio
+S00346,Medium,High,6,5,6,5,5,2,5,3,3,6,algebra
+S00347,High,High,5,4,5,7,7,6,5,5,5,8,perimeter
+S00348,High,High,7,7,7,6,8,8,6,6,9,5,probability
+S00349,Low,Average,2,3,4,5,4,6,4,5,5,6,number sequences
+S00350,High,Average,0,1,2,4,3,4,3,0,0,3,number sequences
+S00351,High,Low,3,3,3,2,6,2,4,6,4,6,fractions/decimals
+S00352,Low,Low,8,9,7,6,8,9,9,7,8,5,probability
+S00353,Medium,Average,6,6,6,8,8,9,6,7,8,5,probability
+S00354,High,High,5,7,7,8,6,5,8,9,8,7,number sequences
+S00355,Low,High,5,7,7,6,6,7,9,9,5,7,number sequences
+S00356,High,Average,3,3,0,1,3,2,2,1,1,2,ratio
+S00357,Low,High,5,6,5,6,9,8,6,5,5,7,number sequences
+S00358,Low,High,8,7,7,8,9,8,8,9,6,9,area
+S00359,High,Low,2,2,0,3,0,4,1,3,1,1,ratio
+S00360,High,Low,0,4,3,4,3,4,4,4,3,3,number sequences
+S00361,High,Low,0,0,1,1,0,2,0,0,0,2,number sequences
+S00362,Low,Average,6,7,6,4,7,3,7,4,5,3,algebra
+S00363,High,High,5,3,4,3,7,5,3,7,7,7,perimeter
+S00364,High,Average,3,2,2,3,1,4,1,4,1,3,indices
+S00365,High,Low,3,5,4,1,4,2,5,2,2,1,fractions/decimals
+S00366,Medium,High,3,4,5,4,6,5,5,3,4,2,probability
+S00367,Medium,High,4,3,3,3,4,5,7,3,5,3,perimeter
+S00368,High,High,7,3,6,6,6,6,5,3,5,4,perimeter
+S00369,Medium,High,9,6,5,8,8,6,7,8,6,5,ratio
+S00370,High,Average,3,5,2,4,5,1,1,5,3,4,algebra
+S00371,High,Low,3,1,0,3,0,0,0,3,1,1,ratio
+S00372,Low,Average,7,6,5,9,9,5,8,8,7,5,ratio
+S00373,Medium,Average,6,4,8,4,6,5,4,7,6,6,perimeter
+S00374,High,Low,5,1,1,3,3,3,4,4,1,2,perimeter
+S00375,High,Low,3,3,1,1,1,5,2,2,2,2,ratio
+S00376,Medium,High,2,6,4,5,5,6,6,2,5,4,number sequences
+S00377,High,Average,1,2,5,5,3,2,3,1,1,2,number sequences
+S00378,Medium,Average,4,5,3,7,3,3,3,5,7,3,ratio
+S00379,Medium,Average,4,3,3,4,4,2,4,5,6,5,algebra
+S00380,Low,High,7,10,10,10,8,10,10,10,9,10,number sequences
+S00381,Medium,High,6,6,7,5,3,5,4,5,6,6,indices
+S00382,Low,High,7,8,8,6,8,7,9,10,6,10,fractions/decimals
+S00383,Low,Average,5,5,7,8,7,7,8,6,5,5,number sequences
+S00384,Medium,Average,3,2,5,6,2,3,4,6,6,5,perimeter
+S00385,Low,Average,4,5,8,7,6,7,5,8,7,8,number sequences
+S00386,Low,Low,6,6,6,4,7,6,5,3,3,7,volume and capacity
+S00387,Low,Low,5,4,6,4,4,8,7,7,5,7,perimeter
+S00388,Medium,Average,6,6,8,7,6,5,9,5,6,9,algebra
+S00389,Medium,Very High,2,2,4,5,4,4,6,5,4,6,number sequences
+S00390,Medium,High,4,6,5,3,6,4,2,3,5,5,angles
+S00391,High,High,7,6,7,7,5,8,7,4,8,5,volume and capacity
+S00392,Medium,High,6,7,7,6,4,8,4,5,8,8,indices
+S00393,Medium,Average,5,6,2,2,6,6,6,4,2,2,ratio
+S00394,Medium,Average,5,5,5,5,5,3,6,4,4,3,algebra
+S00395,Medium,Average,8,9,6,5,7,5,7,9,5,5,fractions/decimals
+S00396,High,Low,1,3,0,0,3,0,1,3,2,4,ratio
+S00397,Medium,Average,5,5,6,9,8,5,9,9,6,5,number sequences
+S00398,Medium,High,8,6,8,7,6,6,8,6,5,7,area
+S00399,Low,Very High,8,5,9,9,7,7,5,9,5,7,perimeter
+S00400,High,Average,3,0,1,1,0,0,1,1,1,3,perimeter
+S00401,High,High,4,5,5,3,3,3,4,3,2,5,area
+S00402,Low,High,6,6,9,8,7,9,6,9,8,8,number sequences
+S00403,Low,High,10,10,10,10,9,10,10,10,10,7,probability
+S00404,Medium,High,2,2,6,3,5,5,6,2,2,2,number sequences
+S00405,Medium,Low,4,5,3,3,5,6,6,3,4,6,ratio
+S00406,Medium,High,6,4,6,7,8,6,4,5,5,5,perimeter
+S00407,Medium,High,4,6,7,5,5,6,8,4,5,4,number sequences
+S00408,Low,High,10,7,10,8,7,8,9,10,7,10,perimeter
+S00409,Low,Very High,9,7,8,6,7,7,7,9,7,6,fractions/decimals
+S00410,Medium,Very High,6,2,3,5,5,4,5,5,2,4,perimeter
+S00411,Low,High,9,6,10,7,9,10,6,8,7,6,perimeter
+S00412,Low,Average,7,5,6,5,4,5,6,3,3,5,volume and capacity
+S00413,Medium,Low,6,6,4,5,4,3,5,3,6,6,algebra
+S00414,Medium,Low,3,4,6,3,5,2,2,4,6,3,algebra
+S00415,High,Average,2,2,4,0,4,3,4,2,4,0,fractions/decimals
+S00416,Medium,Average,7,4,6,7,4,7,6,3,5,5,volume and capacity
+S00417,Medium,Low,3,5,6,5,6,3,2,5,2,3,angles
+S00418,Low,High,8,9,6,7,8,8,8,9,9,6,ratio
+S00419,Low,Low,8,9,9,8,5,6,5,7,8,6,indices
+S00420,Low,Low,6,6,3,4,5,5,3,6,6,7,ratio
+S00421,High,Average,5,2,1,5,1,4,3,5,1,2,ratio
+S00422,Low,Low,5,3,3,6,3,6,5,2,4,3,volume and capacity
+S00423,High,Average,3,0,1,1,1,2,2,0,2,0,perimeter
+S00424,High,Average,3,0,0,3,1,2,3,3,0,2,perimeter
+S00425,Low,High,10,9,9,10,6,8,10,10,6,10,indices
+S00426,High,Low,4,4,3,3,4,4,3,0,3,1,volume and capacity
+S00427,Low,Low,8,5,5,7,4,7,4,8,8,6,indices
+S00428,Medium,High,8,7,5,8,6,9,9,6,8,7,ratio
+S00429,High,Average,3,0,2,4,1,2,0,2,3,0,perimeter
+S00430,Medium,Very High,6,3,4,3,5,3,4,4,3,4,perimeter
+S00431,Medium,Average,5,5,6,9,7,5,9,6,5,9,number sequences
+S00432,Low,High,8,9,7,6,5,7,9,9,5,8,indices
+S00433,Low,High,8,5,9,8,5,6,6,9,5,6,perimeter
+S00434,Medium,Very High,5,8,4,4,5,8,7,8,6,4,ratio
+S00435,High,High,6,7,6,5,6,5,8,8,7,7,fractions/decimals
+S00436,Medium,Average,5,7,8,8,7,5,6,8,5,5,number sequences
+S00437,Medium,Average,4,3,6,2,5,5,3,4,3,3,fractions/decimals
+S00438,Low,High,10,7,7,8,10,10,10,7,7,7,perimeter
+S00439,Low,Very High,7,6,5,6,9,6,7,7,6,7,ratio
+S00440,High,Average,5,4,5,5,6,3,3,6,2,5,area
+S00441,Medium,Very High,7,6,8,6,7,9,7,8,8,9,perimeter
+S00442,Low,High,8,10,9,7,10,6,6,10,10,8,algebra
+S00443,Low,High,8,8,7,10,8,9,10,9,9,7,ratio
+S00444,High,Average,2,1,2,0,2,3,3,0,2,2,fractions/decimals
+S00445,Medium,High,5,6,5,6,8,6,5,8,7,8,number sequences
+S00446,Medium,Low,6,6,6,2,2,4,3,3,4,2,fractions/decimals
+S00447,Low,High,10,10,7,10,9,10,8,10,10,9,ratio
+S00448,High,Average,0,4,1,4,2,3,1,1,1,4,number sequences
+S00449,Low,High,7,7,8,8,7,9,7,10,10,10,number sequences
+S00450,Low,High,6,9,8,8,7,9,6,7,9,9,number sequences
+S00451,Low,High,9,7,6,8,9,8,9,6,6,7,ratio
+S00452,Medium,Low,7,7,5,5,4,8,7,8,5,5,indices
+S00453,Low,Low,7,5,7,7,6,6,5,5,4,5,area
+S00454,Medium,Average,6,5,4,3,4,3,6,7,6,7,fractions/decimals
+S00455,Medium,Average,5,3,3,7,7,3,6,4,4,3,perimeter
+S00456,Medium,Average,6,4,3,5,3,4,4,4,5,3,ratio
+S00457,High,Average,2,6,3,5,4,5,5,6,3,5,number sequences
+S00458,Medium,Average,6,5,9,6,9,9,5,8,9,9,perimeter
+S00459,Low,High,10,7,7,10,8,7,9,9,7,10,perimeter
+S00460,Medium,Very High,5,7,5,8,7,7,6,7,9,6,number sequences
+S00461,Medium,High,7,5,7,3,4,6,5,5,5,5,fractions/decimals
+S00462,Low,Average,6,6,4,5,6,2,5,6,4,4,algebra
+S00463,High,Low,3,4,6,6,2,2,3,5,2,5,indices
+S00464,Low,High,10,8,7,8,9,10,9,10,10,7,ratio
+S00465,High,Average,0,1,2,2,1,0,1,2,2,2,number sequences
+S00466,High,High,6,4,6,4,3,4,6,2,6,2,volume and capacity
+S00467,High,Average,0,1,3,3,0,1,2,3,2,0,number sequences
+S00468,High,High,5,5,8,5,8,9,6,7,6,5,number sequences
+S00469,Medium,Very High,6,7,9,8,8,7,9,5,8,7,volume and capacity
+S00470,Low,High,7,8,10,9,10,10,7,7,10,10,number sequences
+S00471,High,High,9,6,7,8,9,5,8,7,6,7,algebra
+S00472,Medium,Low,2,3,6,4,4,5,2,3,6,4,number sequences
+S00473,Medium,High,5,7,9,5,6,7,6,9,7,6,number sequences
+S00474,Low,Average,7,4,6,5,5,3,4,6,3,5,algebra
+S00475,Medium,Very High,5,3,7,6,6,3,5,7,5,7,perimeter
+S00476,Medium,Low,6,7,7,4,7,5,4,5,3,4,area
+S00477,Low,High,6,8,9,7,9,10,6,6,6,6,number sequences
+S00478,Medium,Very High,7,5,6,3,3,6,4,6,3,3,fractions/decimals
+S00479,Low,Average,3,5,2,3,4,3,4,6,5,5,ratio
+S00480,Medium,Low,4,6,2,3,5,3,2,5,4,6,ratio
+S00481,High,High,2,3,4,2,2,3,4,5,6,5,number sequences
+S00482,High,Low,3,3,6,2,6,6,3,3,6,6,fractions/decimals
+S00483,Low,High,10,9,10,10,10,9,8,8,10,10,angles
+S00484,High,Average,5,6,6,3,3,4,4,5,6,4,fractions/decimals
+S00485,Low,Low,2,5,5,2,5,2,6,4,5,3,number sequences
+S00486,Low,Average,6,4,7,7,4,5,8,8,7,5,perimeter
+S00487,Medium,Average,8,7,8,7,7,9,5,6,9,9,angles
+S00488,Low,Average,7,7,7,5,3,6,3,6,6,3,indices
+S00489,Low,High,9,8,9,8,8,8,8,10,7,9,area
+S00490,High,High,8,8,5,6,8,7,8,6,5,4,probability
+S00491,Medium,Very High,6,4,3,7,5,4,7,4,4,4,ratio
+S00492,Medium,Average,7,4,3,3,5,3,3,4,5,6,ratio
+S00493,Medium,Average,6,6,6,7,6,7,6,7,7,4,probability
+S00494,High,Low,4,3,5,6,4,5,5,2,5,2,volume and capacity
+S00495,Low,Average,3,6,3,3,3,2,3,2,6,2,algebra
+S00496,Low,Average,5,6,4,6,5,3,3,3,4,4,algebra
+S00497,High,Low,4,3,3,4,1,2,1,1,3,2,indices
+S00498,Medium,High,3,3,5,7,6,7,5,4,7,5,number sequences
+S00499,High,Low,3,3,5,3,3,2,3,3,1,5,area
+S00500,High,Low,0,3,1,0,0,4,2,4,3,0,number sequences
+S00501,Low,Average,4,3,7,7,4,4,4,4,4,4,perimeter
+S00502,Low,Very High,7,7,7,9,7,9,10,8,8,6,probability
+S00503,High,Average,3,3,4,1,2,3,2,3,1,5,fractions/decimals
+S00504,High,Low,2,0,0,4,3,4,4,0,0,3,perimeter
+S00505,Medium,Average,6,5,4,7,4,7,3,5,6,3,angles
+S00506,High,Low,1,5,4,2,1,4,3,2,2,5,number sequences
+S00507,Low,Low,6,5,6,4,2,5,5,6,6,5,indices
+S00508,Low,Low,7,5,8,7,7,4,5,4,8,6,algebra
+S00509,High,Average,2,0,1,2,4,0,4,4,1,1,perimeter
+S00510,High,Low,4,5,2,6,6,3,4,3,6,6,ratio
+S00511,Low,Very High,8,6,9,8,5,5,7,6,7,9,indices
+S00512,Low,Very High,8,8,10,6,6,8,7,8,8,9,fractions/decimals
+S00513,Medium,Average,8,8,7,7,8,6,7,9,5,9,area
+S00514,Medium,High,5,6,6,4,6,4,6,7,3,5,area
+S00515,Medium,Average,5,7,6,7,4,3,7,3,6,5,algebra
+S00516,Low,High,7,8,9,10,9,8,8,10,9,10,number sequences
+S00517,Low,Average,5,6,3,5,6,5,4,3,3,4,ratio
+S00518,Low,High,9,10,7,6,8,10,8,8,9,9,fractions/decimals
+S00519,High,Average,2,3,4,5,2,2,4,2,2,1,probability
+S00520,Medium,Low,6,7,6,3,7,6,3,7,5,7,fractions/decimals
+S00521,Medium,High,2,4,6,2,6,5,4,4,5,3,number sequences
+S00522,Medium,Low,6,7,6,5,6,8,8,4,8,4,volume and capacity
+S00523,Low,Low,4,7,8,6,5,6,8,6,7,5,number sequences
+S00524,Low,Very High,10,9,10,8,9,7,9,8,8,10,algebra
+S00525,Medium,High,3,5,5,7,4,7,5,6,6,3,number sequences
+S00526,Low,Average,3,3,5,6,5,5,5,6,6,6,number sequences
+S00527,High,High,5,5,5,5,3,6,5,7,4,6,indices
+S00528,High,Low,3,2,3,1,0,2,1,2,4,2,indices
+S00529,High,High,7,7,5,5,6,7,6,6,7,7,ratio
+S00530,Low,High,9,9,7,7,10,8,10,9,9,7,ratio
+S00531,High,Low,1,4,3,5,5,4,5,5,5,5,number sequences
+S00532,High,High,4,6,4,6,5,8,4,7,7,4,number sequences
+S00533,Low,High,7,9,8,7,7,9,9,6,10,9,volume and capacity
+S00534,Medium,Average,7,3,4,6,6,3,5,3,7,7,perimeter
+S00535,Low,Average,8,6,8,7,9,6,8,7,7,7,perimeter
+S00536,Medium,Low,4,6,6,6,7,4,5,8,8,6,number sequences
+S00537,High,Average,3,0,0,3,0,0,1,3,0,3,perimeter
+S00538,Medium,High,7,9,6,7,5,7,5,5,7,6,indices
+S00539,Low,Very High,5,7,7,9,5,7,8,9,5,7,number sequences
+S00540,Low,Low,5,8,6,6,7,7,9,8,9,5,number sequences
+S00541,Medium,Average,6,5,5,5,2,3,5,6,4,4,indices
+S00542,Low,Average,7,7,6,5,5,4,6,7,4,7,algebra
+S00543,Medium,High,5,9,5,7,5,6,7,5,5,8,number sequences
+S00544,Medium,Average,8,6,6,6,6,9,6,6,6,6,perimeter
+S00545,Medium,Average,7,6,9,7,9,8,5,8,5,8,angles
+S00546,High,Average,2,4,4,1,4,5,5,1,1,2,fractions/decimals
+S00547,Medium,Average,3,5,6,3,4,3,7,6,4,6,number sequences
+S00548,Low,Very High,10,10,8,10,10,7,8,7,6,9,area
+S00549,Low,High,7,7,8,7,8,10,10,10,8,8,number sequences
+S00550,High,Low,2,6,5,5,2,6,3,6,4,4,number sequences
+S00551,High,Low,4,5,1,4,2,5,5,2,2,5,ratio
+S00552,Medium,High,6,4,4,3,6,5,7,6,3,5,fractions/decimals
+S00553,Medium,High,7,6,7,5,3,5,5,6,7,5,indices
+S00554,High,Low,2,0,3,0,4,1,3,0,1,4,perimeter
+S00555,Medium,Average,5,3,4,6,4,4,4,3,6,6,perimeter
+S00556,High,High,6,5,5,9,7,6,5,8,9,9,perimeter
+S00557,High,Low,3,4,3,2,3,3,3,3,2,6,fractions/decimals
+S00558,High,Low,3,4,2,3,1,5,2,5,5,5,indices
+S00559,Low,Very High,5,9,9,9,5,6,6,8,8,6,number sequences
+S00560,High,Average,0,0,0,2,3,3,2,0,3,0,number sequences
+S00561,Low,Very High,7,10,6,8,9,8,7,8,8,9,ratio
+S00562,Medium,Average,7,6,5,8,8,4,6,6,8,7,algebra
+S00563,Low,High,6,6,7,8,7,8,7,8,6,10,number sequences
+S00564,Low,High,5,7,5,5,9,7,7,8,7,6,number sequences
+S00565,Medium,Low,5,7,6,6,5,5,6,8,8,6,number sequences
+S00566,Medium,High,7,5,5,8,5,7,6,7,5,5,perimeter
+S00567,Medium,Low,5,4,4,7,5,6,6,7,7,7,perimeter
+S00568,High,Average,4,2,2,1,3,2,1,4,2,4,fractions/decimals
+S00569,Low,Average,7,8,4,7,8,5,5,6,8,6,ratio
+S00570,High,Low,0,3,3,1,2,1,1,0,0,3,number sequences
+S00571,Low,Very High,10,9,7,10,8,9,9,10,10,9,ratio
+S00572,Medium,Average,4,4,3,5,4,5,3,5,3,5,ratio
+S00573,High,Low,2,1,3,4,3,1,3,3,1,2,perimeter
+S00574,Medium,Average,9,5,7,5,5,5,5,8,7,9,perimeter
+S00575,Low,Average,8,8,7,8,5,4,6,5,6,8,algebra
+S00576,Medium,Average,3,4,5,2,3,4,3,4,2,4,fractions/decimals
+S00577,Medium,Average,9,6,5,8,8,7,8,9,6,5,ratio
+S00578,High,Low,4,3,4,4,4,2,2,1,3,2,volume and capacity
+S00579,Low,High,7,9,10,7,10,8,7,9,10,10,number sequences
+S00580,Low,High,10,10,10,7,10,10,7,9,10,7,fractions/decimals
+S00581,Medium,High,6,4,5,8,8,6,7,5,5,8,perimeter
+S00582,High,High,3,2,4,2,3,2,6,6,6,2,perimeter
+S00583,Low,High,7,7,9,5,6,9,8,8,6,8,fractions/decimals
+S00584,Medium,High,8,8,9,9,9,6,7,7,5,5,area
+S00585,Medium,High,2,5,4,2,4,3,3,2,4,4,number sequences
+S00586,Medium,Average,8,5,9,7,6,5,6,7,7,8,perimeter
+S00587,Medium,Average,2,6,3,2,5,5,3,6,2,4,number sequences
+S00588,Low,Low,4,5,4,5,4,3,4,3,4,6,algebra
+S00589,Medium,Average,9,9,5,8,7,7,7,5,9,8,ratio
+S00590,Medium,High,7,5,8,7,8,7,6,8,9,7,perimeter
+S00591,Medium,High,5,3,2,4,3,3,6,3,3,3,ratio
+S00592,High,Average,3,3,1,2,1,5,5,2,1,5,ratio
+S00593,Low,Very High,10,7,7,9,8,7,8,8,7,8,perimeter
+S00594,High,Low,2,5,3,6,3,6,2,2,6,2,number sequences
+S00595,Medium,Low,5,4,2,4,2,5,6,4,5,3,ratio
+S00596,Medium,Average,6,8,6,5,6,7,9,8,7,9,fractions/decimals
+S00597,Medium,Low,2,3,5,4,2,4,4,6,4,6,number sequences
+S00598,Low,Very High,10,8,10,9,10,8,10,10,8,9,perimeter
+S00599,Medium,High,7,5,7,6,7,5,3,4,7,6,angles
+S00600,High,Average,3,5,4,3,4,5,4,4,3,3,number sequences
+S00601,Medium,Average,4,5,4,8,8,5,6,5,6,6,number sequences
+S00602,Medium,High,8,4,7,5,6,7,4,4,7,5,perimeter
+S00603,Medium,Low,7,6,4,7,5,8,8,4,4,8,ratio
+S00604,High,Average,4,4,3,1,1,1,4,5,5,3,fractions/decimals
+S00605,High,Low,2,1,4,3,4,4,1,1,2,3,perimeter
+S00606,High,Low,3,5,3,5,2,2,2,3,3,2,indices
+S00607,Medium,High,9,5,8,5,6,5,7,5,8,5,perimeter
+S00608,High,Low,0,0,3,2,0,0,0,0,0,1,number sequences
+S00609,Medium,Low,9,6,9,5,5,6,9,5,9,5,fractions/decimals
+S00610,Medium,Average,6,8,8,8,8,6,6,5,7,7,volume and capacity
+S00611,High,Low,3,3,3,3,5,5,4,6,4,4,number sequences
+S00612,Medium,Average,6,6,6,5,4,6,7,7,8,4,indices
+S00613,High,Low,3,1,0,0,3,0,0,3,1,2,ratio
+S00614,High,Low,4,1,5,5,3,1,1,1,5,1,perimeter
+S00615,Medium,Average,5,4,3,4,6,3,4,3,7,4,ratio
+S00616,High,Low,3,1,2,3,0,1,2,1,2,3,indices
+S00617,High,Low,2,4,2,3,4,0,0,1,3,1,algebra
+S00618,High,Low,0,0,0,3,0,1,2,1,2,0,number sequences
+S00619,Medium,Very High,4,7,4,4,7,4,8,4,5,7,number sequences
+S00620,Medium,High,8,4,8,5,5,7,8,8,8,4,perimeter
+S00621,Medium,High,4,3,4,7,3,3,7,3,6,6,perimeter
+S00622,Medium,High,8,5,9,6,5,5,9,5,5,6,perimeter
+S00623,Low,High,7,9,5,6,6,8,9,8,6,8,ratio
+S00624,Medium,Average,7,6,9,7,9,9,6,8,5,9,area
+S00625,Medium,Average,5,4,8,7,5,5,8,4,6,5,perimeter
+S00626,High,Average,1,0,2,0,2,3,2,0,3,0,perimeter
+S00627,Medium,Low,6,6,5,4,5,6,7,8,7,5,fractions/decimals
+S00628,Medium,Average,4,6,2,5,6,6,6,4,4,4,ratio
+S00629,High,Low,1,3,2,2,2,1,3,3,1,4,number sequences
+S00630,Low,Average,6,4,5,4,3,4,3,2,3,4,volume and capacity
+S00631,Medium,Average,6,7,8,4,4,8,6,6,6,7,fractions/decimals
+S00632,Medium,Average,4,7,5,7,6,6,8,8,6,4,number sequences
+S00633,Low,Average,6,9,7,9,7,9,5,5,9,6,angles
+S00634,High,Low,4,3,4,1,2,3,3,4,5,5,fractions/decimals
+S00635,Low,Average,3,2,3,6,3,6,5,2,3,4,perimeter
+S00636,Low,Average,5,6,6,7,7,9,9,8,6,7,number sequences
+S00637,Medium,Average,4,7,4,6,5,5,6,7,6,6,number sequences
+S00638,High,Average,4,0,1,4,3,2,0,1,0,2,perimeter
+S00639,Low,Low,8,7,7,6,8,7,5,7,8,5,angles
+S00640,High,Average,2,1,4,4,0,1,2,4,1,4,indices
+S00641,High,High,4,3,7,7,4,4,6,4,5,6,perimeter
+S00642,Low,Low,7,7,8,8,4,8,4,8,6,5,indices
+S00643,Medium,Average,5,6,6,7,3,6,3,3,6,4,indices
+S00644,Medium,High,5,5,8,4,8,8,5,7,7,4,fractions/decimals
+S00645,Low,High,9,9,10,8,10,8,7,9,9,7,angles
+S00646,Low,Very High,10,9,7,7,8,8,10,9,7,10,ratio
+S00647,High,Low,2,3,5,5,5,5,5,3,2,5,number sequences
+S00648,High,Low,6,5,6,6,2,3,4,2,6,4,indices
+S00649,Medium,Average,6,6,7,9,6,7,6,7,8,5,probability
+S00650,Low,Average,6,4,3,3,5,2,6,2,5,2,algebra
+S00651,Low,Low,2,4,2,6,4,3,4,2,5,4,number sequences
+S00652,High,Low,2,3,2,3,2,5,3,5,2,5,number sequences
+S00653,Low,Average,5,5,7,3,5,4,5,3,7,7,fractions/decimals
+S00654,Medium,Very High,9,6,5,8,8,6,5,7,8,9,ratio
+S00655,High,Average,3,0,1,2,2,0,1,0,2,1,perimeter
+S00656,High,Average,1,1,2,4,2,1,4,0,0,0,volume and capacity
+S00657,High,Low,1,1,3,0,1,2,0,1,1,0,fractions/decimals
+S00658,Low,Average,2,3,4,3,5,3,6,6,3,6,number sequences
+S00659,Medium,High,4,5,6,4,5,5,6,4,7,4,number sequences
+S00660,Medium,Low,8,8,8,6,6,6,4,7,5,7,angles
+S00661,Medium,Very High,3,3,7,5,6,3,4,5,5,5,number sequences
+S00662,High,Low,2,4,2,0,1,0,2,2,2,3,fractions/decimals
+S00663,High,High,6,5,6,3,3,3,6,5,3,3,fractions/decimals
+S00664,Medium,High,4,3,4,5,2,2,2,4,3,5,indices
+S00665,High,High,7,6,7,9,6,7,9,7,6,7,perimeter
+S00666,High,Average,2,2,4,3,2,2,4,0,1,4,volume and capacity
+S00667,Medium,Very High,6,9,8,9,5,8,5,6,8,6,indices
+S00668,Medium,High,5,7,8,8,4,8,8,7,6,8,indices
+S00669,High,Low,1,3,5,4,2,1,2,4,1,4,number sequences
+S00670,High,Low,4,6,2,4,3,4,6,6,5,2,ratio
+S00671,Low,Average,4,6,4,4,2,2,4,4,5,2,indices
+S00672,Medium,High,2,3,6,5,2,6,6,3,4,6,number sequences
+S00673,Medium,Average,9,5,8,5,8,5,5,7,7,8,perimeter
+S00674,High,Low,2,1,2,1,3,0,4,0,2,3,algebra
+S00675,Medium,High,5,6,7,8,8,5,5,5,4,4,area
+S00676,Medium,Very High,9,8,8,5,5,9,9,6,9,7,fractions/decimals
+S00677,Medium,High,4,3,2,6,5,5,4,2,6,4,ratio
+S00678,Medium,Average,8,8,5,6,6,6,7,6,8,9,ratio
+S00679,Medium,Average,8,9,9,5,8,5,8,6,9,8,fractions/decimals
+S00680,Medium,High,3,4,6,5,3,7,6,3,4,7,number sequences
+S00681,Low,High,7,10,10,10,8,8,9,8,6,8,area
+S00682,Medium,High,2,6,5,2,6,6,3,2,4,5,number sequences
+S00683,Low,High,7,7,8,9,10,8,10,9,7,6,probability
+S00684,Medium,Low,4,5,4,6,3,4,6,3,5,7,indices
+S00685,High,Average,0,1,1,0,2,0,2,3,2,0,number sequences
+S00686,Low,Very High,7,5,9,8,8,7,5,7,9,9,perimeter
+S00687,Low,Average,5,4,5,6,5,5,4,3,7,5,volume and capacity
+S00688,High,Average,0,0,2,0,0,0,0,3,2,0,number sequences
+S00689,Medium,Low,9,7,5,6,5,5,7,7,6,5,ratio
+S00690,Low,Very High,5,6,5,8,5,5,5,6,5,9,number sequences
+S00691,Medium,High,8,8,8,7,4,4,5,7,4,7,indices
+S00692,High,Low,3,4,2,1,2,2,1,3,1,3,fractions/decimals
+S00693,Low,High,8,8,6,5,7,6,6,7,7,6,fractions/decimals
+S00694,Medium,Average,5,5,5,2,3,2,2,3,6,2,fractions/decimals
+S00695,Medium,Very High,6,7,5,6,6,7,4,6,8,4,angles
+S00696,High,High,4,4,4,4,8,6,7,5,4,7,number sequences
+S00697,Medium,Low,4,4,3,5,5,6,6,6,3,6,ratio
+S00698,Low,Average,7,6,5,7,4,5,3,5,7,4,angles
+S00699,Low,Very High,10,7,9,7,7,9,8,10,7,10,perimeter
+S00700,Low,Very High,10,10,9,8,9,7,10,7,10,7,algebra
+S00701,High,Average,2,2,4,4,3,3,4,1,3,4,volume and capacity
+S00702,Low,Average,4,5,4,5,7,8,4,4,5,4,number sequences
+S00703,Low,High,6,9,9,10,9,6,9,6,6,6,number sequences
+S00704,Low,High,6,5,9,7,5,6,7,7,5,7,perimeter
+S00705,Low,Very High,5,7,8,7,5,5,6,5,5,6,number sequences
+S00706,High,Low,0,0,0,3,0,3,2,0,0,2,number sequences
+S00707,Medium,Average,7,6,7,6,5,5,6,8,6,8,indices
+S00708,High,Low,4,1,3,3,5,5,4,5,5,3,perimeter
+S00709,Medium,Average,5,2,5,5,4,4,2,5,4,6,perimeter
+S00710,Low,Very High,9,8,8,10,10,7,10,10,10,8,algebra
+S00711,High,Average,3,2,0,3,0,0,0,2,0,1,ratio
+S00712,High,Low,3,0,1,1,2,3,0,1,0,1,perimeter
+S00713,High,Average,0,1,1,0,1,3,2,1,2,3,number sequences
+S00714,Low,Average,5,5,9,7,9,8,8,7,6,6,number sequences
+S00715,High,Average,3,2,2,3,3,1,3,0,4,2,volume and capacity
+S00716,Low,Average,7,5,6,6,5,7,7,5,4,5,area
+S00717,High,Average,5,3,2,4,5,2,2,2,3,2,ratio
+S00718,Low,Average,7,8,6,4,4,4,8,6,6,5,fractions/decimals
+S00719,High,Average,2,6,5,2,3,6,3,2,5,5,number sequences
+S00720,Low,Low,6,6,7,4,4,6,5,7,5,6,fractions/decimals
+S00721,Medium,Low,5,7,4,6,7,4,6,3,6,3,volume and capacity
+S00722,High,Average,2,0,0,0,2,0,2,1,1,0,perimeter
+S00723,Medium,Average,9,9,8,9,9,9,6,7,7,5,probability
+S00724,Medium,Low,6,6,3,5,6,4,5,3,6,6,ratio
+S00725,Medium,Low,3,6,3,4,7,7,6,7,5,4,number sequences
+S00726,Low,Low,5,6,5,6,4,6,4,4,8,7,indices
+S00727,Low,High,6,7,8,10,10,8,9,8,8,9,number sequences
+S00728,High,Low,3,0,1,1,2,4,4,2,3,4,perimeter
+S00729,Medium,Average,5,4,3,7,4,7,5,7,4,7,ratio
+S00730,Medium,High,6,2,3,2,5,3,2,3,2,5,perimeter
+S00731,Medium,High,3,6,6,3,6,5,4,2,3,5,volume and capacity
+S00732,Medium,Low,6,7,3,4,6,3,7,7,6,5,ratio
+S00733,Medium,Very High,3,3,3,3,5,4,7,4,3,7,number sequences
+S00734,Low,Low,3,4,3,6,7,5,7,3,7,6,number sequences
+S00735,High,Average,6,6,5,6,4,6,2,6,5,6,angles
+S00736,High,Low,2,5,5,4,2,5,2,4,2,2,number sequences
+S00737,High,Low,2,1,0,1,0,0,3,0,3,1,ratio
+S00738,Medium,Very High,6,8,6,7,8,5,6,9,9,6,algebra
+S00739,Low,Very High,5,7,7,5,8,8,7,6,8,5,number sequences
+S00740,Medium,Low,2,6,4,2,5,5,3,5,3,3,number sequences
+S00741,High,High,8,6,6,6,4,5,6,4,6,6,indices
+S00742,Medium,Average,4,2,2,2,5,6,6,4,2,2,perimeter
+S00743,Medium,Very High,5,4,5,4,4,4,6,3,6,3,volume and capacity
+S00744,High,Low,1,0,3,3,0,3,3,2,0,2,perimeter
+S00745,Medium,High,2,6,6,2,2,4,6,5,2,3,number sequences
+S00746,Medium,Average,5,5,7,3,3,6,6,6,5,4,fractions/decimals
+S00747,Medium,Average,3,6,2,6,6,3,2,4,4,6,ratio
+S00748,High,Low,2,3,1,3,1,2,1,2,3,4,ratio
+S00749,Low,High,8,10,9,8,10,8,10,8,10,9,number sequences
+S00750,Medium,Average,3,4,4,4,6,7,3,4,6,3,number sequences
+S00751,High,Average,2,4,2,5,5,1,2,4,3,5,algebra
+S00752,Medium,High,5,8,5,7,6,9,5,7,5,6,number sequences
+S00753,Low,High,9,9,9,7,8,8,6,5,5,5,volume and capacity
+S00754,Medium,Average,4,7,4,3,3,4,6,7,3,5,fractions/decimals
+S00755,Low,High,7,6,10,10,7,6,9,6,8,9,perimeter
+S00756,High,Low,0,0,1,4,2,0,1,3,2,1,number sequences
+S00757,Low,Low,8,9,9,8,8,5,5,7,8,8,algebra
+S00758,Medium,High,3,5,6,6,6,4,7,4,4,3,number sequences
+S00759,Medium,High,7,8,6,7,6,8,6,9,8,5,probability
+S00760,High,Average,2,1,1,1,4,4,1,1,4,1,perimeter
+S00761,Low,Average,6,7,8,8,8,5,5,8,9,9,algebra
+S00762,Medium,Average,5,5,5,6,6,5,5,6,6,6,number sequences
+S00763,Low,High,9,8,8,8,5,9,5,8,9,7,indices
+S00764,Medium,Low,6,5,5,8,8,6,8,8,6,9,perimeter
+S00765,Medium,Average,4,5,6,8,8,4,4,8,5,6,number sequences
+S00766,High,Average,5,2,4,5,1,1,5,5,4,1,indices
+S00767,High,Low,1,1,0,0,0,2,0,2,3,1,ratio
+S00768,High,High,6,7,6,5,4,6,5,5,7,5,indices
+S00769,High,Average,5,6,4,4,2,5,6,5,5,6,indices
+S00770,Medium,Average,3,2,6,3,5,3,5,4,5,6,perimeter
+S00771,Medium,High,9,6,9,6,9,9,8,7,5,9,area
+S00772,Low,Average,4,5,4,5,3,4,3,4,7,5,indices
+S00773,Medium,Average,9,8,6,9,9,8,8,5,8,7,volume and capacity
+S00774,Medium,High,2,4,2,2,6,6,6,6,5,6,number sequences
+S00775,High,Low,2,1,3,0,3,3,4,3,0,2,fractions/decimals
+S00776,Medium,Average,3,4,6,4,2,6,5,4,3,5,indices
+S00777,Low,High,10,7,10,10,10,8,10,10,8,9,perimeter
+S00778,Medium,Low,4,3,6,3,5,2,2,2,3,6,algebra
+S00779,High,High,8,9,6,7,9,6,6,9,6,7,ratio
+S00780,Medium,Average,3,6,6,4,5,4,6,5,7,6,number sequences
+S00781,Low,High,8,7,9,6,6,5,8,5,5,6,algebra
+S00782,Low,High,9,8,8,8,6,8,7,10,6,9,indices
+S00783,Medium,Average,3,2,4,5,2,5,3,5,5,3,perimeter
+S00784,Medium,High,5,3,7,7,6,6,6,5,6,3,perimeter
+S00785,Low,Average,5,3,4,5,6,7,7,7,5,3,perimeter
+S00786,Medium,High,7,7,4,7,8,4,4,4,8,5,ratio
+S00787,Low,High,10,7,8,6,6,9,10,8,10,6,fractions/decimals
+S00788,High,Average,2,2,5,3,5,6,3,6,4,3,number sequences
+S00789,High,High,6,2,2,3,4,6,5,6,5,6,perimeter
+S00790,Medium,Low,4,2,3,3,6,4,2,3,5,6,perimeter
+S00791,Low,Very High,6,6,7,5,9,6,9,9,8,8,fractions/decimals
+S00792,Medium,High,5,7,3,3,5,4,4,6,3,6,ratio
+S00793,Medium,Low,5,6,3,7,4,6,4,6,7,6,ratio
+S00794,Low,High,8,5,7,8,9,5,6,8,9,8,perimeter
+S00795,Low,High,6,9,7,8,6,9,8,7,7,9,number sequences
+S00796,Medium,High,5,6,8,7,9,8,9,7,6,8,number sequences
+S00797,High,High,4,5,2,4,3,3,5,5,3,5,ratio
+S00798,Medium,High,3,5,5,4,6,4,3,6,3,6,number sequences
+S00799,High,Low,4,3,1,3,3,5,1,3,5,2,ratio
+S00800,Medium,Very High,9,7,8,5,9,8,9,5,6,9,fractions/decimals
+S00801,Low,Very High,5,7,8,7,8,5,8,5,9,7,number sequences
+S00802,High,High,6,7,6,8,6,9,7,9,9,7,number sequences
+S00803,Medium,High,6,5,5,3,5,4,6,3,4,2,probability
+S00804,Low,Average,6,7,5,5,8,6,9,5,5,8,ratio
+S00805,High,High,7,6,5,7,6,5,5,3,7,4,volume and capacity
+S00806,Medium,Low,9,8,8,7,7,9,6,9,8,6,angles
+S00807,Medium,High,2,3,3,4,4,6,2,6,6,4,number sequences
+S00808,Medium,Low,5,5,8,4,6,6,5,5,7,8,fractions/decimals
+S00809,High,Low,6,3,5,3,6,3,2,2,3,6,angles
+S00810,High,Low,4,4,0,1,3,3,0,1,0,4,ratio
+S00811,Medium,Low,2,5,6,3,2,5,5,2,4,4,number sequences
+S00812,Low,Low,6,3,5,4,7,7,6,4,5,5,perimeter
+S00813,Medium,Low,8,9,9,9,6,7,8,9,6,6,indices
+S00814,High,Low,4,2,4,4,3,2,4,4,3,5,perimeter
+S00815,Medium,Average,6,7,6,3,4,3,4,6,7,4,fractions/decimals
+S00816,Medium,High,8,5,4,8,5,5,5,4,4,6,ratio
+S00817,High,High,4,3,5,3,6,2,4,6,2,5,algebra
+S00818,Medium,Very High,6,4,6,8,7,7,8,7,7,6,perimeter
+S00819,Medium,High,9,6,5,5,9,5,8,6,8,8,ratio
+S00820,Medium,High,7,7,8,7,5,5,8,5,8,7,indices
+S00821,Low,High,6,7,8,9,9,6,10,10,7,6,number sequences
+S00822,Low,Average,7,3,6,6,4,7,5,5,3,7,perimeter
+S00823,Medium,Average,4,7,4,4,5,5,6,5,4,8,number sequences
+S00824,High,High,6,6,8,9,7,9,6,7,6,5,probability
+S00825,Medium,Average,9,5,9,8,7,9,6,5,8,9,perimeter
+S00826,Medium,Low,4,5,6,3,6,5,5,4,3,5,fractions/decimals
+S00827,High,Average,0,1,1,4,2,3,2,1,0,4,number sequences
+S00828,High,Low,2,4,2,2,3,2,6,3,5,2,number sequences
+S00829,Medium,Very High,5,3,5,6,3,7,3,3,6,7,perimeter
+S00830,High,Low,2,1,1,0,4,1,2,2,2,1,fractions/decimals
+S00831,High,High,3,2,3,3,6,6,3,5,3,5,perimeter
+S00832,High,Low,0,0,2,2,2,3,3,1,2,1,number sequences
+S00833,Medium,Low,3,4,3,5,4,7,3,4,7,4,number sequences
+S00834,Medium,High,2,5,6,3,4,4,2,4,2,3,number sequences
+S00835,Low,Average,4,2,3,4,6,2,5,6,5,6,perimeter
+S00836,High,Low,3,4,0,4,3,1,2,2,4,3,ratio
+S00837,High,Low,3,4,4,3,2,2,2,4,4,3,indices
+S00838,High,Low,2,3,2,6,3,6,4,6,5,3,number sequences
+S00839,Medium,Average,7,6,4,6,5,6,5,4,5,6,ratio
+S00840,Medium,Average,3,5,6,6,5,3,7,4,4,5,number sequences
+S00841,Medium,Low,3,3,3,4,3,4,6,7,5,4,number sequences
+S00842,Medium,Low,5,6,9,8,8,9,8,5,5,7,number sequences
+S00843,Low,Average,3,3,3,4,3,5,5,5,2,5,area
+S00844,Medium,High,3,6,6,6,3,3,6,3,4,4,number sequences
+S00845,Low,Average,5,5,5,3,5,2,4,4,3,5,algebra
+S00846,Medium,Average,6,3,5,5,4,6,4,3,4,7,perimeter
+S00847,Medium,Average,5,4,3,5,6,2,6,3,6,4,algebra
+S00848,Medium,High,5,5,4,6,3,4,3,2,3,2,volume and capacity
+S00849,Low,Very High,9,5,5,9,8,8,8,5,8,6,perimeter
+S00850,Medium,Average,7,4,8,8,8,6,4,6,6,4,perimeter
+S00851,Medium,Average,6,5,5,8,9,9,6,8,6,8,perimeter
+S00852,Low,Average,3,6,4,3,4,4,5,3,6,3,number sequences
+S00853,Medium,Very High,7,6,4,6,4,8,8,5,7,4,ratio
+S00854,High,Average,2,2,5,4,4,2,1,3,3,2,angles
+S00855,Low,Very High,10,10,10,10,10,10,7,9,8,8,angles
+S00856,Medium,Low,6,5,5,4,3,4,5,5,6,3,indices
+S00857,Medium,Average,8,8,9,6,6,6,6,8,9,8,fractions/decimals
+S00858,Medium,Average,5,6,6,6,7,4,8,4,8,4,algebra
+S00859,Low,High,8,10,8,8,9,10,9,7,8,7,volume and capacity
+S00860,Medium,Average,5,5,7,5,5,9,9,7,9,9,number sequences
+S00861,High,Average,5,6,4,6,6,6,2,4,5,3,angles
+S00862,Medium,Average,6,5,7,5,5,6,3,6,5,6,angles
+S00863,Low,High,10,9,10,10,10,8,7,9,10,9,angles
+S00864,Low,High,7,10,6,10,6,10,6,10,6,7,ratio
+S00865,Medium,Average,8,7,5,6,6,7,9,7,5,6,ratio
+S00866,Low,Very High,8,9,7,10,7,10,10,10,10,10,ratio
+S00867,Medium,Average,6,4,7,7,5,3,5,5,4,6,algebra
+S00868,Medium,Low,3,4,3,5,4,6,6,4,7,7,number sequences
+S00869,High,Low,0,3,4,1,4,4,3,4,2,1,number sequences
+S00870,Low,Average,4,4,5,6,4,2,3,2,3,5,algebra
+S00871,High,Low,1,5,5,3,3,3,5,5,5,4,number sequences
+S00872,Medium,High,5,3,5,2,6,4,2,6,4,5,fractions/decimals
+S00873,High,High,7,3,5,3,6,6,5,4,7,6,perimeter
+S00874,Low,High,9,8,8,9,10,7,9,10,8,10,algebra
+S00875,High,Average,3,4,1,2,4,3,3,1,3,1,ratio
+S00876,Medium,Low,8,5,5,5,5,5,6,8,5,6,perimeter
+S00877,Medium,High,6,5,8,7,7,6,6,7,6,8,perimeter
+S00878,Medium,High,6,6,2,5,2,4,4,6,3,2,ratio
+S00879,Medium,Average,7,7,3,3,5,4,4,3,6,5,ratio
+S00880,Low,Very High,9,7,6,7,8,9,9,9,7,9,ratio
+S00881,Low,High,9,7,7,10,6,7,8,7,7,6,indices
+S00882,Medium,Average,5,7,6,7,5,6,9,8,6,8,number sequences
+S00883,High,High,6,8,8,6,6,4,8,8,6,7,algebra
+S00884,Medium,Average,8,6,7,8,6,8,6,9,7,7,perimeter
+S00885,Medium,Very High,5,2,6,6,4,2,4,2,4,5,perimeter
+S00886,Medium,Low,6,5,8,7,8,8,8,8,9,6,perimeter
+S00887,Low,Very High,10,8,10,9,10,9,7,9,9,10,angles
+S00888,Low,Very High,7,9,8,8,9,6,7,6,9,6,algebra
+S00889,High,Low,3,2,3,4,3,5,4,4,5,6,perimeter
+S00890,Low,Very High,6,8,10,7,8,10,8,6,10,7,number sequences
+S00891,High,Average,2,5,5,3,4,1,4,2,4,1,algebra
+S00892,Medium,High,8,5,4,7,6,6,4,5,8,5,ratio
+S00893,High,Average,3,4,4,1,1,1,0,1,1,4,angles
+S00894,High,Low,1,0,1,0,1,4,2,2,0,4,perimeter
+S00895,High,Low,3,1,1,2,2,0,1,2,0,3,algebra
+S00896,Low,High,7,7,8,6,9,6,6,6,9,10,fractions/decimals
+S00897,Medium,High,5,8,9,8,9,7,5,5,8,8,number sequences
+S00898,High,Average,3,6,2,5,4,2,2,3,6,2,ratio
+S00899,Medium,Average,3,3,4,3,2,4,4,6,5,2,indices
+S00900,Low,Average,5,9,6,5,7,6,6,8,7,8,number sequences
+S00901,Low,High,10,9,7,6,8,9,10,9,10,7,fractions/decimals
+S00902,Medium,High,5,7,6,6,8,6,5,8,7,5,number sequences
+S00903,Medium,Average,3,5,6,3,4,7,4,4,5,6,number sequences
+S00904,Low,High,8,10,10,9,8,10,7,8,7,10,angles
+S00905,Medium,Average,5,8,5,5,5,8,8,8,9,9,number sequences
+S00906,High,Average,5,1,4,5,3,4,2,2,2,2,perimeter
+S00907,High,High,8,5,5,6,6,7,7,6,9,6,perimeter
+S00908,Medium,Average,6,6,8,4,6,6,4,7,8,6,fractions/decimals
+S00909,Medium,Average,8,6,5,8,7,7,5,6,5,6,ratio
+S00910,Medium,Very High,9,9,9,6,5,8,6,9,9,6,indices
+S00911,Medium,Very High,7,5,3,7,6,5,5,3,4,6,ratio
+S00912,Medium,Average,5,5,3,4,5,6,5,6,3,3,ratio
+S00913,Medium,High,3,4,7,4,4,4,4,7,3,6,number sequences
+S00914,High,High,5,2,2,4,3,3,4,5,4,4,perimeter
+S00915,High,Low,1,1,4,1,0,3,4,3,2,0,indices
+S00916,Medium,Low,5,7,6,5,6,4,5,7,7,4,algebra
+S00917,Low,Average,5,7,8,5,9,8,5,7,9,8,number sequences
+S00918,Medium,Low,2,4,3,3,2,4,5,3,5,6,number sequences
+S00919,Medium,Average,4,7,4,4,6,6,6,4,7,4,number sequences
+S00920,Medium,Average,7,6,4,5,6,3,5,5,3,5,algebra
+S00921,High,Low,4,2,4,4,6,2,4,3,4,6,perimeter
+S00922,Low,High,8,6,6,6,10,10,9,9,8,10,perimeter
+S00923,Medium,Average,6,5,9,6,5,6,6,6,6,6,perimeter
+S00924,High,Low,0,0,0,0,0,2,0,3,0,0,number sequences
+S00925,Medium,Average,3,7,7,6,5,6,3,6,5,5,number sequences
+S00926,High,Low,3,3,4,5,5,3,4,4,4,2,probability
+S00927,Low,Very High,8,7,5,5,8,8,6,6,5,8,ratio
+S00928,Low,High,9,10,8,9,9,10,8,10,7,8,area
+S00929,Low,High,10,10,10,10,9,9,6,7,8,9,angles
+S00930,Low,Average,8,8,5,8,4,4,4,6,4,6,indices
+S00931,Low,Very High,8,9,8,7,9,8,9,10,8,7,fractions/decimals
+S00932,Medium,Average,3,4,6,4,3,7,4,6,4,5,number sequences
+S00933,High,Average,2,2,3,4,2,2,2,2,2,2,number sequences
+S00934,Medium,Average,9,6,6,7,5,8,8,8,9,5,indices
+S00935,Medium,Average,6,7,9,5,8,6,6,5,6,9,fractions/decimals
+S00936,High,Average,0,4,2,4,3,2,4,4,4,0,number sequences
+S00937,Medium,Average,2,4,6,6,4,4,3,5,6,4,number sequences
+S00938,Medium,High,5,2,2,3,2,5,2,5,6,3,perimeter
+S00939,Low,High,9,9,6,6,10,6,6,9,6,9,ratio
+S00940,Low,Average,6,6,4,5,6,7,7,7,5,7,ratio
+S00941,Medium,Average,4,4,3,3,4,7,6,7,5,6,ratio
+S00942,Low,Average,5,9,6,5,7,5,7,6,8,9,number sequences
+S00943,Low,Very High,10,9,9,10,10,8,8,8,9,9,algebra
+S00944,Low,High,7,8,10,10,8,9,7,6,9,8,volume and capacity
+S00945,High,Low,0,4,0,2,0,3,3,1,2,4,number sequences
+S00946,High,Average,0,0,0,0,3,0,3,3,0,0,number sequences
+S00947,Low,High,10,8,7,10,9,10,10,10,8,9,ratio
+S00948,Low,Very High,9,7,9,6,6,8,6,8,5,8,area
+S00949,Low,Low,6,5,7,8,8,4,7,6,8,5,algebra
+S00950,Medium,Average,6,3,5,5,5,2,4,3,5,6,algebra
+S00951,Medium,High,5,3,3,7,3,5,3,6,4,4,perimeter
+S00952,High,Average,2,2,1,1,4,3,3,0,0,2,volume and capacity
+S00953,Low,High,9,8,8,8,9,8,9,10,8,10,perimeter
+S00954,High,Low,1,3,0,3,2,0,3,2,3,0,ratio
+S00955,Medium,Average,5,4,3,3,5,3,2,2,5,2,angles
+S00956,Low,Very High,6,9,8,7,6,6,8,7,9,7,number sequences
+S00957,High,Low,5,2,2,4,4,6,2,4,2,3,perimeter
+S00958,Low,Average,6,7,4,4,5,3,7,4,7,5,algebra
+S00959,High,Average,4,3,3,2,6,6,4,4,6,6,fractions/decimals
+S00960,High,Low,0,4,0,2,3,4,3,0,0,2,number sequences
+S00961,Low,Low,4,6,8,5,4,4,4,5,4,6,number sequences
+S00962,Medium,Low,4,6,7,6,7,7,3,5,3,6,angles
+S00963,Medium,Average,6,4,5,4,4,3,5,7,7,6,algebra
+S00964,Medium,Low,7,7,7,5,3,6,7,3,7,5,indices
+S00965,High,Low,6,3,4,6,6,2,3,2,5,3,algebra
+S00966,Medium,Average,4,2,4,3,3,2,3,2,5,3,perimeter
+S00967,Medium,Average,4,3,2,4,3,2,2,6,2,3,ratio
+S00968,Low,Average,5,4,2,3,6,3,5,4,5,6,ratio
+S00969,High,Average,0,2,0,3,2,0,0,0,0,2,number sequences
+S00970,Low,High,10,10,7,9,7,10,7,8,8,8,ratio
+S00971,Low,Average,3,4,4,5,6,3,5,6,3,5,number sequences
+S00972,Medium,Low,6,8,7,9,6,7,8,8,8,6,number sequences
+S00973,High,Low,2,0,0,1,0,1,0,2,2,1,perimeter
+S00974,Medium,High,5,5,5,7,9,7,9,7,6,8,number sequences
+S00975,High,Average,3,5,5,2,1,1,3,4,1,1,indices
+S00976,Medium,High,6,5,9,9,9,8,5,9,6,6,perimeter
+S00977,Medium,Average,4,7,3,3,4,5,7,3,6,5,ratio
+S00978,Low,High,9,10,10,10,7,10,7,10,9,7,indices
+S00979,Medium,Average,4,4,6,4,7,5,7,4,7,7,number sequences
+S00980,Low,Average,5,5,4,8,4,4,4,8,8,4,ratio
+S00981,Low,Very High,7,10,9,7,7,10,8,10,10,10,number sequences
+S00982,Medium,High,9,5,7,5,7,7,6,7,6,8,perimeter
+S00983,High,Low,5,4,6,4,4,6,6,3,4,6,volume and capacity
+S00984,Medium,High,6,3,6,5,3,3,7,6,3,6,perimeter
+S00985,Medium,Very High,3,4,2,4,5,4,5,4,5,4,ratio
+S00986,Medium,Average,9,8,5,6,9,6,9,9,9,7,ratio
+S00987,Low,Very High,7,8,8,9,6,5,8,5,6,6,algebra
+S00988,Medium,High,5,8,6,4,7,6,5,5,8,7,fractions/decimals
+S00989,Medium,High,7,5,6,4,6,5,3,3,6,3,angles
+S00990,Medium,High,6,5,7,5,7,5,7,6,8,8,perimeter
+S00991,High,Low,0,0,1,2,2,0,0,1,0,0,number sequences
+S00992,Low,Average,7,4,7,7,4,5,4,6,4,6,perimeter
+S00993,High,Average,3,3,4,2,3,4,4,3,3,4,fractions/decimals
+S00994,High,Average,6,6,4,3,5,6,3,6,5,4,fractions/decimals
+S00995,High,Low,3,0,2,0,0,2,3,3,1,0,perimeter
+S00996,Low,High,10,7,8,10,10,9,10,10,7,9,perimeter
+S00997,Medium,Average,6,6,9,9,9,5,6,7,9,5,algebra
+S00998,Medium,Average,4,5,2,6,3,6,3,5,4,3,ratio
+S00999,Medium,Low,9,5,5,7,9,7,7,7,8,6,perimeter
+S01000,High,Low,0,0,0,0,3,2,2,3,0,0,number sequences
+S01001,Low,Very High,8,10,10,7,10,9,10,10,8,10,fractions/decimals
+S01002,High,Low,5,3,5,4,6,3,5,3,3,2,probability
+S01003,Medium,Very High,4,3,3,6,3,3,3,3,5,7,perimeter
+S01004,Medium,Average,6,7,4,4,7,4,7,4,4,7,ratio
+S01005,Low,Average,6,6,6,4,8,6,8,5,5,6,fractions/decimals
+S01006,High,Low,6,5,5,4,6,3,3,4,5,2,probability
+S01007,High,Low,2,3,1,0,3,0,0,0,1,2,fractions/decimals
+S01008,Medium,Average,6,8,6,5,7,9,6,5,7,6,fractions/decimals
+S01009,Low,High,9,7,7,6,5,8,5,9,8,8,indices
+S01010,Low,Average,9,7,7,5,7,5,9,7,8,9,fractions/decimals
+S01011,Medium,High,6,6,6,5,6,6,5,5,8,5,fractions/decimals
+S01012,Medium,Average,9,8,5,9,5,6,9,5,6,7,ratio
+S01013,Medium,Low,6,5,2,2,4,5,2,6,2,2,ratio
+S01014,Low,Average,3,3,3,7,3,7,6,3,6,7,number sequences
+S01015,High,Average,6,3,2,3,5,2,2,5,2,2,ratio
+S01016,Low,High,10,10,9,6,6,8,10,7,10,8,fractions/decimals
+S01017,Medium,High,7,8,7,4,7,8,5,5,6,6,fractions/decimals
+S01018,High,Low,3,0,0,0,1,2,1,0,0,0,perimeter
+S01019,Low,Average,3,3,4,6,5,7,5,7,4,3,number sequences
+S01020,High,High,5,5,7,7,5,5,6,3,4,3,volume and capacity
+S01021,Low,High,8,9,10,10,8,7,7,9,7,9,algebra
+S01022,Low,High,7,10,7,9,7,8,9,7,10,9,number sequences
+S01023,Medium,Low,5,5,7,7,8,7,7,5,5,5,number sequences
+S01024,Low,High,6,9,6,5,8,7,6,5,8,7,fractions/decimals
+S01025,Low,Low,4,8,6,8,7,5,4,6,4,4,number sequences
+S01026,Medium,High,4,4,6,6,5,6,3,3,5,5,angles
+S01027,Medium,High,5,2,6,6,2,4,6,6,2,3,perimeter
+S01028,Low,Very High,8,8,8,9,9,7,10,7,9,7,algebra
+S01029,Low,Average,6,5,4,6,4,4,3,6,5,5,angles
+S01030,Low,Low,5,7,6,7,8,5,5,4,8,4,volume and capacity
+S01031,Medium,Very High,4,6,4,5,8,8,7,8,5,8,number sequences
+S01032,High,Average,0,3,2,2,3,0,4,1,2,0,number sequences
+S01033,Low,Very High,8,8,8,9,7,6,8,8,8,6,algebra
+S01034,Low,Average,9,5,9,7,9,9,9,7,9,6,perimeter
+S01035,High,Low,3,4,4,6,6,6,4,6,6,6,number sequences
+S01036,High,Average,3,3,3,4,3,5,1,5,3,4,angles
+S01037,High,High,6,4,2,2,4,3,3,2,3,2,ratio
+S01038,Low,Average,5,3,4,5,4,7,5,6,7,7,perimeter
+S01039,High,High,3,6,4,4,5,6,7,5,3,5,number sequences
+S01040,Medium,Average,6,7,9,8,8,6,5,9,7,8,angles
+S01041,Medium,Average,8,7,9,9,9,7,8,5,6,5,volume and capacity
+S01042,High,Low,2,3,0,1,1,1,2,2,1,3,ratio
+S01043,Medium,Average,7,5,5,7,3,7,5,3,3,6,indices
+S01044,Medium,Low,2,4,5,5,2,2,5,4,5,3,number sequences
+S01045,Medium,Low,4,4,7,7,7,8,4,5,7,6,number sequences
+S01046,High,Average,0,3,2,3,4,4,0,4,0,3,number sequences
+S01047,High,Low,3,4,4,4,5,3,4,1,2,1,volume and capacity
+S01048,Low,Average,6,5,5,7,4,5,7,7,4,7,indices
+S01049,Medium,Low,3,4,7,3,4,4,6,6,6,5,number sequences
+S01050,High,Low,6,3,6,4,3,5,3,3,4,3,perimeter
+S01051,Medium,High,5,4,6,4,2,5,5,5,4,6,indices
+S01052,Medium,High,8,8,7,8,5,8,8,8,6,5,indices
+S01053,Low,High,6,10,8,9,7,8,7,6,10,9,number sequences
+S01054,Medium,Average,3,6,5,5,3,4,2,3,4,2,angles
+S01055,Medium,Very High,3,6,6,5,6,6,2,4,5,4,angles
+S01056,Medium,Average,2,2,2,3,6,5,6,5,2,6,number sequences
+S01057,Medium,Average,7,6,6,5,5,6,7,5,4,6,area
+S01058,Medium,Low,3,6,3,5,2,6,3,3,2,5,indices
+S01059,High,Average,2,5,6,6,5,2,5,2,5,3,number sequences
+S01060,Low,Average,6,3,4,4,5,3,4,6,4,3,perimeter
+S01061,High,Low,2,3,3,1,0,2,2,0,4,4,indices
+S01062,Medium,High,6,7,6,7,6,7,4,4,5,5,angles
+S01063,Medium,Average,2,5,3,5,2,5,4,3,2,2,number sequences
+S01064,Low,Average,3,2,2,6,3,4,6,5,5,5,perimeter
+S01065,Medium,Very High,5,4,5,6,8,7,6,5,6,7,perimeter
+S01066,Low,Average,7,4,4,6,3,5,7,3,6,3,indices
+S01067,Medium,Average,4,7,8,7,5,4,5,6,7,5,number sequences
+S01068,High,Low,0,3,0,3,0,2,0,0,3,1,number sequences
+S01069,Medium,Average,6,5,6,3,4,5,5,7,6,6,fractions/decimals
+S01070,Low,Very High,9,8,6,10,8,9,6,9,8,7,ratio
+S01071,Medium,High,6,6,7,5,5,4,5,4,5,5,algebra
+S01072,Medium,Low,9,8,7,8,6,6,8,6,6,6,indices
+S01073,Low,Low,4,5,3,7,6,5,6,7,7,3,ratio
+S01074,Medium,Average,6,6,3,6,5,4,5,4,7,6,ratio
+S01075,Low,High,6,8,6,10,8,7,10,7,7,10,number sequences
+S01076,High,High,7,3,5,5,7,5,7,3,3,6,perimeter
+S01077,Low,Very High,6,9,7,6,10,6,9,8,10,9,number sequences
+S01078,Medium,Average,8,6,6,5,5,6,8,5,4,4,area
+S01079,Low,Very High,6,7,10,7,6,8,9,8,6,10,number sequences
+S01080,High,Low,0,3,1,2,3,0,0,3,0,3,number sequences
+S01081,Low,High,7,8,9,9,5,9,9,9,6,6,indices
+S01082,Low,Average,4,4,6,7,6,6,5,6,4,7,number sequences
+S01083,Medium,Average,4,2,3,5,6,6,2,6,4,2,perimeter
+S01084,High,Low,3,0,2,1,1,0,1,1,0,0,perimeter
+S01085,Low,Very High,6,8,6,9,7,6,8,8,7,9,number sequences
+S01086,High,Average,1,1,1,2,0,0,3,0,2,0,indices
+S01087,Low,Very High,5,7,9,7,5,5,6,6,7,7,number sequences
+S01088,High,Average,3,1,1,2,4,0,3,1,3,4,algebra
+S01089,High,Average,3,0,0,2,0,4,1,1,1,1,perimeter
+S01090,Low,High,6,7,8,10,7,10,8,7,7,10,number sequences
+S01091,Medium,High,7,6,4,4,7,7,7,7,3,6,area
+S01092,Low,Very High,10,9,7,8,7,10,8,8,8,9,ratio
+S01093,Medium,Average,6,5,7,7,8,6,7,8,8,7,perimeter
+S01094,Medium,Average,6,7,7,5,5,8,7,7,8,5,fractions/decimals
+S01095,Medium,Average,3,6,5,3,2,3,6,4,6,2,indices
+S01096,Medium,High,8,8,6,7,8,7,7,7,4,8,area
+S01097,High,Low,3,5,4,5,2,4,3,4,2,4,indices
+S01098,Medium,Average,9,5,5,9,6,6,6,8,6,9,perimeter
+S01099,Medium,Average,8,7,7,9,8,7,8,7,5,8,area
+S01100,High,High,4,6,6,2,3,3,5,5,5,6,fractions/decimals
+S01101,High,Average,0,3,2,0,3,4,4,3,1,0,number sequences
+S01102,High,Average,2,2,3,1,2,0,0,4,4,1,algebra
+S01103,Medium,Low,6,8,7,5,8,9,8,6,9,8,fractions/decimals
+S01104,Medium,Average,7,5,7,7,4,5,3,4,5,4,angles
+S01105,Low,Very High,6,10,8,7,7,10,8,7,6,10,number sequences
+S01106,Low,Average,8,4,8,7,7,5,8,5,8,4,perimeter
+S01107,Low,High,6,10,7,6,6,9,10,9,6,9,number sequences
+S01108,Low,Average,6,6,4,6,5,7,8,8,6,5,ratio
+S01109,High,Low,3,2,3,0,3,0,2,4,0,4,fractions/decimals
+S01110,Low,Very High,8,9,9,6,5,9,9,7,7,7,indices
+S01111,High,High,7,9,7,6,6,6,6,6,8,6,fractions/decimals
+S01112,Low,High,9,7,8,9,8,7,10,7,8,10,perimeter
+S01113,High,Average,1,3,1,4,4,4,2,5,3,4,number sequences
+S01114,Medium,Low,6,4,5,7,8,4,6,8,6,7,perimeter
+S01115,High,High,7,5,6,6,5,5,6,7,7,8,perimeter
+S01116,High,Low,1,0,0,0,1,0,3,2,3,3,perimeter
+S01117,High,Low,2,4,6,5,2,5,5,6,4,5,number sequences
+S01118,High,Low,1,3,3,4,5,5,5,5,3,5,number sequences
+S01119,Low,High,5,5,6,7,6,6,6,5,7,6,number sequences
+S01120,High,High,8,8,5,6,5,6,7,7,8,5,ratio
+S01121,Medium,Very High,6,6,9,6,6,5,7,8,9,8,algebra
+S01122,Low,High,10,9,10,8,6,7,9,6,8,9,indices
+S01123,Low,High,10,6,8,6,9,10,7,7,9,10,perimeter
+S01124,High,Average,0,0,0,2,0,0,0,3,0,0,number sequences
+S01125,Low,High,6,6,7,5,6,7,6,5,8,7,fractions/decimals
+S01126,High,Average,3,2,3,3,0,0,0,2,2,0,indices
+S01127,Medium,Average,3,2,5,3,2,6,4,3,2,6,perimeter
+S01128,Low,Average,3,6,3,7,5,3,6,3,6,3,number sequences
+S01129,High,Low,3,3,4,3,1,0,1,0,1,4,algebra
+S01130,Medium,Low,2,6,4,3,5,6,5,6,4,3,number sequences
+S01131,High,Average,1,1,3,3,1,3,3,2,5,1,number sequences
+S01132,Low,High,8,9,6,6,5,7,6,8,8,8,indices
+S01133,High,High,3,3,3,5,5,4,4,4,2,2,area
+S01134,Low,High,9,5,9,9,9,7,8,6,5,8,perimeter
+S01135,High,High,5,6,4,2,6,4,3,5,6,2,fractions/decimals
+S01136,Medium,Average,4,5,4,6,7,7,3,4,5,6,angles
+S01137,Low,High,7,8,6,8,8,6,6,7,9,6,ratio
+S01138,Low,Very High,9,10,7,7,9,10,10,7,10,9,ratio
+S01139,Medium,Low,4,5,5,2,2,4,2,3,2,5,fractions/decimals
+S01140,Low,Average,7,3,5,7,5,7,7,4,6,4,perimeter
+S01141,Low,Average,4,6,6,3,6,7,5,3,7,4,fractions/decimals
+S01142,Low,High,8,10,8,6,6,9,6,7,10,9,fractions/decimals
+S01143,High,Low,1,0,3,2,0,0,4,1,4,2,perimeter
+S01144,Low,High,7,5,5,8,9,5,7,7,7,5,perimeter
+S01145,High,Low,2,3,2,5,6,4,4,5,4,6,number sequences
+S01146,Low,Low,6,5,9,6,7,8,8,8,5,6,perimeter
+S01147,Medium,High,3,6,5,4,3,5,6,5,6,5,number sequences
+S01148,Low,Very High,5,9,5,6,7,7,7,9,8,7,number sequences
+S01149,Medium,Average,2,6,3,5,5,3,4,3,5,6,number sequences
+S01150,High,Average,4,4,1,3,5,1,1,3,5,5,ratio
+S01151,Medium,Low,7,8,7,6,8,6,5,8,4,8,area
+S01152,High,High,7,9,6,6,9,9,7,9,8,8,ratio
+S01153,Low,High,10,8,7,6,10,7,6,8,6,8,fractions/decimals
+S01154,High,High,5,3,4,7,4,5,5,5,3,3,perimeter
+S01155,Medium,Very High,2,6,6,3,4,2,4,5,4,6,number sequences
+S01156,Low,High,9,7,9,10,6,9,9,10,6,10,indices
+S01157,Medium,High,5,5,6,5,3,4,2,4,2,4,angles
+S01158,Low,High,10,8,10,10,9,8,10,7,10,7,volume and capacity
+S01159,Medium,Average,3,6,7,4,3,3,4,4,6,6,number sequences
+S01160,Low,High,9,9,10,8,10,10,7,8,8,9,angles
+S01161,Medium,Low,7,4,4,3,6,3,5,3,4,6,fractions/decimals
+S01162,High,Average,1,1,0,1,2,0,2,0,2,0,ratio
+S01163,Low,Low,7,4,4,7,3,3,7,7,3,3,indices
+S01164,Low,High,8,10,8,10,7,9,10,9,7,10,indices
+S01165,High,Average,1,3,3,1,2,1,2,5,4,1,number sequences
+S01166,Medium,Average,8,9,5,6,5,8,6,6,6,7,ratio
+S01167,Medium,Average,6,7,9,7,9,9,5,5,7,7,angles
+S01168,Medium,Average,6,6,7,7,3,6,4,3,3,4,indices
+S01169,Medium,Low,5,5,7,4,3,3,7,6,7,3,indices
+S01170,Low,High,8,10,9,7,10,10,10,10,8,9,fractions/decimals
+S01171,High,Average,3,6,3,3,5,6,4,5,5,4,number sequences
+S01172,High,Low,0,0,1,0,0,0,1,0,0,1,number sequences
+S01173,High,Average,3,0,3,2,1,3,3,3,4,1,perimeter
+S01174,Medium,Average,2,4,6,3,6,6,4,6,2,4,number sequences
+S01175,Medium,Low,5,6,9,6,8,9,7,7,9,8,number sequences
+S01176,Medium,Average,5,6,4,6,8,4,7,5,7,5,ratio
+S01177,High,Average,0,3,0,0,0,2,4,3,3,3,number sequences
+S01178,Low,Very High,6,6,7,7,7,7,9,9,5,8,area
+S01179,Medium,Very High,4,6,7,5,4,4,7,8,5,4,number sequences
+S01180,Medium,High,6,3,4,7,4,6,6,3,7,7,perimeter
+S01181,High,Low,1,2,4,2,1,1,3,2,2,1,number sequences
+S01182,Medium,Average,5,5,5,7,5,8,7,8,8,7,number sequences
+S01183,Medium,High,4,4,6,7,6,7,4,8,6,5,number sequences
+S01184,Medium,High,5,6,4,7,6,3,7,5,7,4,algebra
+S01185,High,Low,4,1,3,5,2,2,2,3,4,2,perimeter
+S01186,High,Average,2,3,4,2,4,5,4,3,4,3,number sequences
+S01187,High,Average,1,0,1,2,3,2,0,2,2,1,perimeter
+S01188,Low,High,10,10,10,7,9,9,9,7,10,8,fractions/decimals
+S01189,High,Average,0,0,0,2,0,1,1,2,1,2,number sequences
+S01190,Low,Average,5,5,4,5,2,3,5,3,3,4,indices
+S01191,High,High,2,5,6,2,3,6,5,5,6,3,number sequences
+S01192,Medium,High,6,7,6,4,5,6,7,7,8,5,fractions/decimals
+S01193,High,Average,1,3,3,0,0,3,1,2,2,2,fractions/decimals
+S01194,High,Low,0,0,3,2,4,4,3,1,4,4,number sequences
+S01195,High,Low,2,3,2,2,4,5,4,6,6,2,number sequences
+S01196,Medium,High,8,8,6,6,5,7,6,6,4,7,area
+S01197,Low,Very High,10,9,8,7,10,9,8,9,8,10,fractions/decimals
+S01198,Medium,Average,6,3,6,6,6,4,5,6,4,5,perimeter
+S01199,Medium,Average,5,6,3,6,4,6,2,4,6,4,angles
+S01200,High,Low,0,3,0,0,2,4,3,1,2,4,number sequences
+S01201,Medium,High,4,3,3,7,5,7,4,4,5,3,perimeter
+S01202,Low,Very High,6,8,8,5,6,7,9,6,6,9,fractions/decimals
+S01203,Low,Average,5,7,3,3,4,3,3,3,4,3,ratio
+S01204,Medium,Average,8,8,5,8,8,5,6,7,8,8,ratio
+S01205,High,High,5,4,5,7,4,5,5,7,8,4,perimeter
+S01206,High,High,7,8,8,7,8,4,5,8,6,8,algebra
+S01207,Low,High,8,5,5,5,5,7,8,6,8,7,perimeter
+S01208,High,Low,1,4,4,3,4,1,4,1,2,4,number sequences
+S01209,Low,High,7,6,9,8,8,10,10,6,6,10,perimeter
+S01210,Low,High,7,8,6,7,7,8,10,9,8,10,ratio
+S01211,Medium,Average,4,6,8,4,8,5,5,6,7,7,number sequences
+S01212,Medium,Average,3,7,6,7,4,7,6,4,3,7,number sequences
+S01213,High,High,6,5,8,5,9,9,6,5,6,7,perimeter
+S01214,High,High,4,7,4,4,3,4,7,4,3,5,indices
+S01215,Medium,High,8,6,7,9,5,5,5,6,7,6,indices
+S01216,Low,High,9,6,5,7,6,8,9,8,8,9,ratio
+S01217,Medium,High,5,6,8,6,9,8,5,8,5,6,number sequences
+S01218,Low,High,7,8,10,10,7,7,7,8,10,7,number sequences
+S01219,Medium,Average,4,7,5,8,5,6,6,7,5,8,number sequences
+S01220,Low,High,8,6,10,8,9,10,10,9,10,9,perimeter
+S01221,High,Low,0,0,0,1,0,1,2,0,1,0,number sequences
+S01222,Low,High,5,5,6,9,9,6,9,5,8,7,number sequences
+S01223,Medium,Average,5,7,5,8,7,5,7,5,7,5,number sequences
+S01224,Low,High,7,5,6,8,9,9,9,7,9,5,perimeter
+S01225,Medium,Average,5,7,8,8,5,8,7,9,7,9,number sequences
+S01226,Medium,Average,7,7,4,4,5,4,7,4,5,8,ratio
+S01227,Medium,Low,3,2,2,4,6,6,6,3,6,6,perimeter
+S01228,Medium,Average,4,4,4,4,4,5,6,2,5,6,volume and capacity
+S01229,Low,Average,4,6,3,6,3,3,6,3,6,4,ratio
+S01230,Medium,Very High,6,2,2,3,5,6,3,2,2,5,perimeter
+S01231,Medium,Average,6,6,8,9,7,7,8,5,8,8,volume and capacity
+S01232,Low,High,5,8,5,6,5,9,5,9,7,9,number sequences
+S01233,Low,Average,3,6,5,4,5,4,7,3,4,5,number sequences
+S01234,Low,High,9,7,7,10,9,7,7,7,9,10,perimeter
+S01235,Medium,Average,8,7,8,5,7,5,7,7,7,8,fractions/decimals
+S01236,Low,High,9,7,7,10,6,10,7,7,10,6,indices
+S01237,High,Low,1,5,4,4,2,5,4,2,2,4,number sequences
+S01238,High,Average,3,2,2,4,2,0,3,0,4,1,algebra
+S01239,Medium,Low,6,6,8,7,9,9,8,5,9,5,volume and capacity
+S01240,Medium,Very High,4,6,6,4,6,7,5,4,7,4,number sequences
+S01241,High,Low,3,1,1,3,3,1,1,4,3,4,perimeter
+S01242,Medium,Average,4,5,4,7,5,6,5,5,6,5,number sequences
+S01243,Medium,High,7,5,4,4,3,6,6,7,5,3,indices
+S01244,Low,Average,7,3,7,5,7,6,5,5,3,4,perimeter
+S01245,Medium,Average,7,8,4,5,8,6,7,7,4,4,ratio
+S01246,Medium,High,4,3,2,5,2,2,5,4,3,3,ratio
+S01247,Medium,Average,6,7,5,6,6,9,7,7,6,9,ratio
+S01248,High,Average,3,0,0,0,3,1,3,0,0,0,perimeter
+S01249,Low,High,9,5,5,6,9,7,5,7,8,8,perimeter
+S01250,Medium,Average,8,5,5,4,7,4,8,7,6,5,fractions/decimals
+S01251,Low,Very High,9,10,6,7,7,9,6,6,6,10,ratio
+S01252,Medium,High,5,6,8,4,4,8,8,8,5,6,fractions/decimals
+S01253,Low,Very High,9,10,7,10,8,7,8,8,10,8,ratio
+S01254,High,Average,3,2,0,1,1,1,0,1,0,1,ratio
+S01255,Low,High,7,5,5,5,9,6,6,9,9,7,perimeter
+S01256,High,High,7,6,7,7,7,7,7,5,4,4,area
+S01257,Medium,Average,6,5,9,5,9,7,8,7,5,8,perimeter
+S01258,Medium,Average,6,2,3,3,3,2,2,3,5,2,perimeter
+S01259,High,Low,4,2,3,5,2,5,5,3,2,5,perimeter
+S01260,Low,High,10,9,9,7,8,8,10,7,8,8,fractions/decimals
+S01261,Low,High,8,9,9,6,8,9,10,6,7,10,fractions/decimals
+S01262,Medium,Average,5,7,8,4,8,7,7,5,6,7,fractions/decimals
+S01263,Low,High,8,7,9,8,6,6,6,10,7,8,indices
+S01264,High,Low,2,4,6,4,6,5,6,2,5,3,number sequences
+S01265,Low,Average,6,6,5,5,4,8,5,5,4,6,indices
+S01266,Low,Average,7,6,9,7,8,7,5,6,6,8,angles
+S01267,Low,High,7,8,9,9,10,6,10,6,7,6,algebra
+S01268,High,High,3,4,3,4,4,6,7,3,6,5,number sequences
+S01269,Low,High,6,6,7,8,8,9,7,8,10,6,number sequences
+S01270,High,Average,3,1,3,0,2,2,2,3,0,3,fractions/decimals
+S01271,Low,Average,5,6,6,8,7,6,6,6,7,9,number sequences
+S01272,Low,High,7,8,10,9,9,10,8,10,7,7,number sequences
+S01273,Low,Average,4,4,3,2,3,5,6,5,4,3,fractions/decimals
+S01274,High,Average,4,2,3,2,4,4,2,2,6,5,perimeter
+S01275,Low,Very High,7,6,8,9,9,5,8,5,8,6,algebra
+S01276,Medium,Average,6,3,4,6,5,6,5,7,7,5,perimeter
+S01277,Low,High,8,6,7,8,10,6,9,9,7,7,perimeter
+S01278,High,Low,0,3,0,0,0,0,3,2,3,1,number sequences
+S01279,Low,Average,7,6,5,8,7,6,8,7,4,5,area
+S01280,Medium,Very High,5,7,4,8,4,7,5,8,5,6,ratio
+S01281,Medium,Average,5,8,7,5,9,7,6,5,7,9,number sequences
+S01282,Medium,High,8,9,8,5,9,7,6,5,7,6,fractions/decimals
+S01283,Medium,Low,8,8,5,5,5,9,8,7,5,6,ratio
+S01284,Low,High,8,7,9,6,10,8,10,7,6,7,fractions/decimals
+S01285,High,Low,2,1,2,3,1,0,2,0,3,1,algebra
+S01286,Low,Low,9,5,9,6,8,5,5,8,5,5,perimeter
+S01287,Medium,Average,8,7,8,8,5,7,9,5,5,9,indices
+S01288,Low,High,6,6,10,10,7,10,9,10,10,10,number sequences
+S01289,Low,Low,3,6,5,6,2,4,2,3,5,2,indices
+S01290,Medium,High,6,7,9,6,9,8,9,8,8,8,number sequences
+S01291,Low,Average,6,8,6,9,5,7,6,9,5,9,indices
+S01292,High,Low,4,2,3,2,2,5,2,5,1,4,area
+S01293,Low,Average,4,3,4,5,2,2,6,3,4,6,indices
+S01294,High,Average,3,3,1,2,1,2,4,3,2,4,ratio
+S01295,High,Low,4,3,5,1,2,5,5,2,5,1,fractions/decimals
+S01296,High,Average,1,4,2,4,5,3,3,3,2,5,number sequences
+S01297,High,Low,2,1,4,1,3,0,3,1,1,2,algebra
+S01298,Low,High,6,10,10,10,7,6,10,8,8,9,number sequences
+S01299,Medium,Average,4,4,4,8,8,4,6,5,5,7,number sequences
+S01300,High,High,8,5,6,6,6,6,8,6,9,6,perimeter
+S01301,Low,Average,7,6,5,4,8,7,4,6,5,8,fractions/decimals
+S01302,High,Average,5,1,3,5,2,5,3,4,2,1,perimeter
+S01303,Medium,Average,3,2,4,5,4,5,3,2,5,6,perimeter
+S01304,Medium,Very High,3,2,6,2,2,6,4,4,5,5,perimeter
+S01305,Medium,Average,4,5,5,4,5,8,6,4,5,4,number sequences
+S01306,Medium,Average,6,6,6,3,6,4,3,3,6,7,fractions/decimals
+S01307,Low,High,8,7,10,10,10,8,8,8,10,7,perimeter
+S01308,Medium,Average,3,4,7,5,4,5,5,6,5,7,number sequences
+S01309,High,Low,2,0,2,2,3,0,2,1,3,1,perimeter
+S01310,Medium,High,6,5,4,3,5,3,6,2,4,3,volume and capacity
+S01311,Medium,Average,7,7,3,7,7,6,5,6,6,6,ratio
+S01312,High,Average,3,0,4,0,0,4,4,0,0,0,perimeter
+S01313,Medium,Average,5,5,6,7,4,4,4,7,8,5,indices
+S01314,High,Average,2,2,5,2,4,3,3,3,3,2,number sequences
+S01315,High,Low,4,3,2,5,2,6,4,4,5,4,ratio
+S01316,High,Low,2,2,3,2,0,1,0,1,1,0,indices
+S01317,Medium,High,7,7,5,7,5,5,7,6,5,5,ratio
+S01318,Low,Very High,6,9,8,7,10,8,6,10,7,8,number sequences
+S01319,High,Low,6,2,3,5,6,6,6,2,3,3,perimeter
+S01320,High,Low,4,4,3,6,2,4,2,2,2,6,indices
+S01321,Medium,High,5,5,4,4,5,6,8,5,7,4,ratio
+S01322,Medium,Average,8,6,6,6,4,4,5,8,8,4,indices
+S01323,Low,Average,4,3,7,4,7,7,5,6,7,4,perimeter
+S01324,Low,High,6,9,8,5,7,9,5,5,6,5,fractions/decimals
+S01325,High,Average,3,2,1,0,1,3,0,0,3,3,fractions/decimals
+S01326,High,High,4,6,5,5,6,7,8,7,5,4,number sequences
+S01327,Low,Very High,7,7,9,10,8,10,7,10,10,8,number sequences
+S01328,High,Average,1,2,5,4,4,1,1,3,4,1,number sequences
+S01329,High,Low,1,0,1,3,0,1,0,2,3,0,perimeter
+S01330,Medium,High,6,6,4,6,3,5,6,3,2,5,area
+S01331,Medium,Low,6,5,7,9,5,6,8,5,6,8,perimeter
+S01332,Low,Average,5,4,4,4,4,5,6,5,7,6,perimeter
+S01333,High,Low,3,1,4,1,1,2,1,1,3,5,perimeter
+S01334,Medium,Low,7,5,3,6,3,6,4,3,5,4,ratio
+S01335,High,High,7,4,7,7,4,8,8,6,6,7,perimeter
+S01336,High,Low,1,0,1,2,0,3,1,4,2,2,perimeter
+S01337,Low,Average,9,9,7,5,9,8,8,5,5,6,fractions/decimals
+S01338,Medium,Average,5,4,4,5,3,6,2,3,4,4,angles
+S01339,High,Low,2,2,4,2,5,2,6,4,6,4,number sequences
+S01340,High,Low,2,2,1,3,4,1,1,0,2,3,volume and capacity
+S01341,Medium,High,5,6,7,5,8,5,5,7,9,9,number sequences
+S01342,Medium,Average,4,3,5,4,6,3,3,2,3,2,volume and capacity
+S01343,Medium,Low,2,3,4,6,5,4,4,3,6,6,number sequences
+S01344,Medium,Very High,8,8,8,4,8,4,7,4,5,7,fractions/decimals
+S01345,Medium,Low,5,5,7,8,8,8,4,6,5,7,angles
+S01346,High,Average,5,6,2,6,4,6,5,5,3,2,ratio
+S01347,Medium,Low,4,6,5,6,7,6,6,8,5,6,number sequences
+S01348,Low,Average,3,7,7,3,4,7,3,6,5,6,number sequences
+S01349,High,Average,6,6,6,2,5,3,2,4,3,3,fractions/decimals
+S01350,High,Low,4,3,3,1,0,4,1,4,3,0,indices
+S01351,Medium,Average,7,6,6,5,6,4,7,4,4,4,algebra
+S01352,High,High,3,4,5,2,2,4,3,6,3,3,fractions/decimals
+S01353,Medium,Low,5,4,3,6,6,2,4,2,6,5,algebra
+S01354,Low,High,6,9,6,7,8,9,9,8,7,8,number sequences
+S01355,Low,Very High,10,7,10,7,8,10,9,10,10,7,perimeter
+S01356,Low,Low,4,5,6,8,7,8,7,8,8,4,number sequences
+S01357,High,Average,2,3,3,5,1,1,3,2,2,1,indices
+S01358,Low,Very High,7,10,8,9,8,10,9,8,8,10,number sequences
+S01359,Medium,High,6,7,6,4,7,3,7,3,6,7,algebra
+S01360,Medium,High,4,4,4,3,7,4,7,6,7,5,fractions/decimals
+S01361,High,Low,0,2,3,4,3,4,0,0,0,1,number sequences
+S01362,High,Low,4,4,3,3,1,0,2,4,4,0,algebra
+S01363,Medium,Low,6,3,7,5,3,5,7,4,4,5,perimeter
+S01364,Low,Average,6,7,5,5,7,9,6,8,8,8,ratio
+S01365,High,Low,4,1,3,3,4,0,0,3,2,2,algebra
+S01366,Medium,High,8,4,4,7,5,8,5,8,7,7,perimeter
+S01367,High,Average,3,2,6,5,2,5,6,2,2,2,perimeter
+S01368,Low,Very High,7,10,7,10,8,10,9,8,10,10,number sequences
+S01369,High,Low,4,1,1,1,2,2,4,3,3,1,perimeter
+S01370,Medium,Very High,4,7,6,8,5,4,8,6,6,7,number sequences
+S01371,Medium,Low,8,8,9,7,9,7,7,6,6,8,volume and capacity
+S01372,Low,High,8,9,10,8,10,9,8,9,10,10,number sequences
+S01373,Medium,Very High,2,2,2,2,3,2,3,5,2,6,number sequences
+S01374,High,Average,4,5,5,1,5,4,5,1,1,5,fractions/decimals
+S01375,Low,Low,5,2,4,6,6,3,5,6,5,4,perimeter
+S01376,Medium,Low,9,5,6,9,5,6,8,9,9,6,perimeter
+S01377,Medium,High,9,5,6,7,5,7,6,6,6,5,perimeter
+S01378,Medium,Very High,7,5,9,8,7,8,8,7,8,9,perimeter
+S01379,High,Average,0,0,1,1,0,0,1,3,0,2,number sequences
+S01380,Medium,Very High,6,5,4,4,3,7,7,6,6,6,indices
+S01381,High,Average,2,6,4,3,2,5,3,6,4,3,number sequences
+S01382,Low,High,6,9,5,6,9,5,6,8,9,8,ratio
+S01383,Low,High,8,7,10,7,9,10,8,10,7,7,perimeter
+S01384,High,Low,3,1,0,3,2,0,2,3,3,1,ratio
+S01385,High,Average,4,3,2,6,6,2,6,6,4,6,ratio
+S01386,Low,Average,8,6,7,6,6,5,8,7,8,9,algebra
+S01387,Low,Very High,8,10,10,9,8,10,10,9,10,7,probability
+S01388,Low,Very High,8,10,10,6,8,9,7,8,10,8,fractions/decimals
+S01389,High,Average,0,2,0,0,4,0,0,1,1,2,number sequences
+S01390,Medium,Average,6,7,5,7,7,3,6,4,5,4,algebra
+S01391,Low,High,10,7,6,7,9,10,8,9,7,6,ratio
+S01392,Medium,Very High,7,7,6,6,5,8,6,6,5,5,indices
+S01393,Low,Average,2,3,4,6,2,2,3,2,2,2,number sequences
+S01394,Low,Very High,10,9,9,10,7,10,7,10,8,7,indices
+S01395,Medium,Average,2,6,5,4,2,3,3,4,5,5,number sequences
+S01396,High,Low,6,6,4,3,2,5,4,2,6,4,indices
+S01397,High,High,7,4,6,4,5,7,8,4,4,7,perimeter
+S01398,Medium,Low,7,3,4,7,5,5,6,4,3,7,perimeter
+S01399,Low,High,9,8,5,8,9,9,8,7,8,8,ratio
+S01400,High,Low,2,2,4,2,2,0,4,4,3,0,algebra
+S01401,High,Average,1,2,1,5,4,2,2,5,4,4,number sequences
+S01402,Medium,High,8,5,7,7,5,8,4,5,6,7,angles
+S01403,Medium,High,3,4,6,7,6,6,7,6,3,4,number sequences
+S01404,Medium,Low,6,6,2,3,6,4,6,6,4,2,ratio
+S01405,High,Average,2,0,4,4,0,2,0,0,3,3,perimeter
+S01406,Medium,High,4,6,6,8,7,8,4,8,5,7,number sequences
+S01407,Medium,Average,6,5,5,6,3,7,5,7,4,5,indices
+S01408,Low,Average,8,7,4,7,7,4,8,7,5,5,ratio
+S01409,High,Average,2,4,1,4,2,1,2,3,3,3,ratio
+S01410,Medium,High,5,4,6,6,3,5,5,2,5,2,volume and capacity
+S01411,Low,High,9,10,9,10,10,9,7,9,10,10,angles
+S01412,High,Low,2,1,1,0,0,0,1,2,1,3,fractions/decimals
+S01413,High,Low,3,5,6,5,4,5,2,4,2,6,angles
+S01414,Medium,High,5,5,4,5,8,7,8,4,8,6,ratio
+S01415,Low,High,7,10,9,10,10,10,10,7,9,7,number sequences
+S01416,High,Low,3,1,3,3,5,5,4,2,1,1,perimeter
+S01417,Low,Average,8,8,7,8,9,8,7,8,9,6,probability
+S01418,Medium,High,2,3,4,6,5,3,3,4,5,2,number sequences
+S01419,Medium,Very High,8,8,5,6,8,8,7,5,5,8,ratio
+S01420,Low,Low,3,6,3,5,2,4,4,2,3,6,indices
+S01421,High,Average,3,0,3,4,2,1,1,4,2,0,perimeter
+S01422,Low,High,8,5,5,7,5,7,5,9,5,8,perimeter
+S01423,Medium,Very High,7,8,9,5,5,7,7,5,9,7,fractions/decimals
+S01424,Low,Average,3,6,5,5,4,4,3,5,6,6,number sequences
+S01425,Medium,Average,5,3,7,5,6,7,6,4,3,4,perimeter
+S01426,Medium,Average,8,9,8,5,6,8,5,5,8,5,fractions/decimals
+S01427,Low,High,7,8,9,7,7,9,9,7,6,9,area
+S01428,Medium,Very High,7,7,7,5,3,7,4,5,4,3,indices
+S01429,High,Low,2,3,3,2,6,3,3,5,6,3,number sequences
+S01430,Low,High,7,7,7,9,9,9,8,9,6,7,area
+S01431,High,Average,4,3,6,4,2,4,2,2,3,4,indices
+S01432,High,Low,0,3,1,2,0,2,0,1,2,2,number sequences
+S01433,Medium,Very High,7,8,9,7,7,6,8,6,6,6,algebra
+S01434,High,Low,4,2,3,1,2,3,4,4,3,5,fractions/decimals
+S01435,Medium,High,5,8,5,8,8,4,5,8,7,4,algebra
+S01436,Medium,High,7,8,9,7,7,6,9,8,7,6,algebra
+S01437,Medium,Average,3,4,6,4,3,5,2,4,3,4,angles
+S01438,Medium,Average,6,3,2,2,2,6,4,6,6,6,ratio
+S01439,Medium,Average,6,5,4,3,6,5,4,5,2,2,area
+S01440,Medium,Average,5,6,5,6,5,3,7,7,5,4,algebra
+S01441,Medium,Very High,5,5,5,6,3,4,2,3,3,2,angles
+S01442,Medium,Very High,2,4,5,5,6,5,5,4,6,4,number sequences
+S01443,Medium,Very High,7,3,5,3,7,3,3,7,5,6,perimeter
+S01444,Medium,Low,6,5,6,5,3,6,6,3,7,7,indices
+S01445,Medium,Average,3,5,6,5,7,6,4,5,7,4,number sequences
+S01446,Medium,High,5,9,8,7,6,6,7,7,5,7,number sequences
+S01447,Medium,Low,5,5,4,6,4,5,8,8,5,8,ratio
+S01448,High,Low,2,2,6,3,2,6,3,3,5,2,number sequences
+S01449,High,Average,1,0,3,0,0,2,0,0,3,0,perimeter
+S01450,Medium,High,4,3,5,7,4,4,6,6,6,7,perimeter
+S01451,Low,Average,8,9,7,8,9,5,5,6,8,8,algebra
+S01452,Medium,Average,2,4,4,3,6,2,3,6,2,5,number sequences
+S01453,High,High,3,3,4,2,3,3,5,6,5,3,fractions/decimals
+S01454,High,Average,5,2,2,5,2,1,1,3,4,3,algebra
+S01455,Medium,Average,2,3,6,6,3,2,6,3,6,2,number sequences
+S01456,Low,Average,8,7,6,8,7,9,9,5,9,7,volume and capacity
+S01457,High,Low,3,3,2,0,3,2,2,0,3,2,fractions/decimals
+S01458,Medium,High,6,5,6,6,8,6,8,9,9,8,perimeter
+S01459,Low,Average,4,8,7,7,6,4,6,8,7,6,number sequences
+S01460,Medium,Average,6,4,3,4,4,5,5,7,7,4,ratio
+S01461,Medium,High,3,5,3,3,4,3,4,3,4,6,number sequences
+S01462,Low,High,6,10,6,6,8,6,7,7,6,8,number sequences
+S01463,High,Low,5,3,4,1,4,3,5,2,4,2,fractions/decimals
+S01464,Low,Very High,9,9,6,8,6,7,8,9,8,6,ratio
+S01465,High,High,4,6,6,4,4,5,7,3,3,4,volume and capacity
+S01466,Low,High,7,9,7,8,9,10,9,8,9,6,probability
+S01467,High,Low,3,5,3,3,2,4,2,3,6,3,indices
+S01468,Low,Very High,10,7,8,10,10,8,7,8,7,10,perimeter
+S01469,Medium,Very High,2,2,3,6,2,5,5,2,6,2,number sequences
+S01470,High,Low,2,2,3,4,4,2,4,1,1,3,volume and capacity
+S01471,High,Low,1,5,3,4,1,3,3,5,2,2,number sequences
+S01472,High,Average,0,0,3,0,1,2,0,0,1,2,number sequences
+S01473,High,High,7,6,4,7,7,5,5,7,6,7,ratio
+S01474,Low,Average,4,4,8,8,7,7,5,5,4,5,number sequences
+S01475,Medium,Very High,3,5,5,5,2,5,5,3,5,3,indices
+S01476,Low,Very High,10,6,9,8,6,9,6,6,10,9,perimeter
+S01477,High,Low,1,3,2,2,0,0,3,0,1,3,indices
+S01478,Low,Average,7,7,9,9,6,7,9,5,7,5,volume and capacity
+S01479,Medium,Low,6,7,5,5,6,3,6,6,4,5,algebra
+S01480,Medium,Low,2,3,6,5,6,4,6,4,2,6,number sequences
+S01481,Low,Low,3,7,6,6,5,6,3,4,3,3,number sequences
+S01482,Low,Average,9,7,5,5,8,8,5,5,5,8,ratio
+S01483,Low,High,10,10,10,10,9,10,8,7,9,10,volume and capacity
+S01484,High,Low,3,0,0,3,0,2,0,2,0,0,perimeter
+S01485,Medium,High,5,4,7,8,7,8,4,4,8,7,perimeter
+S01486,Medium,Low,8,6,6,4,6,4,5,5,6,5,fractions/decimals
+S01487,High,Average,4,3,2,4,3,3,1,2,4,4,angles
+S01488,Medium,High,5,9,9,8,6,7,5,8,8,9,number sequences
+S01489,Medium,High,7,8,5,5,6,6,6,5,9,8,ratio
+S01490,High,Average,1,4,2,4,3,2,3,2,1,1,number sequences
+S01491,Medium,Average,6,7,5,7,6,8,5,4,8,4,volume and capacity
+S01492,Medium,Average,4,5,5,5,5,3,6,4,5,6,algebra
+S01493,Low,High,7,10,10,8,10,7,6,8,10,10,angles
+S01494,Medium,High,7,4,3,3,3,4,6,4,7,5,ratio
+S01495,Medium,High,2,4,3,5,6,4,6,4,4,3,number sequences
+S01496,Medium,Average,5,8,8,9,9,9,5,8,9,8,number sequences
+S01497,High,High,6,4,6,4,2,5,3,2,2,4,indices
+S01498,High,Low,2,5,5,3,2,1,2,5,2,3,algebra
+S01499,Medium,Average,6,5,4,4,8,7,7,7,4,8,ratio
+S01500,Low,Very High,9,10,9,7,8,9,10,10,9,8,fractions/decimals
+S01501,Medium,Average,6,7,7,7,4,5,4,7,6,8,indices
+S01502,Medium,High,7,6,6,8,8,4,6,6,6,6,algebra
+S01503,Low,Average,8,7,7,5,9,7,8,7,5,8,fractions/decimals
+S01504,Medium,High,9,5,5,5,6,7,7,5,8,8,perimeter
+S01505,Medium,High,4,6,7,4,6,6,6,4,4,3,probability
+S01506,Low,Very High,6,5,7,9,7,7,8,5,6,5,perimeter
+S01507,Medium,High,5,4,6,5,5,4,6,8,7,6,perimeter
+S01508,High,Average,1,2,4,3,2,4,0,3,4,0,angles
+S01509,High,Low,3,4,6,5,2,3,4,3,2,6,indices
+S01510,High,Average,1,1,4,4,1,2,2,0,1,2,volume and capacity
+S01511,High,High,8,8,8,4,6,8,7,6,6,8,fractions/decimals
+S01512,Medium,Average,2,3,5,2,4,4,3,6,4,6,number sequences
+S01513,High,Low,2,1,3,0,2,2,1,0,0,3,fractions/decimals
+S01514,Medium,Average,6,6,8,8,7,6,8,8,8,5,probability
+S01515,High,High,8,6,5,6,8,7,4,4,4,7,angles
+S01516,High,High,6,4,3,4,6,3,2,6,5,2,angles
+S01517,Medium,High,2,5,6,5,4,4,6,2,6,5,number sequences
+S01518,Medium,Average,2,4,6,6,5,2,2,2,3,4,number sequences
+S01519,Medium,Low,3,4,3,7,6,3,6,3,5,5,number sequences
+S01520,High,High,7,3,6,4,5,3,3,4,6,6,perimeter
+S01521,Medium,Average,7,3,5,4,3,7,4,7,3,7,perimeter
+S01522,High,Low,2,6,5,5,5,5,5,6,3,6,number sequences
+S01523,Medium,Average,2,5,6,6,2,3,4,3,3,4,number sequences
+S01524,Medium,Average,8,5,8,6,9,8,5,8,5,9,perimeter
+S01525,Low,Average,4,3,4,4,4,2,2,5,4,3,algebra
+S01526,High,Low,3,6,6,2,5,2,3,5,3,4,fractions/decimals
+S01527,High,Average,0,2,1,0,0,0,0,0,3,2,number sequences
+S01528,Low,Average,5,5,9,9,9,7,5,7,6,7,number sequences
+S01529,High,Average,2,0,0,1,3,0,0,3,3,0,perimeter
+S01530,Medium,Low,2,3,4,3,5,3,3,4,4,6,number sequences
+S01531,Low,High,5,5,6,6,6,8,5,7,9,5,number sequences
+S01532,High,Average,2,1,4,1,5,2,4,4,2,3,perimeter
+S01533,Medium,Very High,7,9,9,6,6,5,7,6,8,9,algebra
+S01534,High,Average,0,2,0,3,0,0,1,3,2,0,number sequences
+S01535,Low,High,7,9,7,10,7,8,10,7,10,10,number sequences
+S01536,Medium,Average,8,6,5,8,6,8,5,4,5,8,volume and capacity
+S01537,Low,Average,4,5,3,2,4,4,2,5,3,2,fractions/decimals
+S01538,High,Average,3,0,0,0,0,0,1,3,3,0,perimeter
+S01539,Medium,Average,7,6,5,5,6,3,4,5,7,3,algebra
+S01540,Medium,High,2,2,4,5,4,2,6,4,5,3,number sequences
+S01541,Medium,Low,5,4,8,6,8,5,4,4,6,6,perimeter
+S01542,Low,Very High,8,10,10,7,10,10,7,10,10,10,fractions/decimals
+S01543,Low,High,7,6,6,7,9,8,8,10,6,9,perimeter
+S01544,High,Low,4,2,3,0,0,4,1,3,2,4,fractions/decimals
+S01545,Medium,Average,6,2,3,2,2,6,6,4,5,4,perimeter
+S01546,Low,Average,6,5,3,6,7,5,6,4,3,3,ratio
+S01547,Medium,High,4,6,5,4,6,4,2,2,5,2,angles
+S01548,High,Low,3,6,4,2,3,6,3,6,6,6,fractions/decimals
+S01549,Medium,Average,8,9,7,6,8,5,5,5,5,8,algebra
+S01550,Low,High,10,10,8,10,8,10,8,7,10,10,volume and capacity
+S01551,High,Average,2,5,4,3,5,1,3,4,2,2,algebra
+S01552,Low,Very High,7,5,7,8,8,8,8,7,8,7,perimeter
+S01553,High,Low,4,2,6,5,2,4,3,5,3,6,perimeter
+S01554,Medium,Low,9,9,6,6,8,7,8,8,9,5,probability
+S01555,Medium,Very High,6,5,2,3,4,3,4,4,5,2,ratio
+S01556,Low,High,6,8,7,5,5,8,5,5,9,6,fractions/decimals
+S01557,Medium,Low,5,8,8,5,8,5,4,6,4,6,angles
+S01558,Medium,Low,5,5,5,7,5,6,5,6,8,4,probability
+S01559,Medium,High,3,3,7,3,6,3,5,7,6,5,number sequences
+S01560,High,High,2,2,5,2,4,5,6,4,6,4,number sequences
+S01561,Medium,Average,5,7,6,5,6,8,6,8,4,5,area
+S01562,High,Low,3,0,4,0,3,0,0,2,4,2,perimeter
+S01563,Low,Average,6,6,6,2,5,4,4,3,5,4,fractions/decimals
+S01564,High,Low,3,2,1,4,4,0,2,0,1,0,algebra
+S01565,High,High,5,6,5,3,4,7,7,4,5,3,fractions/decimals
+S01566,High,Low,1,1,2,1,0,0,3,0,0,0,indices
+S01567,Low,Very High,8,8,9,6,9,8,7,9,7,8,fractions/decimals
+S01568,Low,Low,5,2,3,4,4,2,3,6,4,4,perimeter
+S01569,High,Average,3,0,0,1,3,0,1,3,0,2,perimeter
+S01570,Medium,High,6,5,9,6,8,9,8,8,8,9,perimeter
+S01571,High,Average,2,0,4,0,0,4,4,0,3,2,perimeter
+S01572,Medium,Average,4,4,6,5,5,7,6,7,7,4,number sequences
+S01573,High,High,4,6,7,7,6,4,8,5,4,6,number sequences
+S01574,Low,High,5,8,6,7,7,5,7,8,7,7,number sequences
+S01575,Medium,Average,7,6,4,3,3,6,5,7,7,7,fractions/decimals
+S01576,Medium,Average,6,3,5,6,4,6,3,3,3,2,probability
+S01577,High,Low,3,4,4,6,5,4,5,6,6,4,number sequences
+S01578,Low,Very High,9,6,8,6,7,9,6,8,8,7,perimeter
+S01579,Low,Low,5,3,4,2,2,2,2,2,5,6,fractions/decimals
+S01580,Low,Average,3,6,4,6,6,3,4,7,6,3,number sequences
+S01581,Medium,Low,3,5,6,7,6,3,4,4,3,5,number sequences
+S01582,Medium,High,9,6,8,7,5,6,6,7,5,6,indices
+S01583,High,High,4,5,3,5,3,7,3,3,6,7,ratio
+S01584,High,Low,6,2,3,2,2,2,5,2,5,2,perimeter
+S01585,Medium,Low,6,7,7,4,6,5,3,5,6,7,angles
+S01586,Low,High,8,7,10,10,10,10,10,7,7,8,perimeter
+S01587,Low,Very High,6,5,7,6,8,6,6,8,5,5,perimeter
+S01588,Low,Very High,10,10,10,7,9,8,10,8,9,10,fractions/decimals
+S01589,Low,High,7,10,9,10,8,9,10,7,10,10,number sequences
+S01590,High,Low,1,3,1,0,3,0,1,3,1,0,fractions/decimals
+S01591,Medium,High,7,6,6,7,6,7,8,6,7,7,perimeter
+S01592,Medium,Average,9,6,6,6,7,5,8,5,7,5,algebra
+S01593,Medium,Low,7,7,7,6,5,5,4,6,7,5,angles
+S01594,Low,Very High,6,8,5,5,5,5,7,9,8,9,ratio
+S01595,Medium,Low,5,6,5,6,4,4,4,5,5,7,indices
+S01596,Medium,High,5,2,2,5,2,6,3,6,5,2,perimeter
+S01597,High,Low,4,3,1,2,4,5,2,5,1,2,ratio
+S01598,Low,Average,3,4,5,5,2,5,2,3,4,3,indices
+S01599,Low,Average,6,7,4,6,7,4,6,7,5,6,ratio
+S01600,Low,Low,4,6,4,5,6,6,2,5,5,3,angles
+S01601,Medium,Low,4,4,5,8,7,5,4,7,8,8,number sequences
+S01602,Low,Average,4,4,3,2,3,3,2,6,5,5,fractions/decimals
+S01603,Medium,Average,7,7,6,7,6,3,3,3,6,3,algebra
+S01604,High,High,5,4,5,7,6,6,8,6,7,4,perimeter
+S01605,Low,Average,2,3,4,3,6,5,2,3,2,6,number sequences
+S01606,Low,Very High,10,10,10,10,10,10,10,8,8,8,volume and capacity
+S01607,High,Average,5,2,2,5,6,3,6,3,5,2,perimeter
+S01608,Low,High,6,9,6,8,9,5,5,6,7,6,algebra
+S01609,Low,High,10,7,8,7,10,8,9,8,8,9,perimeter
+S01610,Medium,Average,5,8,5,5,6,7,7,9,5,7,number sequences
+S01611,High,Average,4,2,2,4,3,5,4,3,3,2,perimeter
+S01612,Low,High,7,6,5,8,7,6,9,6,8,7,ratio
+S01613,Medium,Average,8,6,5,4,5,6,7,5,4,8,fractions/decimals
+S01614,Low,High,9,6,7,6,7,8,5,6,7,7,angles
+S01615,Medium,Very High,7,8,9,9,7,9,5,6,9,6,angles
+S01616,Medium,Very High,4,8,6,4,5,6,7,4,5,8,number sequences
+S01617,Medium,High,7,5,4,5,8,7,7,7,7,8,ratio
+S01618,Low,Low,4,5,6,8,4,4,6,4,4,5,number sequences
+S01619,High,Average,4,0,1,2,4,4,3,3,3,0,perimeter
+S01620,High,Average,2,4,4,4,3,4,6,2,6,5,number sequences
+S01621,Medium,High,8,7,9,6,9,7,8,8,9,6,fractions/decimals
+S01622,High,Low,0,0,0,1,1,0,1,1,3,1,number sequences
+S01623,Low,Average,3,3,6,5,4,6,4,5,4,5,number sequences
+S01624,Medium,Low,4,6,3,5,7,6,5,4,4,6,ratio
+S01625,Medium,Average,5,4,3,5,5,6,4,7,4,6,ratio
+S01626,High,Low,1,0,1,1,1,0,3,3,2,0,perimeter
+S01627,Medium,Average,6,6,6,4,3,3,7,3,7,4,indices
+S01628,Low,Average,7,6,7,7,5,7,8,6,5,7,indices
+S01629,Medium,Average,2,5,6,4,2,6,2,6,4,2,number sequences
+S01630,Low,High,8,7,6,7,5,9,7,6,9,6,indices
+S01631,Medium,Average,9,7,5,7,8,7,9,6,7,5,ratio
+S01632,High,Low,5,5,5,1,4,1,4,5,3,5,fractions/decimals
+S01633,Medium,Average,6,2,6,4,4,5,4,3,3,6,perimeter
+S01634,Low,Average,7,9,9,7,8,8,9,9,9,7,number sequences
+S01635,Medium,Low,5,6,6,4,7,8,6,5,6,5,fractions/decimals
+S01636,Low,Very High,9,9,10,9,8,9,6,7,8,7,angles
+S01637,Medium,Low,5,6,7,8,5,5,7,5,5,8,number sequences
+S01638,High,Low,1,1,1,3,1,0,0,2,4,2,algebra
+S01639,Medium,Very High,8,6,5,6,7,5,5,8,7,5,ratio
+S01640,Medium,High,8,5,6,8,6,6,7,8,5,8,perimeter
+S01641,High,Average,0,2,2,4,4,2,2,2,4,1,number sequences
+S01642,Low,Very High,7,9,7,8,7,8,10,10,9,9,number sequences
+S01643,High,High,8,9,7,9,6,9,7,9,5,8,area
+S01644,Low,High,8,10,9,7,7,8,10,8,8,10,fractions/decimals
+S01645,Medium,Very High,5,6,6,7,5,7,9,8,9,8,number sequences
+S01646,High,High,6,6,6,4,5,6,8,8,6,5,fractions/decimals
+S01647,Medium,Average,4,7,3,7,6,5,4,6,7,7,ratio
+S01648,Medium,High,9,5,8,9,9,7,6,7,5,7,perimeter
+S01649,High,Average,4,5,4,5,5,4,5,6,5,4,number sequences
+S01650,High,Low,4,6,3,5,4,6,6,6,4,6,ratio
+S01651,High,Low,1,1,0,1,1,0,0,2,1,3,ratio
+S01652,Medium,High,4,3,3,3,6,6,5,5,4,2,probability
+S01653,Medium,Low,8,6,4,4,5,7,8,5,4,5,ratio
+S01654,Low,Very High,9,7,6,9,10,8,9,6,6,7,ratio
+S01655,Low,High,9,9,10,7,7,9,8,7,10,8,fractions/decimals
+S01656,Medium,High,4,6,6,6,4,4,6,6,5,6,number sequences
+S01657,Medium,High,2,2,2,5,4,5,2,6,2,2,number sequences
+S01658,Medium,Average,3,6,3,3,3,3,4,7,4,7,number sequences
+S01659,Medium,Average,5,7,6,5,4,5,6,6,3,3,area
+S01660,Low,Average,7,6,4,6,7,3,4,7,4,4,algebra
+S01661,Low,Low,3,6,5,7,7,7,6,6,3,7,number sequences
+S01662,Low,Average,4,2,4,2,3,3,4,5,3,3,perimeter
+S01663,High,Low,2,5,2,3,4,2,4,6,6,6,number sequences
+S01664,Medium,Low,9,9,7,8,7,5,5,9,7,7,algebra
+S01665,Low,Average,9,6,5,5,7,5,8,7,6,9,ratio
+S01666,Low,Low,5,5,7,7,7,9,6,8,5,5,number sequences
+S01667,Medium,Low,8,8,7,9,8,6,9,6,6,9,algebra
+S01668,Low,High,8,9,9,7,10,10,7,8,7,7,fractions/decimals
+S01669,High,Average,4,4,1,2,3,5,2,5,4,2,ratio
+S01670,Medium,Low,3,2,4,6,5,2,2,3,6,6,perimeter
+S01671,High,Average,1,5,2,5,2,2,2,4,3,5,number sequences
+S01672,High,Low,0,0,3,2,2,3,2,0,0,3,number sequences
+S01673,Low,Very High,6,8,6,9,6,7,6,9,6,8,number sequences
+S01674,High,High,3,5,3,2,6,2,4,4,2,4,fractions/decimals
+S01675,High,High,4,3,7,4,7,6,6,6,4,4,perimeter
+S01676,Low,High,8,8,10,6,6,6,6,8,6,9,fractions/decimals
+S01677,Medium,High,8,8,8,5,8,5,5,7,7,5,fractions/decimals
+S01678,Low,Average,3,6,5,5,4,6,2,4,2,6,angles
+S01679,High,Average,2,6,5,4,6,5,5,2,5,2,number sequences
+S01680,Medium,Average,5,6,5,7,9,8,6,9,5,5,number sequences
+S01681,Medium,Average,3,6,5,3,6,3,5,4,3,3,number sequences
+S01682,Medium,Low,4,4,6,2,6,6,2,5,3,4,fractions/decimals
+S01683,Low,High,7,6,7,5,7,5,9,7,6,7,fractions/decimals
+S01684,Low,High,10,8,10,9,9,9,7,10,10,10,angles
+S01685,Medium,Average,4,8,6,5,7,7,4,5,7,5,number sequences
+S01686,Medium,Low,9,9,6,7,8,8,6,5,8,9,volume and capacity
+S01687,Medium,Low,7,5,7,8,7,6,5,8,5,7,perimeter
+S01688,Medium,High,7,5,6,6,7,4,7,4,8,4,algebra
+S01689,High,Average,0,3,0,2,0,3,2,2,2,3,number sequences
+S01690,Medium,Average,6,7,4,7,6,6,6,6,7,6,ratio
+S01691,High,Low,2,0,3,0,2,1,0,4,2,0,perimeter
+S01692,High,Average,3,0,0,2,3,2,3,3,3,1,perimeter
+S01693,Medium,Very High,9,8,6,7,5,5,5,8,7,7,indices
+S01694,High,Average,3,1,2,1,1,3,4,4,5,5,perimeter
+S01695,High,High,3,3,5,2,2,2,4,4,2,4,fractions/decimals
+S01696,Medium,Average,4,4,6,6,2,4,3,3,5,4,indices
+S01697,Low,High,8,6,6,6,5,5,7,8,7,9,indices
+S01698,High,Average,2,4,5,5,2,3,2,3,3,4,number sequences
+S01699,High,Average,0,3,2,1,1,3,0,0,1,0,number sequences
+S01700,Low,Low,6,3,6,6,2,6,3,5,6,3,indices
+S01701,Low,Average,4,5,3,5,2,6,3,4,5,5,indices
+S01702,Medium,Low,3,2,5,2,3,2,2,3,5,3,perimeter
+S01703,Medium,High,7,7,7,5,7,4,5,8,7,4,algebra
+S01704,High,Average,3,2,5,2,4,2,4,2,6,2,perimeter
+S01705,Medium,Average,6,9,6,9,9,9,6,5,8,5,volume and capacity
+S01706,High,Average,2,2,3,1,4,2,0,0,0,4,angles
+S01707,Low,High,7,8,10,7,9,7,7,10,9,10,number sequences
+S01708,Medium,Average,6,7,7,8,6,6,5,8,5,7,angles
+S01709,High,Average,1,3,4,1,0,4,4,1,0,0,indices
+S01710,Medium,High,6,6,8,6,8,6,6,7,9,5,probability
+S01711,High,Average,2,4,4,1,5,2,5,5,5,2,fractions/decimals
+S01712,High,Low,5,4,3,6,3,5,3,6,2,4,area
+S01713,High,High,7,6,5,8,8,5,7,6,7,6,ratio
+S01714,Medium,Low,4,4,5,6,3,6,7,6,7,3,indices
+S01715,Medium,High,5,2,5,5,5,4,3,4,6,3,perimeter
+S01716,Low,Average,7,6,6,8,7,8,4,6,5,5,angles
+S01717,Medium,Average,7,9,9,5,9,8,6,5,8,8,fractions/decimals
+S01718,High,Low,3,0,0,0,0,0,2,1,1,1,perimeter
+S01719,Medium,Low,6,6,4,4,6,4,6,7,3,3,area
+S01720,Medium,Very High,6,6,9,7,8,5,8,7,8,6,algebra
+S01721,Medium,Low,7,4,8,4,7,7,7,8,8,6,perimeter
+S01722,Medium,Very High,6,6,6,4,3,3,4,6,3,6,indices
+S01723,Medium,High,7,4,5,7,5,5,7,6,6,4,perimeter
+S01724,High,Low,3,4,4,5,6,5,6,5,3,6,number sequences
+S01725,Medium,Average,3,5,2,4,5,5,4,4,2,4,ratio
+S01726,Medium,Low,2,3,5,2,5,4,3,6,3,3,number sequences
+S01727,Low,Low,5,6,7,6,7,4,8,7,5,5,algebra
+S01728,Low,High,6,8,9,9,6,6,7,5,8,8,volume and capacity
+S01729,Medium,Average,8,9,7,8,5,7,6,6,9,8,indices
+S01730,Medium,High,7,6,4,4,4,7,8,6,7,4,ratio
+S01731,High,Average,4,1,5,4,2,4,4,2,3,5,perimeter
+S01732,High,Average,0,2,2,3,0,3,3,3,3,2,number sequences
+S01733,Medium,High,4,8,7,6,4,4,6,8,8,4,number sequences
+S01734,Medium,Low,5,5,6,5,5,6,7,6,5,4,probability
+S01735,High,Low,2,5,3,1,1,4,3,5,4,2,fractions/decimals
+S01736,Medium,Low,5,2,3,4,2,3,6,2,5,5,perimeter
+S01737,Low,Low,4,4,4,6,5,7,6,7,4,7,number sequences
+S01738,Medium,Average,5,6,6,5,5,6,7,7,4,3,probability
+S01739,Medium,High,4,4,8,8,5,6,7,8,4,6,number sequences
+S01740,Medium,High,4,4,6,3,3,7,5,5,7,7,fractions/decimals
+S01741,High,High,8,5,4,7,8,8,4,6,5,6,ratio
+S01742,Medium,High,7,3,5,6,5,6,3,7,3,6,perimeter
+S01743,Medium,Average,6,3,5,5,5,4,5,6,4,4,perimeter
+S01744,Low,Low,5,8,8,6,9,7,8,8,6,7,number sequences
+S01745,Low,Average,4,7,5,7,5,8,8,5,8,5,number sequences
+S01746,High,Low,0,1,2,1,0,4,3,0,1,2,number sequences
+S01747,Medium,Very High,5,5,7,3,4,3,7,4,4,4,fractions/decimals
+S01748,Medium,High,3,3,5,6,6,3,5,2,5,6,volume and capacity
+S01749,High,High,8,7,8,6,6,8,7,4,7,6,volume and capacity
+S01750,Low,Average,7,5,5,7,5,6,8,6,8,7,perimeter
+S01751,High,Average,1,0,0,3,0,1,1,1,3,3,perimeter
+S01752,Low,Very High,6,6,6,6,8,5,7,7,9,8,algebra
+S01753,Medium,Average,2,6,3,6,6,6,6,2,6,6,number sequences
+S01754,High,High,7,8,5,8,6,7,9,5,7,5,ratio
+S01755,Low,Very High,9,10,6,8,8,10,6,10,8,9,ratio
+S01756,Medium,High,6,6,5,6,9,6,9,5,9,5,ratio
+S01757,Medium,Low,7,5,3,6,4,4,3,7,7,6,ratio
+S01758,Medium,Average,8,6,7,5,9,7,7,9,6,7,fractions/decimals
+S01759,High,Average,0,2,3,2,0,0,3,1,0,0,number sequences
+S01760,Low,Average,9,9,7,8,7,7,6,5,8,9,volume and capacity
+S01761,Low,Very High,9,9,7,8,10,9,10,8,7,9,ratio
+S01762,High,High,5,2,6,6,5,2,3,4,6,2,perimeter
+S01763,Medium,Average,6,4,7,4,6,7,4,3,6,4,volume and capacity
+S01764,Medium,Low,4,3,3,4,4,5,6,3,4,4,perimeter
+S01765,High,Low,6,3,5,2,2,2,5,5,5,6,fractions/decimals
+S01766,Low,Very High,6,8,6,10,10,8,8,10,10,10,number sequences
+S01767,Low,High,10,10,7,10,7,7,10,10,10,9,ratio
+S01768,Low,Average,6,9,9,9,6,5,6,6,9,8,algebra
+S01769,Medium,Average,8,6,5,5,8,4,4,5,5,7,algebra
+S01770,Medium,Average,4,5,4,4,8,6,4,6,7,5,number sequences
+S01771,High,High,8,8,8,6,4,4,4,7,7,8,indices
+S01772,Low,Very High,8,7,6,8,8,9,6,10,7,8,ratio
+S01773,High,Average,5,4,6,5,2,2,5,5,6,4,indices
+S01774,Medium,Low,2,6,2,2,5,5,6,3,4,4,number sequences
+S01775,Medium,Low,6,4,4,4,4,5,4,4,5,5,perimeter
+S01776,High,Low,1,3,0,0,0,0,3,0,0,2,ratio
+S01777,Low,Average,7,6,8,4,4,7,6,7,5,5,fractions/decimals
+S01778,High,High,6,7,9,8,5,9,7,6,8,9,indices
+S01779,Low,Very High,8,8,10,7,8,6,9,8,9,7,algebra
+S01780,Low,Average,3,6,2,4,2,3,5,5,3,2,ratio
+S01781,High,Average,5,1,5,5,2,1,1,3,2,2,perimeter
+S01782,Low,Very High,9,8,9,10,8,9,7,9,8,8,angles
+S01783,High,Low,0,0,2,2,0,3,1,3,2,3,number sequences
+S01784,Medium,Average,8,9,8,8,5,8,6,5,9,6,indices
+S01785,High,Low,3,1,2,4,5,3,1,1,5,4,perimeter
+S01786,Medium,Very High,6,6,6,7,6,6,6,6,6,5,probability
+S01787,Low,Average,6,8,8,7,8,7,6,9,5,9,area
+S01788,Low,High,6,7,6,9,6,9,8,5,6,6,volume and capacity
+S01789,High,Average,2,0,0,0,2,2,0,0,2,1,perimeter
+S01790,Low,Very High,7,10,9,8,10,8,9,9,9,8,number sequences
+S01791,Medium,Average,3,5,3,6,6,3,4,7,7,7,number sequences
+S01792,Low,High,9,10,9,10,8,9,10,10,10,7,probability
+S01793,High,Low,1,2,5,1,3,3,1,3,5,1,number sequences
+S01794,Medium,Average,4,3,2,6,5,2,2,6,4,6,ratio
+S01795,High,Average,3,0,2,2,2,4,3,2,1,0,perimeter
+S01796,Medium,Very High,7,5,6,8,5,9,7,9,8,8,perimeter
+S01797,High,Average,2,3,5,6,5,4,6,6,2,2,number sequences
+S01798,Medium,Average,5,5,5,7,6,6,6,7,4,7,area
+S01799,Low,Average,7,5,8,7,6,8,4,4,8,6,angles
+S01800,High,High,6,6,5,3,7,3,4,4,3,3,fractions/decimals
+S01801,High,Average,4,2,4,3,3,6,2,6,2,2,perimeter
+S01802,Medium,Very High,6,5,5,4,2,5,6,4,4,3,indices
+S01803,Medium,Average,5,6,4,2,6,5,5,5,3,6,fractions/decimals
+S01804,Low,Average,6,2,3,3,5,3,6,5,5,2,perimeter
+S01805,Low,High,6,9,9,8,9,10,7,8,8,9,number sequences
+S01806,Low,High,10,7,10,6,6,9,8,9,6,9,fractions/decimals
+S01807,Medium,Average,4,3,5,3,5,5,4,4,3,3,perimeter
+S01808,Low,Average,6,7,5,5,7,4,7,3,3,5,volume and capacity
+S01809,Medium,Average,6,5,7,8,6,8,9,7,5,5,perimeter
+S01810,Medium,Low,8,6,6,7,7,6,9,8,8,8,perimeter
+S01811,Medium,High,2,3,2,2,5,6,3,4,2,3,number sequences
+S01812,Medium,Average,6,5,6,5,3,7,6,7,6,6,indices
+S01813,Medium,High,7,4,5,8,7,8,4,8,8,7,perimeter
+S01814,Medium,Average,8,9,7,5,6,9,7,7,8,8,fractions/decimals
+S01815,High,Average,2,4,1,1,3,1,0,1,3,2,angles
+S01816,High,High,7,9,8,6,7,9,6,8,6,8,fractions/decimals
+S01817,High,Average,4,1,3,1,3,2,3,3,5,2,perimeter
+S01818,Medium,High,8,4,8,4,4,4,8,6,7,5,perimeter
+S01819,Low,High,10,7,7,9,9,10,7,7,8,8,perimeter
+S01820,Medium,Average,4,5,4,5,4,8,5,6,5,4,number sequences
+S01821,High,Low,0,1,0,1,0,0,1,2,2,3,number sequences
+S01822,Medium,Average,7,6,4,3,6,7,4,4,3,6,fractions/decimals
+S01823,Low,Average,6,7,8,7,5,4,7,7,6,7,algebra
+S01824,High,Low,2,0,2,2,0,2,0,0,1,2,perimeter
+S01825,High,Low,5,6,2,3,6,4,5,4,3,3,ratio
+S01826,High,Low,4,2,2,4,3,0,0,2,2,1,algebra
+S01827,Low,Average,3,6,6,3,3,6,5,5,5,2,probability
+S01828,Medium,Average,6,4,2,5,4,2,6,2,6,2,ratio
+S01829,High,High,5,8,7,7,5,5,6,6,7,4,probability
+S01830,High,Low,3,0,0,1,1,2,2,1,0,3,perimeter
+S01831,High,High,2,5,6,5,4,6,2,5,4,5,number sequences
+S01832,High,Low,0,4,2,0,3,3,1,4,0,4,number sequences
+S01833,Low,Average,2,6,6,5,4,4,2,2,6,6,number sequences
+S01834,High,Average,4,4,5,2,4,1,4,2,4,5,algebra
+S01835,Medium,Average,8,7,6,8,7,6,7,7,6,4,probability
+S01836,Low,High,10,8,10,9,10,7,10,8,10,8,algebra
+S01837,High,Low,5,5,4,5,3,5,3,1,3,3,volume and capacity
+S01838,High,High,7,5,9,9,8,6,9,8,7,6,perimeter
+S01839,High,Low,3,3,3,5,6,4,3,6,5,5,number sequences
+S01840,Low,Very High,7,7,7,7,7,8,8,7,9,10,number sequences
+S01841,Medium,Very High,5,5,7,7,8,5,5,6,5,7,number sequences
+S01842,High,Average,3,1,4,2,2,4,3,4,3,4,perimeter
+S01843,High,Average,3,4,0,2,1,1,0,4,2,2,ratio
+S01844,Medium,High,7,7,4,4,8,4,6,7,5,7,ratio
+S01845,Medium,Average,6,9,8,5,8,5,6,6,8,8,fractions/decimals
+S01846,Low,Low,6,7,5,5,7,6,6,9,9,5,ratio
+S01847,Low,Average,9,7,8,5,5,7,6,8,9,6,fractions/decimals
+S01848,High,Average,1,2,1,0,0,1,1,1,0,0,fractions/decimals
+S01849,Medium,Low,7,6,5,9,7,5,5,5,7,6,ratio
+S01850,Medium,Average,4,2,3,6,4,5,2,2,3,4,perimeter
+S01851,Medium,High,5,9,5,7,5,9,8,9,8,7,number sequences
+S01852,Low,Average,5,6,7,7,7,5,5,5,5,5,number sequences
+S01853,High,Average,5,3,4,6,4,5,5,4,2,5,area
+S01854,Low,Average,9,8,5,8,9,9,9,5,6,7,ratio
+S01855,High,Average,4,1,1,0,3,4,2,2,4,0,fractions/decimals
+S01856,High,Low,3,3,2,3,6,3,2,3,3,5,ratio
+S01857,Low,High,6,6,8,5,9,8,5,6,8,7,fractions/decimals
+S01858,High,Average,3,4,3,2,4,2,4,4,0,3,area
+S01859,High,Average,1,2,4,4,2,1,2,1,5,2,number sequences
+S01860,Low,Very High,8,9,9,6,9,10,8,7,7,6,fractions/decimals
+S01861,Low,High,7,7,10,7,8,9,7,10,8,10,number sequences
+S01862,Medium,Average,9,7,7,6,5,5,7,9,6,6,indices
+S01863,High,Average,1,3,2,0,3,1,3,3,3,0,fractions/decimals
+S01864,Medium,Low,6,7,8,6,8,5,7,6,6,4,probability
+S01865,Medium,High,2,3,5,6,4,3,2,2,6,3,number sequences
+S01866,Low,High,10,9,7,10,10,10,7,10,7,7,ratio
+S01867,Low,Average,7,5,6,5,5,5,7,5,5,3,probability
+S01868,Medium,Average,2,6,3,2,2,6,6,3,5,5,number sequences
+S01869,Medium,High,8,6,9,5,7,6,5,9,5,5,fractions/decimals
+S01870,Low,Low,5,4,6,5,6,5,7,6,3,5,area
+S01871,Medium,Average,3,3,7,3,3,3,7,6,7,5,number sequences
+S01872,Low,High,9,8,7,8,9,7,7,10,10,9,ratio
+S01873,High,Low,2,3,4,5,5,3,3,3,3,4,number sequences
+S01874,High,Low,2,5,5,1,3,4,2,4,1,4,fractions/decimals
+S01875,Medium,Low,4,4,4,5,7,3,4,7,7,3,algebra
+S01876,Low,High,7,9,7,10,9,10,6,6,6,7,angles
+S01877,High,Low,2,5,6,3,3,3,2,2,3,2,number sequences
+S01878,High,Average,5,5,1,3,3,5,3,1,3,1,ratio
+S01879,Medium,Low,6,5,7,3,3,6,7,3,4,5,fractions/decimals
+S01880,High,Average,2,1,4,4,3,0,4,0,0,3,algebra
+S01881,Low,Very High,10,7,10,8,7,10,10,10,8,10,perimeter
+S01882,Low,High,8,9,8,8,7,8,8,10,10,8,indices
+S01883,Medium,High,6,7,5,9,9,6,6,6,8,9,ratio
+S01884,Medium,Low,7,4,8,4,8,4,4,8,8,5,perimeter
+S01885,Medium,High,7,8,8,4,6,7,7,5,7,4,fractions/decimals
+S01886,Medium,Very High,4,8,6,5,5,5,5,4,4,7,number sequences
+S01887,High,Low,2,0,3,2,2,3,3,0,2,0,perimeter
+S01888,Medium,Very High,6,4,4,4,4,7,7,5,4,8,perimeter
+S01889,Medium,Average,6,7,8,5,6,8,6,5,9,5,fractions/decimals
+S01890,Low,Low,8,4,6,5,4,7,6,6,7,6,perimeter
+S01891,Medium,High,4,5,6,4,8,4,4,6,4,4,number sequences
+S01892,High,Average,2,3,1,4,3,5,1,1,2,4,ratio
+S01893,High,Low,4,3,1,1,0,3,2,1,3,3,indices
+S01894,Medium,Average,6,6,8,7,7,5,9,7,9,8,algebra
+S01895,Low,Very High,6,9,6,6,5,7,8,8,8,8,indices
+S01896,High,Average,4,1,5,4,2,2,3,3,5,4,perimeter
+S01897,High,Low,3,2,0,0,3,0,2,0,1,2,ratio
+S01898,Medium,Low,6,7,7,5,7,7,4,8,4,4,angles
+S01899,High,Low,1,3,0,3,2,0,3,3,0,1,ratio
+S01900,Low,Average,7,9,8,5,7,8,8,7,8,6,fractions/decimals
+S01901,Low,High,8,7,10,7,10,8,10,7,10,8,perimeter
+S01902,High,High,6,5,2,4,2,3,2,3,4,3,ratio
+S01903,Medium,Average,5,7,9,9,8,5,5,7,5,7,number sequences
+S01904,High,Average,1,3,0,3,2,0,3,1,2,1,ratio
+S01905,Low,High,8,9,6,8,9,7,8,7,9,8,ratio
+S01906,High,High,6,3,2,6,4,4,4,6,2,4,ratio
+S01907,High,Average,5,1,5,2,4,1,2,4,3,3,perimeter
+S01908,Medium,Average,6,2,5,2,4,4,6,5,6,3,perimeter
+S01909,Low,High,6,7,5,9,8,8,6,5,5,8,ratio
+S01910,Low,High,8,7,10,8,7,8,10,8,7,9,perimeter
+S01911,Low,High,7,9,9,10,8,10,7,10,9,10,number sequences
+S01912,Medium,Average,5,2,5,3,4,3,2,2,6,5,perimeter
+S01913,High,Low,4,1,3,4,0,4,4,4,1,4,indices
+S01914,Medium,Low,5,7,5,3,6,3,7,5,5,4,fractions/decimals
+S01915,Medium,Average,6,4,4,6,4,2,2,3,6,2,algebra
+S01916,Medium,Low,6,3,6,3,5,7,3,3,4,5,perimeter
+S01917,High,High,3,2,3,2,2,5,3,3,3,2,perimeter
+S01918,Low,High,10,8,8,9,9,9,8,10,10,8,perimeter
+S01919,High,Low,3,2,5,1,2,3,1,2,1,1,fractions/decimals
+S01920,Medium,Average,4,8,5,5,4,8,7,8,6,7,number sequences
+S01921,Medium,High,5,5,6,7,8,6,6,8,5,8,number sequences
+S01922,Low,High,9,6,5,5,8,6,5,6,6,7,ratio
+S01923,Low,High,9,6,9,7,7,7,9,8,9,6,perimeter
+S01924,High,High,4,6,3,3,5,3,4,2,4,2,volume and capacity
+S01925,High,Average,3,2,2,2,3,5,5,2,3,5,perimeter
+S01926,Medium,Average,6,5,6,5,2,6,4,4,4,2,indices
+S01927,Medium,Average,4,5,7,6,6,5,7,8,6,5,number sequences
+S01928,Medium,Low,9,8,5,7,8,8,6,7,7,6,ratio
+S01929,Medium,Average,9,8,9,5,9,7,9,9,5,8,fractions/decimals
+S01930,High,Average,0,3,1,2,0,1,1,3,3,0,number sequences
+S01931,Medium,Average,4,6,6,3,5,4,7,6,5,7,fractions/decimals
+S01932,High,Low,2,2,0,0,0,3,3,3,2,3,ratio
+S01933,Low,Low,5,3,3,5,5,4,6,5,7,7,perimeter
+S01934,Medium,Average,6,3,4,5,6,2,3,4,6,5,algebra
+S01935,Medium,Average,7,9,5,5,9,9,9,5,6,6,ratio
+S01936,Medium,Average,5,7,5,8,5,8,8,8,5,6,number sequences
+S01937,Low,High,9,9,7,7,6,6,10,8,7,8,indices
+S01938,Medium,Low,4,6,3,5,6,2,4,6,3,4,algebra
+S01939,Medium,Average,2,2,6,3,6,5,2,6,5,2,number sequences
+S01940,High,Low,3,2,4,4,1,2,4,0,0,4,volume and capacity
+S01941,Low,Average,2,4,4,5,4,4,6,3,5,2,number sequences
+S01942,High,Average,3,6,3,4,6,3,6,4,3,4,number sequences
+S01943,Medium,High,6,7,6,4,4,4,4,5,4,4,fractions/decimals
+S01944,Medium,Average,2,6,5,6,2,3,5,2,6,5,number sequences
+S01945,Medium,High,5,6,7,3,6,5,4,6,4,4,fractions/decimals
+S01946,Low,High,7,9,7,9,8,7,8,6,6,10,volume and capacity
+S01947,High,Low,4,1,0,3,4,4,1,4,0,1,ratio
+S01948,Medium,Average,8,5,5,8,5,8,6,6,5,8,perimeter
+S01949,Low,Average,5,8,9,5,7,7,9,5,7,7,number sequences
+S01950,Medium,Low,2,5,6,4,3,2,6,6,4,6,number sequences
+S01951,High,Low,2,5,2,3,2,5,2,6,6,6,number sequences
+S01952,High,Low,0,1,1,2,4,1,2,4,0,3,number sequences
+S01953,Medium,Low,6,6,3,5,3,4,7,6,6,6,ratio
+S01954,Low,Very High,7,10,10,7,10,7,9,7,10,8,number sequences
+S01955,Medium,Average,6,6,7,3,3,6,3,5,7,5,fractions/decimals
+S01956,High,Average,2,2,2,4,6,4,2,2,5,6,number sequences
+S01957,Low,Average,5,8,7,7,7,6,6,6,9,7,number sequences
+S01958,Low,High,7,6,9,9,9,9,9,8,10,7,perimeter
+S01959,Low,High,10,7,7,7,9,7,10,10,8,8,perimeter
+S01960,High,Average,5,6,4,6,5,5,3,2,4,6,volume and capacity
+S01961,Medium,Average,5,6,6,4,8,8,7,7,8,7,fractions/decimals
+S01962,Medium,Low,9,9,8,8,7,8,6,8,7,7,angles
+S01963,Low,Average,6,6,7,6,5,3,4,7,6,6,algebra
+S01964,High,High,7,8,5,8,7,5,4,7,5,5,angles
+S01965,Medium,Average,5,2,5,5,3,5,2,2,2,5,perimeter
+S01966,Low,Low,7,9,9,9,6,7,6,8,5,6,area
+S01967,Medium,Low,3,3,7,7,6,7,7,6,7,5,number sequences
+S01968,High,Average,4,5,5,1,1,5,2,2,3,2,fractions/decimals
+S01969,High,Average,0,3,0,0,0,3,0,0,2,2,number sequences
+S01970,Medium,Average,3,6,6,5,7,3,4,3,6,4,number sequences
+S01971,Low,Low,3,5,5,4,3,6,7,5,5,7,number sequences
+S01972,Medium,Average,3,5,5,4,3,4,3,2,4,2,volume and capacity
+S01973,Medium,Low,4,4,6,7,3,6,5,3,5,6,indices
+S01974,Medium,Average,5,6,4,7,6,4,5,3,7,3,volume and capacity
+S01975,Low,High,9,6,6,9,8,7,6,9,6,9,perimeter
+S01976,Medium,Very High,6,7,4,5,7,6,6,5,6,4,ratio
+S01977,Medium,Low,3,6,4,4,7,3,6,3,3,5,number sequences
+S01978,Medium,Average,7,7,5,8,7,7,7,5,8,9,ratio
+S01979,Low,Very High,6,6,8,10,6,10,6,9,7,10,number sequences
+S01980,High,Low,3,2,3,3,2,3,4,3,4,1,probability
+S01981,Medium,Average,4,2,6,3,2,3,5,2,3,5,perimeter
+S01982,Low,Very High,8,10,10,10,7,10,9,9,10,10,indices
+S01983,Low,Very High,7,9,10,9,8,10,9,8,9,10,number sequences
+S01984,High,Average,5,2,5,5,4,6,5,2,4,4,perimeter
+S01985,Medium,High,7,5,7,8,7,5,7,9,7,6,perimeter
+S01986,High,Low,2,5,5,2,5,4,5,5,6,6,number sequences
+S01987,High,Low,1,3,5,3,5,3,3,4,2,4,number sequences
+S01988,Medium,Low,3,4,6,4,7,6,3,7,7,4,number sequences
+S01989,High,Low,3,0,0,0,3,1,2,1,0,0,perimeter
+S01990,Medium,Very High,7,6,6,7,8,7,8,6,7,5,probability
+S01991,Medium,Low,4,7,7,7,4,4,3,4,5,3,angles
+S01992,Medium,Average,6,6,5,4,5,4,3,2,4,6,volume and capacity
+S01993,Medium,High,8,8,5,4,4,8,7,7,5,8,fractions/decimals
+S01994,High,Low,4,0,0,0,0,4,2,0,4,4,perimeter
+S01995,High,Average,4,3,3,1,5,3,2,4,1,5,fractions/decimals
+S01996,Low,High,8,7,7,7,10,10,10,7,10,9,perimeter
+S01997,Medium,Low,3,4,4,6,3,2,5,6,3,5,algebra
+S01998,High,High,9,5,7,6,8,8,7,8,6,7,perimeter
+S01999,Low,Very High,7,8,6,7,10,9,10,7,9,6,ratio
+S02000,High,Average,0,0,1,3,0,3,0,1,2,0,number sequences
+S02001,Low,Average,4,7,4,4,5,7,5,6,6,5,number sequences
+S02002,Low,Average,2,5,2,6,2,5,2,4,4,5,number sequences
+S02003,Low,High,8,10,10,9,6,10,7,7,6,8,indices
+S02004,Medium,High,4,6,5,7,8,6,5,4,7,5,number sequences
+S02005,Low,High,7,6,8,6,8,7,9,5,5,5,volume and capacity
+S02006,Low,High,6,7,7,10,9,10,6,10,7,6,number sequences
+S02007,Medium,Very High,4,8,5,5,5,5,4,4,8,6,number sequences
+S02008,Low,Very High,9,6,5,5,9,6,6,6,7,7,ratio
+S02009,High,Low,2,2,2,5,3,3,2,3,6,5,number sequences
+S02010,High,Low,0,0,0,0,2,1,0,0,2,0,number sequences
+S02011,High,Low,3,3,3,1,5,4,3,3,1,1,fractions/decimals
+S02012,High,Low,5,4,2,2,4,6,3,2,3,2,ratio
+S02013,Medium,Low,6,8,5,8,5,6,6,4,4,7,volume and capacity
+S02014,Low,High,7,9,8,7,7,10,10,10,10,8,number sequences
+S02015,Low,High,9,6,9,5,6,6,6,8,9,7,fractions/decimals
+S02016,Medium,Average,4,6,5,7,4,5,4,6,5,5,number sequences
+S02017,Low,Very High,7,8,8,6,7,9,10,8,8,9,fractions/decimals
+S02018,Medium,High,4,3,5,3,7,6,4,7,4,5,perimeter
+S02019,Low,High,8,10,9,10,9,10,8,9,9,10,number sequences
+S02020,Medium,Low,7,6,6,6,8,9,9,7,6,7,perimeter
+S02021,High,Low,3,6,6,2,6,6,2,2,5,6,fractions/decimals
+S02022,Medium,High,8,8,7,6,6,5,7,7,8,6,algebra
+S02023,High,Average,4,4,2,2,2,4,2,5,3,5,ratio
+S02024,Medium,High,4,5,2,3,2,6,6,3,5,3,ratio
+S02025,Medium,Average,5,6,9,7,6,5,5,7,7,5,number sequences
+S02026,Medium,High,6,5,5,7,4,7,3,3,4,3,angles
+S02027,High,Low,5,6,6,3,6,6,5,3,4,3,fractions/decimals
+S02028,Medium,High,6,5,5,6,3,6,5,3,7,3,indices
+S02029,Low,High,8,8,6,8,7,9,9,9,7,8,ratio
+S02030,Medium,Very High,5,6,8,7,5,4,7,4,6,8,algebra
+S02031,High,Low,0,0,2,1,0,0,0,1,2,0,number sequences
+S02032,High,Low,2,2,0,1,2,3,1,0,1,3,ratio
+S02033,Low,Average,4,5,3,3,5,2,2,5,6,4,algebra
+S02034,Low,Average,3,3,2,5,6,3,3,5,5,4,ratio
+S02035,Medium,Low,4,4,5,7,4,5,5,6,4,8,number sequences
+S02036,Medium,High,8,9,5,6,5,8,7,8,7,9,ratio
+S02037,Medium,High,9,8,8,7,9,9,5,5,7,9,angles
+S02038,Medium,High,4,3,2,3,6,4,2,4,4,3,ratio
+S02039,High,Low,2,2,3,3,1,2,2,3,3,1,indices
+S02040,Medium,High,6,4,5,7,4,4,5,4,8,7,perimeter
+S02041,Low,High,10,7,7,7,9,9,9,10,8,9,perimeter
+S02042,High,Average,3,2,5,2,3,1,5,2,3,5,algebra
+S02043,Medium,Low,2,4,3,6,5,2,6,2,6,3,number sequences
+S02044,Medium,High,7,6,5,5,7,8,4,5,8,8,angles
+S02045,Low,Average,4,5,7,8,4,8,7,5,8,4,number sequences
+S02046,Medium,High,3,7,5,6,4,4,6,6,4,6,number sequences
+S02047,Medium,Low,6,7,6,9,9,5,5,9,6,6,algebra
+S02048,Medium,High,8,5,7,9,8,6,9,5,7,9,perimeter
+S02049,Low,High,9,9,9,7,7,8,8,8,9,10,fractions/decimals
+S02050,High,High,6,8,6,6,4,5,4,7,5,5,indices
+S02051,Low,High,7,8,10,10,9,10,10,9,10,7,number sequences
+S02052,Low,High,7,8,9,5,8,7,6,9,8,8,fractions/decimals
+S02053,High,Low,0,0,2,3,0,2,0,0,0,0,number sequences
+S02054,Medium,Average,7,4,5,4,4,4,6,5,4,6,perimeter
+S02055,High,Average,3,0,1,0,0,1,3,2,2,2,perimeter
+S02056,Medium,Very High,7,6,5,7,7,4,5,5,4,3,probability
+S02057,Medium,Average,8,6,7,8,6,7,7,9,9,8,perimeter
+S02058,Medium,Average,7,5,7,6,3,6,3,7,4,5,indices
+S02059,High,Low,0,0,2,0,1,4,0,4,2,2,number sequences
+S02060,Medium,Low,3,7,7,4,6,4,3,6,3,7,number sequences
+S02061,Low,Low,4,3,7,6,6,4,3,5,7,6,perimeter
+S02062,High,Average,3,0,2,0,1,1,0,2,3,2,perimeter
+S02063,Medium,High,6,8,4,8,8,6,6,4,4,6,ratio
+S02064,Low,Average,5,3,4,7,3,7,5,6,5,5,perimeter
+S02065,Medium,Average,5,6,2,2,5,5,5,6,2,5,ratio
+S02066,Medium,High,6,8,4,6,6,4,6,4,4,8,ratio
+S02067,Medium,High,9,7,9,7,6,8,7,6,7,6,indices
+S02068,Low,Very High,7,10,10,8,9,10,7,10,9,8,number sequences
+S02069,Low,Very High,6,9,8,9,7,10,9,10,8,7,number sequences
+S02070,Low,Average,4,4,3,6,3,4,7,6,4,6,ratio
+S02071,Medium,High,6,5,3,4,5,5,6,5,5,4,ratio
+S02072,Medium,Average,5,5,7,5,8,9,8,7,7,7,number sequences
+S02073,Medium,Average,6,6,4,6,3,4,5,3,5,4,indices
+S02074,Medium,Average,5,7,8,8,7,6,6,9,7,9,number sequences
+S02075,Medium,High,6,6,2,5,6,5,6,2,6,2,ratio
+S02076,High,Low,3,4,5,5,5,5,5,2,4,5,volume and capacity
+S02077,Low,High,9,6,8,10,8,9,9,9,9,10,perimeter
+S02078,Low,High,9,8,10,6,7,10,8,10,8,7,fractions/decimals
+S02079,High,Low,4,6,5,5,4,4,2,5,6,2,angles
+S02080,Medium,Low,8,9,7,9,5,5,5,7,9,9,indices
+S02081,Medium,High,3,7,4,7,5,6,5,6,4,5,number sequences
+S02082,Low,High,9,5,8,8,5,5,6,5,7,6,perimeter
+S02083,Medium,High,7,8,5,4,6,5,8,6,5,8,fractions/decimals
+S02084,Low,High,8,7,7,5,5,7,6,8,7,8,fractions/decimals
+S02085,High,High,4,3,6,3,2,4,2,4,4,4,indices
+S02086,Medium,Average,2,6,5,2,4,3,4,5,6,6,number sequences
+S02087,Medium,Average,5,3,7,4,4,5,6,4,4,7,perimeter
+S02088,Medium,High,3,6,3,2,6,2,6,3,2,5,fractions/decimals
+S02089,Low,High,8,8,7,8,6,9,9,6,6,6,indices
+S02090,Medium,High,6,8,6,5,9,6,5,8,8,6,fractions/decimals
+S02091,Medium,Average,3,6,3,3,6,5,2,5,2,5,angles
+S02092,Medium,Average,6,6,5,6,6,6,6,2,5,2,volume and capacity
+S02093,Medium,Average,7,8,5,8,9,5,7,7,6,6,ratio
+S02094,High,High,7,5,8,9,7,5,5,6,8,9,perimeter
+S02095,High,Low,3,2,1,1,2,1,3,2,5,5,ratio
+S02096,Low,Average,5,5,9,5,7,9,7,5,8,9,number sequences
+S02097,Medium,High,7,8,7,5,8,6,8,9,9,9,fractions/decimals
+S02098,Low,Very High,9,6,7,8,7,9,8,10,7,8,perimeter
+S02099,High,Average,1,0,2,1,2,1,1,2,0,0,perimeter
+S02100,Low,Very High,6,5,6,6,8,9,5,7,5,9,perimeter
+S02101,Medium,Average,8,7,4,7,4,6,8,6,5,8,ratio
+S02102,Low,High,7,6,7,7,8,5,7,9,6,8,algebra
+S02103,High,Low,4,4,2,4,6,3,4,4,4,4,ratio
+S02104,High,High,3,2,3,2,4,3,3,3,4,2,perimeter
+S02105,Low,High,9,10,10,9,10,8,7,10,9,10,angles
+S02106,Medium,High,4,6,7,5,5,6,6,3,3,3,volume and capacity
+S02107,High,Average,1,2,4,1,3,1,3,1,1,2,number sequences
+S02108,Low,High,8,9,8,7,9,7,6,5,9,9,volume and capacity
+S02109,Medium,High,7,8,7,8,8,7,8,4,8,4,volume and capacity
+S02110,High,Average,4,2,3,1,3,4,2,4,1,4,fractions/decimals
+S02111,High,High,2,3,3,2,4,5,2,2,2,6,number sequences
+S02112,Low,Very High,5,6,9,6,8,6,8,7,7,8,number sequences
+S02113,High,Low,2,2,5,6,5,2,3,5,2,4,number sequences
+S02114,Low,Average,6,6,6,9,9,5,9,8,8,8,algebra
+S02115,High,Low,5,3,3,1,3,2,2,4,4,5,fractions/decimals
+S02116,Medium,Average,5,6,9,9,5,8,5,6,9,8,number sequences
+S02117,Medium,High,3,6,6,3,6,5,7,5,4,6,number sequences
+S02118,Medium,Average,7,8,7,8,8,6,9,8,8,9,algebra
+S02119,Low,Very High,9,6,10,10,9,6,7,6,10,10,perimeter
+S02120,High,Average,4,6,2,3,4,4,2,5,4,5,ratio
+S02121,Low,High,7,8,10,9,10,10,8,10,6,7,area
+S02122,High,Low,2,6,4,5,2,6,6,4,6,6,number sequences
+S02123,High,Average,3,1,0,0,0,1,2,0,0,0,ratio
+S02124,Medium,High,3,6,6,2,5,4,5,4,4,2,fractions/decimals
+S02125,High,Average,6,5,4,3,2,5,6,6,4,6,indices
+S02126,Low,High,8,10,8,9,10,9,10,10,10,7,probability
+S02127,High,Low,3,1,0,0,1,2,3,1,0,3,ratio
+S02128,Low,Low,8,5,6,6,6,8,7,7,6,7,perimeter
+S02129,Medium,Low,7,7,6,7,3,6,4,4,6,3,indices
+S02130,Low,High,10,8,8,6,9,10,7,7,9,10,fractions/decimals
+S02131,High,Average,1,0,2,2,0,4,2,1,3,1,perimeter
+S02132,High,Average,0,0,1,0,0,0,2,1,1,3,number sequences
+S02133,Medium,Average,8,5,7,8,8,6,7,7,5,8,perimeter
+S02134,High,Low,2,4,2,5,6,6,4,4,2,3,number sequences
+S02135,Medium,High,6,7,7,6,5,5,5,4,7,4,volume and capacity
+S02136,Medium,Average,3,3,4,2,4,5,6,4,5,6,fractions/decimals
+S02137,Low,High,9,8,8,6,6,6,5,6,5,5,angles
+S02138,High,Low,0,1,2,0,0,1,0,0,3,0,number sequences
+S02139,High,High,6,7,5,6,5,7,8,6,5,7,ratio
+S02140,Medium,High,6,5,5,3,2,4,4,2,6,6,indices
+S02141,High,Average,3,3,3,5,3,6,3,6,6,6,number sequences
+S02142,Low,Average,6,4,6,4,4,7,7,8,6,4,perimeter
+S02143,Medium,Average,4,5,6,8,7,5,8,5,6,8,number sequences
+S02144,Low,High,10,7,8,6,10,7,6,9,8,9,fractions/decimals
+S02145,Medium,Average,8,8,7,8,9,6,8,6,6,7,algebra
+S02146,Medium,Average,7,8,4,8,5,8,7,7,8,4,ratio
+S02147,High,Low,1,1,4,4,3,1,1,2,1,2,number sequences
+S02148,High,Average,1,3,1,1,1,2,4,3,4,2,number sequences
+S02149,Low,Very High,6,6,5,6,5,5,7,5,8,5,ratio
+S02150,Low,High,8,7,6,7,10,10,10,6,6,9,ratio
+S02151,High,Low,5,2,3,3,2,6,2,2,4,6,perimeter
+S02152,Low,Low,3,6,5,7,7,5,5,3,7,4,number sequences
+S02153,Low,High,5,6,6,7,6,8,8,9,8,9,number sequences
+S02154,High,Average,1,1,2,4,2,0,0,4,4,4,algebra
+S02155,Medium,Average,8,9,5,8,8,6,5,9,9,8,ratio
+S02156,Medium,Average,3,3,5,7,5,6,4,3,4,4,number sequences
+S02157,Medium,Low,4,4,6,7,6,5,6,5,7,6,number sequences
+S02158,Medium,Low,8,4,7,4,7,4,4,8,8,4,perimeter
+S02159,Medium,Low,9,7,7,8,6,6,8,5,9,5,volume and capacity
+S02160,Low,Average,7,8,7,5,8,6,7,8,9,5,fractions/decimals
+S02161,Low,Very High,6,8,8,6,7,9,5,9,5,5,angles
+S02162,Medium,Average,7,8,7,7,8,5,7,5,6,6,algebra
+S02163,Medium,High,6,7,6,4,7,7,4,5,3,6,area
+S02164,Medium,Average,8,7,7,7,9,8,5,5,8,6,angles
+S02165,Medium,Average,6,4,3,6,5,5,3,3,7,3,ratio
+S02166,Low,High,9,7,10,9,10,10,10,9,7,10,perimeter
+S02167,Medium,Average,4,3,3,3,3,5,4,2,6,2,volume and capacity
+S02168,High,Average,2,4,4,4,3,4,6,6,5,6,number sequences
+S02169,Medium,Very High,6,4,5,4,4,5,5,7,5,3,probability
+S02170,Medium,Low,4,5,7,4,6,8,6,5,8,5,number sequences
+S02171,Medium,Very High,5,6,4,5,7,6,7,4,8,8,ratio
+S02172,High,Low,3,1,2,3,1,1,4,1,0,4,area
+S02173,High,Average,2,1,0,3,2,3,0,2,1,1,ratio
+S02174,Low,High,10,8,7,9,6,10,8,8,7,6,indices
+S02175,Low,Very High,9,9,6,6,9,9,7,7,5,8,area
+S02176,Medium,High,7,7,5,5,7,5,8,4,4,5,volume and capacity
+S02177,Medium,Very High,8,4,6,4,8,7,8,4,8,4,perimeter
+S02178,High,Low,3,4,1,1,2,3,5,4,4,4,ratio
+S02179,Medium,Low,5,6,6,7,7,9,5,9,5,6,number sequences
+S02180,Medium,High,2,4,5,3,3,6,6,3,6,5,number sequences
+S02181,Medium,Average,5,6,6,2,3,3,2,6,3,5,fractions/decimals
+S02182,Medium,Average,5,6,6,3,5,3,6,4,4,5,fractions/decimals
+S02183,Medium,High,7,4,3,7,4,5,6,5,5,5,ratio
+S02184,High,Low,4,6,2,6,6,5,2,6,4,6,ratio
+S02185,Medium,High,7,3,4,3,3,3,3,3,6,5,perimeter
+S02186,Low,High,10,9,9,10,8,10,8,7,7,10,volume and capacity
+S02187,High,Low,5,3,6,3,6,5,5,6,4,6,perimeter
+S02188,Medium,Average,8,7,6,9,8,5,6,9,7,7,algebra
+S02189,Medium,Low,6,5,8,7,5,7,8,6,8,5,perimeter
+S02190,High,High,9,7,8,7,8,6,8,6,5,9,area
+S02191,High,Average,3,1,0,3,1,1,0,0,0,1,ratio
+S02192,Low,High,9,8,9,10,8,7,8,9,9,10,algebra
+S02193,Low,High,7,6,6,9,9,9,6,9,8,5,probability
+S02194,Medium,High,8,5,8,6,5,8,8,6,7,7,perimeter
+S02195,High,Low,2,0,0,1,2,4,3,3,0,4,perimeter
+S02196,Low,High,9,8,10,9,8,7,7,7,6,10,area
+S02197,Low,Average,5,3,4,5,5,5,7,4,6,7,perimeter
+S02198,Medium,Average,8,5,4,7,6,7,5,6,8,4,ratio
+S02199,Low,High,6,9,9,7,9,9,9,6,7,8,number sequences
+S02200,High,Average,0,3,0,4,0,0,4,0,1,2,number sequences
+S02201,Low,Average,5,6,9,8,9,6,8,6,8,7,number sequences
+S02202,High,Average,5,4,2,3,5,3,4,1,5,1,volume and capacity
+S02203,Medium,High,6,7,5,4,4,6,8,8,4,7,fractions/decimals
+S02204,Medium,Low,7,3,4,5,7,7,5,6,4,6,perimeter
+S02205,Low,Low,6,5,8,7,8,7,5,7,9,9,perimeter
+S02206,Medium,Average,9,7,5,5,6,9,6,6,7,5,ratio
+S02207,Medium,Very High,8,9,7,6,6,7,7,6,9,7,fractions/decimals
+S02208,Low,High,5,8,6,5,5,6,7,7,6,5,number sequences
+S02209,Low,Average,9,8,8,8,6,5,6,5,5,5,algebra
+S02210,Medium,Low,5,6,7,5,6,6,4,8,8,4,angles
+S02211,Low,Average,6,5,6,7,5,8,6,6,6,8,perimeter
+S02212,High,Low,2,1,5,3,4,2,5,1,2,3,perimeter
+S02213,High,Average,2,3,0,0,0,0,1,2,3,1,ratio
+S02214,Low,Average,5,5,7,4,5,7,5,4,6,5,fractions/decimals
+S02215,Medium,Low,7,8,5,5,7,5,8,5,5,7,ratio
+S02216,Medium,Average,6,2,2,5,3,3,6,6,4,5,perimeter
+S02217,Medium,High,8,6,5,8,5,5,6,7,5,6,ratio
+S02218,High,Low,0,0,1,1,0,0,2,1,3,0,number sequences
+S02219,Low,Low,4,4,6,7,4,6,3,5,5,6,angles
+S02220,High,Average,2,4,4,4,6,4,3,2,6,4,number sequences
+S02221,Medium,Low,5,7,4,6,4,4,4,5,3,7,area
+S02222,Low,High,9,5,5,5,9,6,9,8,8,9,perimeter
+S02223,Low,Average,5,6,3,6,7,6,6,4,7,4,ratio
+S02224,High,Low,6,6,4,2,3,2,6,4,2,4,fractions/decimals
+S02225,Low,High,6,7,10,8,6,10,9,9,10,7,number sequences
+S02226,High,Low,2,4,5,2,6,6,6,3,3,3,number sequences
+S02227,Medium,High,5,7,6,5,5,4,6,7,5,5,algebra
+S02228,High,Average,0,1,0,0,1,1,1,2,0,2,number sequences
+S02229,High,Low,1,2,3,0,0,3,0,3,3,0,fractions/decimals
+S02230,Medium,Low,5,2,5,4,3,6,2,2,6,6,perimeter
+S02231,Low,Low,4,7,6,7,7,5,7,6,4,5,number sequences
+S02232,Low,Very High,10,7,10,7,9,8,8,7,6,9,area
+S02233,Medium,High,8,5,8,8,6,8,7,8,8,7,perimeter
+S02234,High,Average,3,5,4,4,3,2,2,2,6,6,algebra
+S02235,High,High,6,7,6,4,4,4,7,8,5,6,fractions/decimals
+S02236,Medium,High,7,5,3,7,4,3,6,4,3,7,ratio
+S02237,High,Average,2,0,0,2,1,0,1,0,0,1,perimeter
+S02238,Medium,Very High,4,6,8,8,7,4,7,5,7,5,number sequences
+S02239,High,Low,1,3,5,2,5,2,5,4,1,3,number sequences
+S02240,Medium,Average,6,6,8,5,8,8,5,6,7,8,fractions/decimals
+S02241,High,Low,5,4,2,4,6,3,3,5,2,3,ratio
+S02242,Medium,Average,8,7,7,6,6,9,7,5,8,5,volume and capacity
+S02243,High,Low,3,0,2,4,0,4,0,1,0,2,perimeter
+S02244,Low,Very High,10,9,10,7,9,7,8,10,7,7,fractions/decimals
+S02245,Low,Low,4,3,3,3,5,4,3,4,6,2,probability
+S02246,High,Average,3,3,0,2,4,3,0,4,2,4,ratio
+S02247,High,Low,2,2,6,5,6,5,2,4,4,2,number sequences
+S02248,Medium,High,2,5,5,5,2,6,2,3,3,5,number sequences
+S02249,Low,Very High,5,6,6,8,9,9,8,8,9,7,number sequences
+S02250,High,Low,3,0,0,0,3,1,3,0,0,0,perimeter
+S02251,Low,High,8,8,10,9,7,7,10,7,10,8,indices
+S02252,Medium,Very High,5,7,5,8,9,7,7,6,6,5,number sequences
+S02253,Low,High,8,7,7,9,6,6,9,10,10,7,indices
+S02254,Low,Average,8,8,8,6,4,6,6,8,4,5,indices
+S02255,Medium,Average,2,3,5,2,4,5,6,2,3,5,number sequences
+S02256,Medium,Average,2,6,5,2,3,2,4,6,2,5,number sequences
+S02257,High,Low,4,5,5,5,6,5,5,5,4,6,number sequences
+S02258,Medium,Very High,7,6,7,6,3,3,7,3,7,3,indices
+S02259,High,High,8,7,4,8,8,5,8,8,6,7,ratio
+S02260,Medium,Low,2,6,4,3,3,3,6,2,3,6,number sequences
+S02261,Low,Very High,8,6,7,8,8,10,10,9,9,10,perimeter
+S02262,High,High,5,7,6,4,7,5,7,6,5,5,fractions/decimals
+S02263,Low,Very High,8,10,9,8,10,9,8,10,8,7,probability
+S02264,High,Low,3,0,3,0,0,0,0,0,2,0,perimeter
+S02265,High,Average,0,1,1,1,1,0,3,0,0,1,number sequences
+S02266,Low,Average,3,5,6,2,3,3,4,4,3,6,fractions/decimals
+S02267,Medium,Average,8,7,8,7,7,6,7,4,5,6,volume and capacity
+S02268,High,High,8,8,8,4,7,8,8,5,6,4,fractions/decimals
+S02269,High,Average,4,2,2,5,2,2,5,3,4,1,probability
+S02270,Low,Average,3,6,3,4,4,5,6,3,7,7,number sequences
+S02271,Medium,Average,5,7,5,4,5,5,8,4,7,4,fractions/decimals
+S02272,High,High,4,4,7,5,8,7,8,7,6,7,number sequences
+S02273,Low,High,6,6,7,5,9,5,6,5,6,9,fractions/decimals
+S02274,High,Average,3,2,4,6,2,2,5,5,3,5,perimeter
+S02275,Medium,Very High,9,9,9,5,5,7,6,9,5,9,fractions/decimals
+S02276,High,High,5,7,6,4,5,4,7,7,7,8,fractions/decimals
+S02277,Low,High,7,8,8,9,5,8,7,8,9,9,indices
+S02278,Low,Low,8,4,4,4,7,6,4,6,5,8,perimeter
+S02279,High,Low,1,1,2,3,3,3,2,3,2,3,number sequences
+S02280,Medium,Low,6,5,7,6,6,7,3,6,6,7,angles
+S02281,Medium,Very High,9,6,9,5,5,6,6,7,6,6,fractions/decimals
+S02282,Medium,Very High,6,7,6,5,3,5,6,3,6,3,indices
+S02283,Low,Low,4,3,4,2,5,2,6,3,5,4,fractions/decimals
+S02284,Medium,Average,6,5,7,6,7,8,6,4,4,7,volume and capacity
+S02285,Low,Average,4,5,6,5,4,5,3,5,6,6,angles
+S02286,High,Average,0,3,3,0,0,3,0,0,0,0,number sequences
+S02287,Medium,Average,8,9,6,5,5,7,7,5,6,7,fractions/decimals
+S02288,High,Average,2,2,1,2,0,2,1,2,1,2,indices
+S02289,Low,Low,4,3,3,3,3,4,4,3,5,2,probability
+S02290,Medium,Average,7,7,7,6,5,7,8,8,6,8,indices
+S02291,Medium,Low,9,5,5,8,5,8,8,9,9,6,perimeter
+S02292,High,Low,0,1,2,0,3,0,1,1,2,0,number sequences
+S02293,High,Average,2,0,2,3,4,2,3,3,3,0,perimeter
+S02294,High,Low,3,4,4,3,3,3,3,6,3,4,number sequences
+S02295,Low,Very High,10,6,10,10,10,7,6,8,6,8,perimeter
+S02296,Medium,Average,5,3,4,5,6,4,2,6,4,5,angles
+S02297,Medium,Average,6,2,5,3,4,2,2,5,6,4,perimeter
+S02298,Medium,High,5,9,7,8,6,6,7,5,6,9,number sequences
+S02299,Medium,Very High,6,4,3,4,5,7,3,5,7,4,ratio
+S02300,High,Average,2,3,3,2,3,2,0,2,1,2,angles
+S02301,Medium,High,3,5,6,6,4,3,5,5,5,2,probability
+S02302,Low,Average,7,4,8,7,8,5,6,7,5,5,perimeter
+S02303,Medium,Average,8,8,8,5,6,8,8,7,8,6,fractions/decimals
+S02304,High,Low,2,5,5,1,2,3,2,1,3,5,fractions/decimals
+S02305,Low,Average,3,7,7,6,7,4,5,3,7,5,number sequences
+S02306,Low,Average,8,7,9,8,5,5,6,9,5,7,indices
+S02307,Low,Average,7,7,6,5,7,6,6,5,4,6,area
+S02308,Low,Very High,7,8,8,6,8,7,10,6,7,8,fractions/decimals
+S02309,High,Average,2,1,4,1,3,1,0,2,4,1,angles
+S02310,High,High,6,3,4,5,6,4,5,4,4,3,perimeter
+S02311,Low,High,6,9,7,6,7,9,6,7,9,7,number sequences
+S02312,High,Low,2,2,1,0,1,1,4,2,2,2,fractions/decimals
+S02313,Medium,Average,6,6,6,3,4,6,4,3,6,4,fractions/decimals
+S02314,Medium,Average,3,6,5,4,7,6,4,4,7,3,number sequences
+S02315,Medium,High,7,7,6,5,6,3,4,3,3,7,algebra
+S02316,Low,Low,7,6,8,6,8,5,6,7,8,4,probability
+S02317,Medium,Low,5,4,3,4,2,3,6,5,6,6,indices
+S02318,Low,Average,8,8,6,7,5,4,5,6,5,7,algebra
+S02319,Medium,Low,5,4,2,4,2,6,6,6,2,3,ratio
+S02320,High,Low,6,5,3,3,3,5,6,6,3,4,ratio
+S02321,High,High,5,3,4,5,4,4,6,6,5,5,perimeter
+S02322,High,Average,0,3,3,1,0,4,4,3,1,4,number sequences
+S02323,Low,High,8,7,10,7,10,10,7,10,10,8,perimeter
+S02324,Low,Average,2,5,3,4,6,4,6,4,5,2,number sequences
+S02325,Medium,High,3,3,4,7,4,5,7,4,4,5,number sequences
+S02326,Medium,High,6,2,2,2,3,5,5,3,6,2,perimeter
+S02327,Medium,High,7,7,8,6,7,5,8,7,7,6,algebra
+S02328,High,Low,4,6,5,4,4,5,2,5,4,5,angles
+S02329,Medium,High,5,2,2,3,5,5,4,6,4,6,perimeter
+S02330,Medium,Average,6,3,6,5,6,4,6,6,7,5,perimeter
+S02331,Medium,Very High,5,7,8,6,6,9,6,6,8,9,number sequences
+S02332,Medium,Low,9,9,8,7,5,9,6,5,5,5,indices
+S02333,Medium,Average,5,5,3,5,2,2,4,3,3,5,indices
+S02334,High,High,3,5,7,7,5,7,6,7,7,7,number sequences
+S02335,High,Average,4,6,2,4,2,3,5,2,3,4,ratio
+S02336,Medium,High,6,5,6,5,4,2,5,3,6,5,algebra
+S02337,Medium,High,7,7,6,8,4,8,5,6,8,6,indices
+S02338,Low,High,6,6,9,7,8,9,7,7,6,7,number sequences
+S02339,High,High,6,5,9,6,8,6,7,6,9,8,perimeter
+S02340,Medium,High,5,2,4,3,5,3,4,2,6,4,perimeter
+S02341,High,Low,1,1,4,2,5,4,3,3,1,1,number sequences
+S02342,Medium,Average,4,6,7,6,3,6,5,7,6,5,indices
+S02343,Low,High,5,8,9,6,5,5,6,9,7,6,number sequences
+S02344,High,Average,2,5,2,4,2,6,3,4,6,4,number sequences
+S02345,High,Low,3,0,0,3,0,2,2,1,2,0,perimeter
+S02346,Medium,Average,3,3,6,3,5,3,3,6,6,5,number sequences
+S02347,High,Low,0,0,2,4,3,3,2,4,0,1,number sequences
+S02348,High,Average,3,1,4,1,3,0,1,2,4,4,algebra
+S02349,Low,Very High,8,9,8,9,7,5,9,7,5,7,algebra
+S02350,Medium,High,4,6,7,4,7,3,7,6,5,7,algebra
+S02351,Low,High,8,7,8,8,9,8,9,9,10,8,perimeter
+S02352,Low,High,6,7,5,9,9,8,6,5,6,6,ratio
+S02353,Medium,Average,5,2,2,6,5,6,4,3,6,3,perimeter
+S02354,Medium,Very High,3,4,4,5,3,7,6,4,6,4,number sequences
+S02355,High,Low,3,1,2,3,1,1,1,3,1,3,perimeter
+S02356,Medium,Average,5,8,7,8,6,5,5,8,5,5,number sequences
+S02357,Medium,Low,2,3,6,5,2,4,6,3,4,5,number sequences
+S02358,High,Low,0,1,2,1,3,0,0,1,0,0,number sequences
+S02359,Low,Very High,10,10,7,10,10,10,10,9,9,9,ratio
+S02360,Medium,Very High,6,5,6,8,9,8,5,6,6,6,perimeter
+S02361,Low,Average,2,5,4,2,3,2,4,3,5,3,number sequences
+S02362,Medium,Average,7,3,3,5,4,6,4,6,7,6,perimeter
+S02363,High,Average,1,0,1,1,2,2,3,1,0,0,perimeter
+S02364,High,High,6,5,9,8,7,6,7,5,9,8,perimeter
+S02365,Medium,Very High,5,7,3,4,4,5,6,4,4,6,ratio
+S02366,Low,Very High,9,6,9,7,7,5,5,7,6,5,algebra
+S02367,Low,Low,2,3,3,6,6,3,2,6,4,5,number sequences
+S02368,Medium,Average,4,4,2,4,3,2,6,5,3,6,ratio
+S02369,Medium,High,5,6,7,9,8,9,7,6,6,7,number sequences
+S02370,Medium,High,6,7,3,5,5,4,4,5,4,5,ratio
+S02371,High,Average,0,0,0,0,1,1,0,2,0,3,number sequences
+S02372,Low,Average,9,5,9,6,8,5,9,9,8,6,perimeter
+S02373,Medium,High,8,9,9,6,5,7,8,9,7,6,indices
+S02374,Medium,High,7,7,7,5,6,7,5,8,6,5,fractions/decimals
+S02375,Medium,Average,6,6,5,6,3,4,2,3,2,5,angles
+S02376,Low,High,9,5,7,6,5,6,8,6,7,9,perimeter
+S02377,Medium,Average,5,6,5,5,8,4,5,8,4,4,algebra
+S02378,Low,High,7,10,8,10,10,7,7,10,7,9,number sequences
+S02379,Low,Low,3,7,3,3,5,3,3,4,7,7,number sequences
+S02380,High,Low,6,6,4,5,4,6,5,5,5,3,probability
+S02381,Low,High,9,7,5,8,6,7,8,8,5,8,ratio
+S02382,Medium,High,4,6,6,2,3,3,3,3,2,2,fractions/decimals
+S02383,High,High,7,8,5,6,5,8,6,5,5,8,ratio
+S02384,High,Low,3,3,3,6,5,6,2,3,6,5,angles
+S02385,Medium,Average,5,5,6,8,5,7,4,5,7,8,angles
+S02386,Low,High,8,9,8,6,7,8,7,7,5,5,area
+S02387,Medium,Low,5,7,7,7,5,6,7,4,5,4,volume and capacity
+S02388,Low,High,7,7,9,9,8,7,8,6,9,10,volume and capacity
+S02389,Medium,Low,4,2,3,3,3,2,4,2,4,4,perimeter
+S02390,High,Average,3,2,5,2,2,4,5,2,2,1,probability
+S02391,Low,Low,3,3,3,3,3,6,7,4,3,3,number sequences
+S02392,Medium,Average,5,7,5,6,6,6,4,5,3,5,area
+S02393,Low,Average,5,6,2,2,5,3,3,3,3,4,ratio
+S02394,Low,High,9,8,8,10,8,9,9,8,10,8,perimeter
+S02395,Medium,High,6,7,6,6,7,4,4,7,7,4,algebra
+S02396,High,Average,0,2,0,2,0,2,0,1,2,0,number sequences
+S02397,High,Low,4,4,6,5,3,5,6,2,4,2,volume and capacity
+S02398,Low,Very High,9,7,6,7,6,8,9,6,6,8,ratio
+S02399,High,Average,3,3,2,1,1,3,1,1,4,1,fractions/decimals
+S02400,Low,Average,8,8,4,7,4,5,6,6,6,8,ratio
+S02401,Medium,Average,5,6,6,3,4,6,5,3,5,6,fractions/decimals
+S02402,Medium,High,3,4,7,3,5,3,4,3,6,4,number sequences
+S02403,Low,Very High,9,10,10,7,9,10,8,10,8,9,fractions/decimals
+S02404,Medium,High,4,4,2,2,6,4,6,5,2,3,ratio
+S02405,Medium,High,5,5,6,7,8,5,7,8,6,5,number sequences
+S02406,Medium,Average,2,3,5,2,4,3,5,6,3,6,number sequences
+S02407,Medium,Average,2,4,2,6,2,6,3,4,3,6,number sequences
+S02408,Low,High,7,8,8,7,6,9,8,8,9,9,indices
+S02409,Medium,Low,6,3,5,6,2,3,5,6,6,3,indices
+S02410,High,Average,3,5,2,3,6,2,3,6,5,6,ratio
+S02411,Medium,Very High,6,4,2,2,2,6,6,3,5,6,ratio
+S02412,High,Average,0,1,3,0,0,0,0,0,0,3,number sequences
+S02413,Medium,Very High,7,7,6,4,6,8,4,5,4,7,fractions/decimals
+S02414,Low,High,6,7,5,6,5,6,8,9,5,8,ratio
+S02415,High,Average,2,2,4,1,1,2,4,0,4,1,volume and capacity
+S02416,Medium,Very High,5,3,3,4,6,6,5,4,6,3,perimeter
+S02417,Low,Very High,9,10,10,10,10,8,10,8,6,10,area
+S02418,High,Average,2,3,0,2,0,1,2,2,0,3,ratio
+S02419,Low,Average,6,4,5,4,4,5,6,7,8,7,perimeter
+S02420,Low,Low,8,6,5,4,4,4,4,8,5,7,fractions/decimals
+S02421,Medium,Average,7,7,6,4,5,3,7,4,7,7,algebra
+S02422,Medium,Average,4,2,5,3,3,3,3,6,4,4,perimeter
+S02423,Low,High,7,5,6,6,5,7,6,5,7,9,perimeter
+S02424,High,Average,2,2,3,1,0,0,0,1,2,2,indices
+S02425,Low,Average,2,3,5,5,5,2,2,6,6,2,number sequences
+S02426,Medium,High,6,7,6,9,6,5,5,9,5,6,algebra
+S02427,Low,Very High,7,7,10,6,6,7,6,8,6,7,fractions/decimals
+S02428,Medium,High,7,5,6,6,8,9,9,7,8,5,perimeter
+S02429,High,Average,4,4,1,2,4,4,1,1,2,0,probability
+S02430,Medium,Low,5,2,5,4,6,3,5,4,2,4,perimeter
+S02431,Medium,High,5,7,7,7,4,4,7,5,4,6,indices
+S02432,Low,Average,9,6,9,8,9,6,6,8,7,5,probability
+S02433,Low,Average,4,3,3,6,5,3,6,6,5,3,perimeter
+S02434,Medium,Very High,6,7,7,8,5,7,6,8,7,6,indices
+S02435,Low,Very High,6,8,8,6,9,6,6,5,7,6,volume and capacity
+S02436,Medium,High,7,4,7,4,6,5,7,7,4,7,perimeter
+S02437,Medium,High,8,6,9,5,9,8,5,6,5,5,fractions/decimals
+S02438,Low,High,9,6,9,7,6,8,9,7,6,6,perimeter
+S02439,Low,Average,9,9,9,9,9,8,5,8,6,9,angles
+S02440,Low,High,10,10,7,6,10,6,10,6,6,8,fractions/decimals
+S02441,Low,High,9,5,6,7,9,8,6,7,8,8,perimeter
+S02442,Medium,High,8,8,8,9,9,6,6,5,9,5,volume and capacity
+S02443,Medium,Average,2,3,6,6,5,4,2,3,3,2,number sequences
+S02444,High,Low,5,6,2,4,2,2,5,6,4,6,ratio
+S02445,Medium,Average,5,4,5,4,4,4,6,4,7,7,perimeter
+S02446,High,Average,1,2,3,0,0,0,0,2,0,2,fractions/decimals
+S02447,Medium,Low,5,6,5,4,5,7,5,8,8,5,fractions/decimals
+S02448,Medium,Low,7,6,7,6,4,6,3,4,3,3,angles
+S02449,Low,High,10,9,10,9,9,10,10,9,9,8,probability
+S02450,Low,High,7,8,7,10,9,10,7,7,8,10,number sequences
+S02451,Low,Average,3,3,5,5,3,3,6,2,3,5,volume and capacity
+S02452,High,Low,3,0,0,3,2,3,1,2,0,3,perimeter
+S02453,High,Low,2,0,2,3,1,0,3,1,3,0,perimeter
+S02454,Low,Very High,7,7,8,9,7,9,9,10,7,9,number sequences
+S02455,Low,Very High,6,7,6,8,8,8,8,6,8,6,number sequences
+S02456,Medium,Very High,7,7,7,3,5,7,7,7,4,4,fractions/decimals
+S02457,High,Low,0,3,4,2,4,3,4,4,4,4,number sequences
+S02458,Medium,Average,3,7,5,6,4,6,7,6,7,3,number sequences
+S02459,High,Average,2,1,2,2,1,3,1,3,0,4,area
+S02460,Medium,Average,6,9,7,8,6,7,8,7,5,7,area
+S02461,Medium,High,9,7,5,8,7,6,9,5,5,9,ratio
+S02462,Low,Low,2,3,4,5,4,5,6,2,3,2,number sequences
+S02463,Low,Average,4,3,3,5,5,7,6,7,4,4,perimeter
+S02464,Low,High,8,9,5,7,9,8,7,5,7,9,ratio
+S02465,Medium,High,7,8,6,7,9,5,5,6,5,9,algebra
+S02466,Medium,Low,7,5,8,5,6,4,4,5,5,8,algebra
+S02467,Medium,High,4,7,8,8,5,6,6,4,6,6,number sequences
+S02468,Low,High,9,5,8,9,8,5,8,8,8,6,perimeter
+S02469,High,Average,3,1,1,2,4,0,4,1,4,4,algebra
+S02470,High,Low,2,3,4,4,2,3,1,2,3,3,angles
+S02471,Medium,Very High,7,4,3,3,3,4,7,6,6,4,ratio
+S02472,High,Low,0,0,0,0,1,1,0,1,3,1,number sequences
+S02473,Low,Average,5,4,4,4,6,5,2,3,4,2,angles
+S02474,Medium,Low,7,4,6,5,7,5,5,4,4,7,perimeter
+S02475,Medium,Average,4,3,6,6,4,7,5,4,7,5,perimeter
+S02476,Medium,Very High,7,5,3,3,4,3,4,5,6,7,ratio
+S02477,Medium,Average,9,8,6,6,7,8,8,9,7,6,ratio
+S02478,Low,Average,5,7,8,6,5,6,8,8,9,9,number sequences
+S02479,Low,Low,6,6,3,2,2,3,5,3,5,3,fractions/decimals
+S02480,Low,Low,6,2,6,6,6,3,2,2,5,6,perimeter
+S02481,Medium,Average,5,7,6,8,8,6,4,6,5,6,angles
+S02482,High,Low,4,3,1,2,4,2,4,0,2,0,volume and capacity
+S02483,Low,High,6,6,8,6,7,6,9,5,6,6,volume and capacity
+S02484,Medium,Very High,5,3,6,5,6,3,3,4,4,5,perimeter
+S02485,Low,High,6,9,6,5,5,7,9,7,8,7,fractions/decimals
+S02486,Low,High,9,10,8,9,10,7,9,8,9,10,algebra
+S02487,Low,High,7,7,7,6,7,9,6,8,9,7,fractions/decimals
+S02488,Medium,High,6,7,8,7,5,5,5,7,8,5,indices
+S02489,Medium,Average,4,8,7,6,5,5,8,5,7,4,number sequences
+S02490,Low,Very High,9,10,10,7,9,9,8,10,8,10,fractions/decimals
+S02491,Low,Very High,6,9,8,7,8,8,5,7,7,8,angles
+S02492,Medium,Average,6,6,4,5,3,6,6,3,3,4,indices
+S02493,Low,High,9,10,10,9,9,7,6,10,9,7,angles
+S02494,Low,High,9,8,10,7,9,6,10,10,6,9,algebra
+S02495,Medium,Low,3,3,4,2,4,2,4,6,4,6,fractions/decimals
+S02496,High,High,9,8,5,6,5,8,7,8,8,6,ratio
+S02497,Medium,Average,8,5,8,5,8,7,8,8,5,7,perimeter
+S02498,Medium,Low,5,7,6,8,5,4,5,7,4,4,algebra
+S02499,Low,Very High,9,8,6,9,5,9,6,7,6,7,indices
+S02500,High,Low,1,1,0,4,3,3,0,2,4,1,ratio
+S02501,High,Low,3,2,0,1,0,0,1,0,0,2,ratio
+S02502,High,Low,5,4,5,5,3,5,4,1,5,4,volume and capacity
+S02503,Medium,High,3,6,6,5,2,2,2,5,6,4,indices
+S02504,Low,Low,6,2,4,3,4,6,2,2,5,3,perimeter
+S02505,Medium,High,4,4,4,7,5,4,5,7,3,6,area
+S02506,High,High,4,4,5,7,6,4,7,5,6,5,number sequences
+S02507,Low,Very High,9,10,9,6,6,9,8,10,10,9,fractions/decimals
+S02508,Low,Low,8,5,8,8,7,7,5,7,6,8,perimeter
+S02509,Medium,Very High,8,7,5,6,5,4,6,4,5,7,algebra
+S02510,Medium,High,5,3,2,5,2,3,3,5,6,4,ratio
+S02511,Medium,Average,8,4,6,4,7,5,6,7,6,6,perimeter
+S02512,Low,High,10,8,8,10,9,10,10,9,10,7,probability
+S02513,High,High,4,4,5,6,6,8,6,4,6,4,number sequences
+S02514,High,Average,2,4,1,1,2,5,3,3,3,2,ratio
+S02515,Medium,Average,5,7,6,3,3,7,3,6,5,4,fractions/decimals
+S02516,High,High,2,2,5,6,4,2,5,2,5,3,number sequences
+S02517,Medium,Average,8,6,7,8,5,8,9,5,5,7,indices
+S02518,Medium,Low,5,9,7,5,5,7,5,9,7,5,number sequences
+S02519,High,Low,4,3,6,4,3,6,2,2,6,3,angles
+S02520,High,Average,3,0,1,4,2,3,2,2,2,4,perimeter
+S02521,High,Low,3,4,3,1,0,3,3,3,4,0,indices
+S02522,High,Average,5,5,2,5,2,4,3,5,3,5,ratio
+S02523,Medium,Average,4,4,4,5,4,2,2,4,4,2,algebra
+S02524,Medium,Average,6,3,3,2,3,4,4,4,6,6,fractions/decimals
+S02525,High,Average,0,0,2,2,3,0,3,4,4,1,number sequences
+S02526,High,Average,3,0,2,0,3,3,0,0,0,1,perimeter
+S02527,High,High,3,3,2,2,2,2,4,2,4,6,ratio
+S02528,Medium,Low,6,4,6,2,6,2,5,6,6,3,fractions/decimals
+S02529,Medium,Average,8,8,7,9,5,9,9,8,7,8,indices
+S02530,Medium,Low,5,7,9,8,9,8,8,5,5,6,number sequences
+S02531,Medium,Very High,7,3,5,7,3,3,3,7,6,7,perimeter
+S02532,High,Low,0,0,0,3,0,1,2,2,1,1,number sequences
+S02533,Medium,High,7,6,6,7,6,6,6,6,4,7,area
+S02534,Low,High,9,10,9,8,9,10,9,10,9,10,fractions/decimals
+S02535,Medium,Average,3,5,3,5,5,6,6,6,3,5,number sequences
+S02536,Medium,Average,4,6,7,7,7,3,7,7,4,5,algebra
+S02537,Medium,Average,4,7,8,8,4,7,6,7,4,6,number sequences
+S02538,High,Low,5,6,3,3,2,4,2,6,4,3,indices
+S02539,Medium,Very High,5,5,8,6,6,9,7,5,6,6,number sequences
+S02540,Medium,Low,5,2,4,2,3,3,6,5,6,6,perimeter
+S02541,Medium,Very High,7,5,5,4,3,5,5,6,3,7,indices
+S02542,Low,High,9,7,9,8,10,9,8,7,10,7,perimeter
+S02543,Medium,Low,3,6,4,4,6,3,6,2,3,4,volume and capacity
+S02544,Medium,Low,6,4,6,5,8,5,8,5,7,6,perimeter
+S02545,Low,Very High,10,8,9,10,7,10,10,7,10,8,indices
+S02546,Low,Very High,10,9,10,7,10,6,7,7,10,7,algebra
+S02547,Medium,Average,4,8,4,5,5,7,8,8,6,8,number sequences
+S02548,Low,Very High,6,9,7,8,6,7,5,5,7,9,angles
+S02549,Medium,Average,6,8,8,4,8,7,7,4,5,8,fractions/decimals
+S02550,Medium,Very High,4,5,7,4,8,4,8,6,5,8,number sequences
+S02551,Medium,Very High,4,7,6,5,4,6,7,4,5,4,number sequences
+S02552,Medium,Average,8,8,6,7,5,8,7,5,7,7,indices
+S02553,Low,Average,5,7,4,5,7,4,3,7,5,7,angles
+S02554,High,High,4,4,4,6,6,8,7,8,7,4,number sequences
+S02555,Medium,Low,7,9,9,9,6,7,9,8,6,7,indices
+S02556,Medium,Average,6,2,4,4,4,4,2,3,4,3,perimeter
+S02557,Medium,High,6,8,5,7,4,6,7,4,8,4,indices
+S02558,High,Average,3,2,3,1,2,3,1,4,2,1,fractions/decimals
+S02559,High,Average,5,1,4,2,5,5,2,1,1,1,perimeter
+S02560,Medium,High,8,8,8,7,5,5,6,7,6,7,indices
+S02561,High,Average,1,2,1,0,0,1,2,0,2,3,fractions/decimals
+S02562,High,Low,1,1,0,3,2,3,0,1,0,0,ratio
+S02563,Low,High,6,5,8,8,6,8,8,6,6,7,perimeter
+S02564,Medium,Low,6,4,6,4,3,5,4,4,3,7,indices
+S02565,Low,Very High,9,8,8,8,10,8,9,7,10,9,volume and capacity
+S02566,Medium,Low,2,5,3,5,6,5,3,4,2,2,number sequences
+S02567,Medium,High,7,5,3,5,4,4,7,4,3,6,ratio
+S02568,Low,High,7,10,10,10,9,10,10,9,8,8,number sequences
+S02569,Low,Average,4,6,8,5,7,8,6,7,4,6,number sequences
+S02570,Medium,Very High,6,7,8,6,8,8,6,9,8,7,number sequences
+S02571,High,Low,3,5,3,4,1,1,1,2,3,3,indices
+S02572,High,Low,0,0,0,2,1,3,3,0,2,2,number sequences
+S02573,Low,Low,3,5,6,4,6,5,6,5,3,6,number sequences
+S02574,High,Low,5,4,4,2,1,4,4,3,3,4,indices
+S02575,Medium,Low,7,3,4,6,4,3,6,5,5,3,perimeter
+S02576,Medium,Average,7,6,5,7,9,9,5,7,9,8,ratio
+S02577,High,High,4,5,3,4,7,4,7,6,3,6,ratio
+S02578,Medium,Average,6,7,7,5,5,3,7,7,5,5,algebra
+S02579,Medium,High,4,7,5,6,7,6,7,4,3,5,area
+S02580,High,Average,1,3,0,1,2,0,2,1,1,3,ratio
+S02581,Low,Average,7,9,8,9,6,9,6,5,8,9,volume and capacity
+S02582,Medium,Average,7,7,5,5,5,4,4,6,6,3,probability
+S02583,Medium,Low,5,4,6,3,3,5,4,5,4,6,fractions/decimals
+S02584,Medium,Average,3,7,6,6,6,3,5,6,4,3,number sequences
+S02585,Low,Low,8,7,6,8,6,7,6,7,6,6,ratio
+S02586,Low,High,10,10,10,10,7,8,8,10,9,8,indices
+S02587,Low,Very High,8,7,6,7,8,8,7,6,6,10,ratio
+S02588,Medium,Average,5,2,2,2,6,4,6,4,5,3,perimeter
+S02589,High,High,5,4,7,6,7,5,3,4,3,4,angles
+S02590,Medium,High,6,6,4,5,6,4,5,4,3,4,area
+S02591,Low,Average,4,7,7,8,7,7,5,8,7,7,number sequences
+S02592,Medium,Average,7,6,6,7,5,7,8,6,7,4,probability
+S02593,Low,Average,7,8,4,8,7,5,7,8,8,8,ratio
+S02594,High,Average,0,3,4,0,3,0,4,4,4,1,number sequences
+S02595,Medium,Low,7,4,6,8,7,5,5,8,8,7,perimeter
+S02596,High,Average,4,6,4,6,3,2,5,6,5,4,algebra
+S02597,Low,Average,5,7,8,8,7,4,5,6,5,4,algebra
+S02598,High,Average,1,4,4,5,4,1,2,5,1,3,number sequences
+S02599,High,Average,5,2,3,4,4,2,2,5,1,1,area
+S02600,Medium,Very High,2,3,3,6,5,3,4,5,6,5,number sequences
+S02601,Low,Low,7,8,9,5,8,6,9,8,7,9,fractions/decimals
+S02602,Medium,High,8,5,8,6,5,4,7,8,4,7,algebra
+S02603,Medium,Low,5,4,5,5,5,6,3,6,3,4,angles
+S02604,High,High,3,2,3,2,6,2,4,5,4,2,perimeter
+S02605,Low,High,10,8,10,8,6,7,9,8,6,10,indices
+S02606,Medium,Average,9,8,6,6,9,8,5,8,5,5,angles
+S02607,High,Average,2,5,4,5,2,5,4,4,3,4,number sequences
+S02608,Low,High,9,5,7,7,7,9,6,7,8,9,perimeter
+S02609,Low,Low,5,5,6,7,6,8,5,9,9,8,number sequences
+S02610,High,High,5,7,6,7,5,8,8,8,9,7,number sequences
+S02611,Medium,Very High,6,4,6,6,3,7,5,3,6,5,indices
+S02612,Medium,Average,5,2,3,2,3,3,2,3,3,3,perimeter
+S02613,Low,Low,3,6,6,3,2,5,4,6,6,5,indices
+S02614,High,Low,3,6,5,5,5,4,6,5,6,2,probability
+S02615,Medium,Average,5,7,9,9,5,6,7,8,5,5,number sequences
+S02616,Medium,High,7,7,6,4,6,6,6,7,6,6,fractions/decimals
+S02617,Medium,Average,3,3,5,5,4,6,3,5,6,3,number sequences
+S02618,High,Low,5,3,5,1,1,2,4,5,2,5,fractions/decimals
+S02619,High,Average,5,3,2,2,3,5,2,3,4,1,probability
+S02620,Low,Average,7,3,4,3,4,5,6,7,4,5,perimeter
+S02621,Medium,High,6,4,6,4,3,3,6,2,5,3,volume and capacity
+S02622,Medium,Average,7,4,5,5,3,6,3,7,4,6,indices
+S02623,Medium,High,7,8,7,5,7,5,9,7,9,6,fractions/decimals
+S02624,Medium,Low,5,3,5,6,3,5,5,7,5,4,perimeter
+S02625,Medium,High,5,5,6,6,7,3,4,5,7,7,algebra
+S02626,Low,Low,5,7,5,4,4,5,6,7,5,3,probability
+S02627,Low,Low,6,6,6,2,5,6,5,5,5,2,fractions/decimals
+S02628,Medium,Average,7,6,9,5,6,5,9,8,9,6,fractions/decimals
+S02629,Low,High,10,9,9,8,8,6,9,7,10,9,algebra
+S02630,Medium,Low,5,5,2,2,4,4,4,4,3,4,ratio
+S02631,Low,High,9,8,6,9,5,9,8,8,5,5,indices
+S02632,Medium,Average,7,5,4,6,5,4,4,8,5,5,ratio
+S02633,High,Low,6,3,6,3,4,4,3,3,6,5,perimeter
+S02634,High,Low,2,2,2,0,2,1,3,0,0,0,fractions/decimals
+S02635,Medium,High,4,3,5,5,7,6,5,5,4,7,perimeter
+S02636,High,Low,2,4,6,2,5,4,2,3,6,3,number sequences
+S02637,High,Low,1,2,3,3,2,1,3,3,5,4,number sequences
+S02638,Low,High,7,7,6,8,5,7,8,5,5,6,indices
+S02639,Low,Average,4,3,4,6,2,2,5,2,6,5,indices
+S02640,High,High,5,8,4,6,4,6,6,6,6,4,ratio
+S02641,Low,High,10,10,8,10,6,10,10,6,8,7,indices
+S02642,Medium,Average,7,6,5,6,7,9,8,7,9,5,ratio
+S02643,Low,Average,3,2,2,6,3,5,6,2,4,3,perimeter
+S02644,Low,Average,8,8,8,5,8,8,9,9,6,7,fractions/decimals
+S02645,High,Low,4,1,3,4,4,3,4,1,4,0,probability
+S02646,Medium,Low,7,7,4,5,3,6,5,6,5,7,indices
+S02647,Medium,Average,6,7,3,4,4,6,7,5,4,3,ratio
+S02648,Medium,Average,5,5,6,4,6,4,7,4,4,7,fractions/decimals
+S02649,Low,Very High,9,8,10,8,10,8,9,8,10,9,perimeter
+S02650,Low,High,8,10,7,7,10,8,7,8,8,6,probability
+S02651,Low,High,8,9,8,6,6,10,6,8,10,7,fractions/decimals
+S02652,High,Average,3,3,4,3,4,3,1,2,2,3,angles
+S02653,Low,High,7,6,9,7,10,8,7,9,10,9,perimeter
+S02654,Low,Very High,6,7,6,6,9,6,6,6,5,5,area
+S02655,Low,Average,4,6,3,5,5,6,4,6,3,4,ratio
+S02656,Medium,Very High,2,6,4,5,5,6,5,6,2,2,number sequences
+S02657,High,Average,3,2,0,3,4,0,4,1,1,4,ratio
+S02658,Medium,Average,5,2,2,3,2,5,3,6,3,5,perimeter
+S02659,Low,Very High,9,6,7,7,5,8,7,6,9,6,indices
+S02660,High,Average,3,6,5,5,4,5,2,2,3,6,angles
+S02661,Low,Very High,6,7,7,9,8,6,9,7,8,9,number sequences
+S02662,Medium,High,4,7,4,6,3,5,5,5,7,3,indices
+S02663,Low,Very High,9,9,10,9,9,9,6,7,8,9,angles
+S02664,High,Low,2,0,1,3,0,2,2,4,4,3,perimeter
+S02665,Low,High,8,8,9,10,8,10,8,7,10,10,volume and capacity
+S02666,High,Average,0,1,3,1,4,4,0,0,3,1,number sequences
+S02667,High,Low,0,3,4,3,3,0,4,1,4,0,number sequences
+S02668,Medium,Low,7,5,7,6,6,6,7,7,5,8,perimeter
+S02669,Medium,High,8,7,7,5,9,8,6,6,8,6,fractions/decimals
+S02670,High,Average,4,4,4,3,5,6,4,5,4,6,fractions/decimals
+S02671,High,Low,0,4,0,0,3,1,2,1,1,4,number sequences
+S02672,High,Average,4,4,5,2,5,6,5,5,4,3,fractions/decimals
+S02673,Medium,Low,9,7,6,7,7,7,8,8,7,9,ratio
+S02674,High,Low,2,3,2,0,1,2,0,2,1,2,fractions/decimals
+S02675,Low,Very High,10,9,10,8,10,10,8,9,9,8,fractions/decimals
+S02676,Medium,Low,5,8,6,4,5,5,6,6,7,7,fractions/decimals
+S02677,Medium,High,7,7,3,6,5,3,6,4,5,4,ratio
+S02678,Low,Average,6,7,4,7,8,4,4,6,6,5,ratio
+S02679,Medium,High,6,3,7,4,6,3,3,3,7,4,perimeter
+S02680,Medium,High,2,2,3,2,3,6,6,5,5,2,number sequences
+S02681,Low,Average,7,8,8,8,8,4,4,8,6,4,algebra
+S02682,High,High,7,7,7,6,5,9,7,5,9,7,indices
+S02683,Medium,Very High,6,2,2,5,3,4,3,5,3,4,perimeter
+S02684,Medium,Very High,2,6,2,5,5,4,4,4,6,5,number sequences
+S02685,High,Average,2,4,2,6,3,5,6,2,5,5,number sequences
+S02686,High,Low,0,1,1,0,3,1,3,1,1,0,number sequences
+S02687,High,Average,6,3,2,3,2,4,2,4,4,4,ratio
+S02688,Medium,Average,3,4,6,4,5,7,4,7,7,5,number sequences
+S02689,Medium,Average,5,7,5,4,7,7,4,4,4,4,fractions/decimals
+S02690,Low,High,8,10,10,8,9,7,7,7,10,8,algebra
+S02691,Medium,Average,6,8,7,5,6,6,6,8,8,4,probability
+S02692,Low,High,8,8,10,7,7,10,10,8,10,9,fractions/decimals
+S02693,High,Low,6,5,2,4,4,6,2,6,3,3,ratio
+S02694,High,Average,1,1,0,0,3,0,1,0,2,1,ratio
+S02695,Medium,High,4,2,5,3,5,2,4,5,2,3,perimeter
+S02696,Medium,Average,5,3,6,7,4,5,3,7,4,4,perimeter
+S02697,High,Average,4,1,4,2,2,2,3,2,4,1,perimeter
+S02698,High,High,7,4,6,5,7,4,4,7,6,4,perimeter
+S02699,High,Average,3,4,2,0,4,3,4,3,1,4,fractions/decimals
+S02700,Medium,Low,5,8,6,7,5,4,4,4,5,8,algebra
+S02701,Low,Very High,9,6,8,7,8,5,7,6,9,8,algebra
+S02702,Low,Low,6,6,3,3,7,3,7,3,5,5,ratio
+S02703,Low,Average,7,5,4,4,4,8,6,7,7,5,ratio
+S02704,Medium,Average,5,4,6,8,6,6,7,8,7,6,perimeter
+S02705,Low,Very High,7,8,10,7,9,7,7,10,9,10,number sequences
+S02706,Low,High,7,7,9,7,6,7,7,8,9,9,indices
+S02707,High,Average,4,3,3,2,2,4,0,0,2,2,angles
+S02708,Medium,Low,6,5,5,5,5,6,4,5,4,7,angles
+S02709,Low,Low,8,4,7,7,6,4,4,7,4,5,perimeter
+S02710,Low,Very High,5,8,7,6,6,8,9,7,7,5,number sequences
+S02711,High,Low,4,0,3,1,3,3,2,1,2,0,perimeter
+S02712,High,Low,1,3,3,1,0,4,2,3,2,3,indices
+S02713,High,High,8,8,4,8,4,8,8,4,8,7,ratio
+S02714,Low,Very High,6,8,8,7,10,7,10,10,9,7,number sequences
+S02715,Medium,Average,8,8,4,7,7,6,6,5,8,5,ratio
+S02716,Medium,High,4,5,7,4,4,7,4,8,6,8,number sequences
+S02717,Medium,Average,6,9,8,7,5,5,7,8,8,5,indices
+S02718,Low,Very High,6,7,6,8,6,8,7,8,10,10,number sequences
+S02719,Low,Very High,10,6,10,10,9,6,10,8,10,10,perimeter
+S02720,High,Average,2,1,0,0,0,0,0,0,0,1,ratio
+S02721,High,Low,2,4,6,5,2,3,6,6,4,5,number sequences
+S02722,Medium,High,5,5,3,6,5,6,7,5,5,6,ratio
+S02723,Medium,High,4,6,3,5,6,5,6,4,4,6,ratio
+S02724,Medium,Average,3,4,7,6,4,5,3,5,4,4,number sequences
+S02725,High,High,6,5,3,5,3,4,7,7,6,4,ratio
+S02726,Low,High,7,6,9,6,7,8,10,7,8,10,perimeter
+S02727,Medium,High,9,6,8,6,8,7,7,9,9,6,perimeter
+S02728,Low,Low,6,6,5,5,5,2,5,3,3,5,algebra
+S02729,High,Average,0,3,3,2,2,1,0,0,1,2,number sequences
+S02730,Low,High,10,9,10,7,10,9,10,10,10,10,fractions/decimals
+S02731,Medium,Low,7,7,5,5,4,4,7,7,6,6,indices
+S02732,Low,Very High,7,6,9,6,6,6,6,8,7,5,probability
+S02733,Low,Average,5,6,2,5,2,5,6,2,3,2,ratio
+S02734,Low,High,7,7,10,9,7,10,8,8,7,10,number sequences
+S02735,High,Average,3,0,0,0,0,2,1,0,2,0,perimeter
+S02736,High,Low,0,3,0,0,0,0,1,3,1,1,number sequences
+S02737,Low,Low,6,7,8,9,9,5,8,7,6,6,algebra
+S02738,Medium,Average,5,7,5,6,6,4,7,7,6,7,algebra
+S02739,High,Average,2,1,2,0,2,0,1,3,3,0,fractions/decimals
+S02740,Low,Average,7,3,5,3,7,6,5,4,4,6,perimeter
+S02741,Medium,Average,7,6,6,7,6,6,3,3,6,4,angles
+S02742,Medium,Average,3,2,3,2,5,6,4,3,5,6,perimeter
+S02743,High,Average,3,1,1,0,0,0,3,0,1,1,fractions/decimals
+S02744,High,Low,1,2,0,3,0,2,1,3,0,3,ratio
+S02745,Medium,High,8,7,5,8,7,4,4,5,4,5,algebra
+S02746,High,Low,3,4,4,4,0,3,0,1,1,1,indices
+S02747,Low,Very High,8,8,10,8,9,10,7,10,10,10,angles
+S02748,Medium,Average,6,5,4,5,3,4,5,7,3,7,indices
+S02749,Medium,High,6,8,6,8,8,8,5,7,5,6,angles
+S02750,Medium,Average,3,3,5,6,5,3,5,5,7,7,number sequences
+S02751,Low,High,7,10,9,9,10,10,10,9,7,9,number sequences
+S02752,Medium,High,5,4,4,5,5,5,6,5,8,5,perimeter
+S02753,Medium,High,4,4,7,6,7,4,7,7,7,4,number sequences
+S02754,High,Average,5,2,5,3,6,4,3,2,2,4,perimeter
+S02755,High,High,5,7,4,6,7,6,7,8,4,8,ratio
+S02756,Medium,Average,7,7,5,4,6,4,5,5,4,5,fractions/decimals
+S02757,Medium,High,6,6,8,7,5,9,9,9,9,7,indices
+S02758,Low,Low,6,7,7,4,4,6,3,3,7,7,angles
+S02759,Medium,High,6,8,9,5,7,8,6,8,6,6,fractions/decimals
+S02760,Medium,Average,5,8,9,6,9,9,6,8,9,6,number sequences
+S02761,Low,High,7,8,8,10,9,7,8,10,10,10,number sequences
+S02762,Low,Average,5,7,6,3,4,6,5,6,4,5,fractions/decimals
+S02763,Medium,High,5,4,5,2,5,6,5,6,2,2,fractions/decimals
+S02764,Medium,Average,7,4,7,5,4,7,4,3,7,7,volume and capacity
+S02765,High,Low,4,2,3,6,5,3,4,4,2,4,perimeter
+S02766,Low,Average,8,7,8,6,6,5,5,6,6,7,algebra
+S02767,Medium,Very High,6,6,4,7,4,8,8,6,6,8,ratio
+S02768,Medium,High,5,7,7,7,7,3,5,7,6,6,algebra
+S02769,Medium,High,7,6,8,8,8,8,4,7,4,7,angles
+S02770,Medium,Average,7,6,5,4,6,4,4,4,8,4,fractions/decimals
+S02771,High,High,4,4,6,5,6,2,3,4,2,4,algebra
+S02772,High,Low,5,6,5,3,4,3,6,6,6,2,probability
+S02773,Medium,Low,7,6,8,5,8,7,7,4,5,6,volume and capacity
+S02774,High,Low,5,1,5,3,5,3,5,1,2,5,perimeter
+S02775,Medium,High,7,9,5,9,6,8,6,7,6,9,ratio
+S02776,Medium,High,5,8,6,6,8,8,5,9,7,5,number sequences
+S02777,Low,Average,7,6,5,5,4,4,6,5,6,7,indices
+S02778,Low,Average,5,7,8,4,7,8,6,4,5,8,fractions/decimals
+S02779,Medium,Average,4,6,3,3,5,3,3,6,2,4,area
+S02780,Low,High,7,8,7,10,10,8,9,7,10,10,number sequences
+S02781,Low,Very High,8,8,10,7,6,7,6,7,10,6,indices
+S02782,Medium,Average,7,7,5,4,7,5,6,6,7,4,fractions/decimals
+S02783,Low,High,9,5,6,5,5,7,6,7,7,7,perimeter
+S02784,Medium,Average,9,6,5,9,9,6,7,9,7,9,ratio
+S02785,High,Low,2,4,3,6,6,4,2,6,6,2,number sequences
+S02786,Medium,Very High,5,8,8,9,7,9,5,6,6,8,number sequences
+S02787,Low,High,8,9,9,7,9,6,5,8,8,8,angles
+S02788,Medium,Very High,8,6,9,5,7,7,5,9,5,5,fractions/decimals
+S02789,Medium,Low,5,5,7,7,8,8,7,5,7,7,number sequences
+S02790,Medium,Low,6,8,5,6,9,5,9,5,6,6,ratio
+S02791,High,High,7,5,5,9,8,9,6,5,7,9,perimeter
+S02792,Medium,High,6,5,7,5,4,6,3,4,3,3,angles
+S02793,Medium,High,6,8,6,5,5,8,6,6,7,5,fractions/decimals
+S02794,High,Average,5,4,4,2,6,4,6,4,4,6,fractions/decimals
+S02795,High,Average,2,4,2,1,2,0,0,1,2,0,algebra
+S02796,Medium,High,5,5,2,4,6,4,5,6,2,4,ratio
+S02797,Medium,High,7,6,4,4,4,7,7,5,5,4,ratio
+S02798,High,High,3,4,2,4,4,2,2,4,3,2,ratio
+S02799,Low,Very High,7,9,9,8,9,8,10,10,9,8,number sequences
+S02800,High,High,5,6,8,9,7,8,6,7,8,6,number sequences
+S02801,Medium,Average,5,6,5,7,3,7,5,5,4,7,indices
+S02802,High,Average,4,4,2,1,3,1,1,5,1,1,fractions/decimals
+S02803,High,Average,4,1,3,2,2,1,0,1,1,0,angles
+S02804,Medium,Average,5,6,3,6,3,2,5,6,6,6,algebra
+S02805,Medium,Low,5,5,3,3,5,6,7,5,7,7,ratio
+S02806,Low,Low,8,6,5,8,7,6,8,8,5,7,ratio
+S02807,High,High,5,5,7,4,8,7,4,6,8,5,fractions/decimals
+S02808,High,Low,4,2,4,5,4,4,3,5,2,2,perimeter
+S02809,High,Low,2,6,4,5,2,4,6,2,5,6,number sequences
+S02810,High,Average,3,5,3,6,3,5,3,2,4,4,volume and capacity
+S02811,Low,Average,5,6,4,2,6,3,4,5,2,6,fractions/decimals
+S02812,High,Average,2,4,2,4,0,2,2,4,2,0,indices
+S02813,Medium,High,4,8,8,4,8,7,6,6,6,8,number sequences
+S02814,Low,Average,5,8,4,4,8,4,8,6,8,4,ratio
+S02815,Low,High,10,10,7,9,10,10,10,8,10,8,ratio
+S02816,Low,Average,5,4,4,7,5,4,7,4,7,7,perimeter
+S02817,High,Average,1,1,4,2,1,3,5,5,3,5,number sequences
+S02818,High,Low,6,3,4,5,4,2,2,5,3,6,algebra
+S02819,High,Average,1,2,0,1,2,2,3,3,2,2,ratio
+S02820,High,Low,3,0,4,1,2,4,0,3,4,3,perimeter
+S02821,Medium,Average,6,3,3,6,5,2,3,3,5,5,algebra
+S02822,Low,Average,7,5,5,8,6,9,5,9,5,9,perimeter
+S02823,Medium,Average,7,6,7,3,5,6,5,4,3,6,fractions/decimals
+S02824,Medium,Average,5,6,5,7,6,5,4,8,5,4,angles
+S02825,High,Low,2,4,2,3,4,3,5,1,2,5,volume and capacity
+S02826,Medium,Average,7,3,7,5,7,7,6,4,5,6,perimeter
+S02827,Medium,High,3,3,4,4,6,3,6,4,7,6,number sequences
+S02828,Medium,Average,6,9,8,9,6,6,6,5,8,9,volume and capacity
+S02829,High,Low,4,4,3,2,5,1,3,2,4,5,algebra
+S02830,Medium,Low,2,4,4,6,3,3,2,4,4,4,number sequences
+S02831,Medium,High,3,4,5,4,7,4,3,6,3,5,number sequences
+S02832,Medium,High,5,7,7,6,5,4,8,4,4,6,algebra
+S02833,Medium,Average,6,6,4,8,4,5,6,7,7,8,ratio
+S02834,High,High,6,5,8,5,8,7,5,5,8,7,perimeter
+S02835,Medium,Average,3,3,5,2,4,5,4,6,3,2,fractions/decimals
+S02836,Medium,Low,5,4,7,4,7,7,7,7,5,5,perimeter
+S02837,High,Average,2,5,3,4,2,5,3,5,4,5,number sequences
+S02838,High,Average,2,0,0,0,3,2,0,0,0,2,perimeter
+S02839,High,Low,5,5,4,2,3,5,6,6,4,3,fractions/decimals
+S02840,Low,Very High,9,10,7,9,10,7,10,9,10,10,ratio
+S02841,Medium,High,7,4,3,4,6,4,6,6,6,5,ratio
+S02842,Medium,Average,6,3,2,6,4,5,6,3,2,2,ratio
+S02843,Medium,Low,2,5,6,5,2,5,4,3,3,6,number sequences
+S02844,Medium,High,2,6,3,2,2,4,6,2,3,5,number sequences
+S02845,Medium,Average,5,8,6,7,5,8,7,5,8,8,number sequences
+S02846,Medium,Very High,5,6,7,3,5,6,5,4,6,7,fractions/decimals
+S02847,Medium,High,4,7,5,4,7,7,4,7,4,6,number sequences
+S02848,High,Low,2,2,0,3,0,0,0,1,4,3,ratio
+S02849,Medium,High,6,9,5,5,8,9,6,7,7,5,ratio
+S02850,Medium,High,4,4,4,5,5,6,6,8,8,4,number sequences
+S02851,High,Low,3,4,4,5,3,5,3,3,4,5,number sequences
+S02852,High,Average,1,1,4,4,4,5,3,2,4,5,number sequences
+S02853,High,Low,3,0,1,0,3,0,0,2,0,0,perimeter
+S02854,High,Average,4,0,2,3,0,1,4,0,2,2,perimeter
+S02855,Medium,Low,2,6,5,4,3,6,2,2,2,6,number sequences
+S02856,High,Average,5,2,5,4,3,4,3,2,3,1,probability
+S02857,Medium,Average,7,8,8,7,6,5,8,5,6,8,algebra
+S02858,Low,Average,5,5,3,3,5,7,4,6,4,6,ratio
+S02859,High,Low,4,4,0,1,0,1,0,0,0,0,ratio
+S02860,Medium,Average,5,5,5,6,7,3,5,6,6,3,algebra
+S02861,Low,High,5,7,9,5,8,5,7,5,7,8,number sequences
+S02862,Low,High,6,7,7,6,9,7,10,9,6,10,number sequences
+S02863,High,High,5,7,4,7,5,6,8,5,6,5,ratio
+S02864,Medium,Average,4,6,4,3,2,6,3,2,6,5,indices
+S02865,High,Low,4,2,3,3,1,1,3,3,4,4,indices
+S02866,High,Low,4,2,4,4,1,1,5,3,3,4,indices
+S02867,High,Average,3,5,5,2,2,2,2,3,4,1,probability
+S02868,Low,High,9,6,5,6,6,7,8,8,6,7,ratio
+S02869,Low,High,6,10,9,6,7,6,7,8,8,8,number sequences
+S02870,Medium,Very High,3,5,5,6,3,7,7,5,4,4,number sequences
+S02871,Medium,Low,5,4,6,5,5,6,6,5,5,6,perimeter
+S02872,Low,Average,5,5,6,6,8,6,6,5,7,7,number sequences
+S02873,High,Low,2,2,0,0,2,0,0,0,2,3,ratio
+S02874,Medium,High,9,7,5,9,7,8,7,9,8,9,ratio
+S02875,High,High,7,5,6,5,7,4,5,3,5,3,volume and capacity
+S02876,High,High,4,2,2,3,6,2,3,2,2,4,perimeter
+S02877,High,Average,1,5,3,2,4,1,2,2,5,2,number sequences
+S02878,Medium,High,4,2,4,3,5,6,2,4,5,2,perimeter
+S02879,Medium,Very High,6,5,7,6,4,7,4,4,5,7,indices
+S02880,High,High,9,8,5,6,6,8,7,8,6,7,ratio
+S02881,Medium,Low,6,4,5,8,5,5,6,6,4,7,perimeter
+S02882,Low,Average,9,8,5,6,5,6,7,6,5,5,ratio
+S02883,Medium,High,4,3,6,7,6,6,5,3,4,4,perimeter
+S02884,High,Average,4,0,0,0,3,1,3,3,1,1,perimeter
+S02885,High,Average,5,6,6,6,2,3,2,4,3,6,indices
+S02886,Medium,High,3,5,2,2,2,2,3,5,6,2,ratio
+S02887,Medium,Average,5,7,5,5,6,4,4,6,3,4,area
+S02888,Low,High,10,10,7,10,7,7,8,8,7,10,ratio
+S02889,Low,Average,3,3,4,4,6,4,3,4,3,5,number sequences
+S02890,Medium,High,3,5,5,3,6,5,5,2,3,5,volume and capacity
+S02891,Low,High,9,7,10,10,9,10,10,10,10,7,perimeter
+S02892,Low,High,8,10,9,9,10,8,9,10,9,8,number sequences
+S02893,Medium,Low,3,5,5,5,4,2,2,5,4,6,algebra
+S02894,High,Low,4,5,6,4,2,2,6,2,4,6,indices
+S02895,Low,Very High,10,10,10,10,7,10,7,7,10,10,indices
+S02896,High,Average,0,0,2,0,0,3,1,0,0,0,number sequences
+S02897,Low,High,8,9,9,5,8,7,7,6,5,6,fractions/decimals
+S02898,Low,Very High,7,10,7,6,10,8,8,8,6,9,fractions/decimals
+S02899,Medium,Very High,7,3,7,7,4,6,6,3,3,7,perimeter
+S02900,High,Low,2,3,6,4,5,4,3,6,2,2,number sequences
+S02901,Low,High,6,8,10,7,8,9,9,9,9,9,number sequences
+S02902,Medium,High,5,3,3,4,3,6,4,5,4,5,perimeter
+S02903,High,High,4,6,7,7,4,7,8,4,6,5,number sequences
+S02904,High,Low,5,4,4,2,3,1,4,3,5,4,algebra
+S02905,Medium,High,5,7,6,8,4,5,4,7,5,7,indices
+S02906,Low,Average,5,6,7,4,3,6,3,7,3,6,indices
+S02907,Medium,Average,8,6,7,7,5,8,7,8,8,6,indices
+S02908,Medium,High,4,4,4,5,4,6,2,3,6,4,angles
+S02909,High,High,7,3,6,5,3,5,5,6,7,6,perimeter
+S02910,High,Average,3,3,2,0,3,1,1,0,0,2,fractions/decimals
+S02911,Medium,Very High,6,5,4,6,3,5,3,2,4,4,volume and capacity
+S02912,Low,Average,9,5,9,9,7,5,7,5,6,8,perimeter
+S02913,Medium,High,5,9,5,9,6,5,9,8,6,7,number sequences
+S02914,Medium,Average,4,2,5,3,2,2,3,3,3,6,perimeter
+S02915,High,High,5,5,7,7,5,8,8,5,5,8,number sequences
+S02916,Low,Average,6,5,7,4,7,7,4,4,8,8,fractions/decimals
+S02917,Low,Very High,7,9,10,10,8,10,10,10,10,9,number sequences
+S02918,High,Average,1,2,3,5,2,2,3,2,3,2,number sequences
+S02919,High,Low,5,5,4,4,2,3,4,3,3,4,indices
+S02920,Low,Low,5,4,6,7,6,3,7,3,4,6,algebra
+S02921,Low,Average,3,5,6,6,3,6,3,4,4,5,number sequences
+S02922,High,Average,0,2,3,3,2,0,2,2,2,3,number sequences
+S02923,Low,High,9,8,9,5,6,5,6,6,9,7,fractions/decimals
+S02924,Medium,High,4,4,2,4,3,4,6,5,6,4,ratio
+S02925,Medium,High,5,8,4,7,5,5,7,5,7,8,ratio
+S02926,High,High,4,5,2,6,5,4,5,5,3,2,ratio
+S02927,Low,Average,5,2,5,2,2,3,6,2,2,2,perimeter
+S02928,High,Average,3,3,5,4,1,5,3,5,2,5,indices
+S02929,Medium,Very High,3,7,5,4,3,6,6,6,6,7,number sequences
+S02930,Medium,High,2,2,3,4,3,5,5,6,4,5,number sequences
+S02931,Medium,Average,9,7,7,9,8,8,6,7,7,5,probability
+S02932,High,Average,2,5,3,2,5,6,6,2,6,4,number sequences
+S02933,Low,Low,4,5,6,3,6,3,4,5,3,3,fractions/decimals
+S02934,Low,High,8,10,6,8,6,9,9,8,9,9,ratio
+S02935,High,Low,1,3,4,3,5,3,4,4,4,5,number sequences
+S02936,Medium,Average,7,6,7,5,5,9,5,6,9,5,fractions/decimals
+S02937,High,Average,2,3,0,1,3,0,3,0,0,2,ratio
+S02938,Medium,Average,3,4,7,7,4,3,4,4,7,4,number sequences
+S02939,Low,High,7,10,7,9,8,10,10,8,9,8,number sequences
+S02940,High,Average,5,4,5,5,4,5,2,5,5,4,angles
+S02941,High,Low,4,3,3,4,2,4,1,2,3,4,angles
+S02942,Medium,Average,4,4,4,6,5,6,5,3,2,5,area
+S02943,High,High,6,8,8,8,4,6,8,7,5,5,indices
+S02944,Medium,Average,6,3,7,3,7,3,7,3,5,4,perimeter
+S02945,Medium,Low,9,6,8,5,7,5,7,6,6,7,fractions/decimals
+S02946,Low,High,7,6,9,7,7,6,9,9,8,6,perimeter
+S02947,Medium,Average,6,6,8,5,8,6,7,8,5,5,fractions/decimals
+S02948,Low,Very High,8,6,8,5,6,7,8,6,8,9,fractions/decimals
+S02949,Low,Very High,10,10,8,10,9,8,9,10,10,9,ratio
+S02950,Medium,Very High,5,7,6,5,7,5,5,5,7,9,number sequences
+S02951,Low,Average,4,5,6,2,6,5,4,4,4,5,fractions/decimals
+S02952,Medium,Average,5,4,4,6,5,6,4,3,6,4,volume and capacity
+S02953,High,Low,3,0,1,4,4,3,0,0,1,1,perimeter
+S02954,Low,Very High,10,8,8,6,6,7,10,9,8,6,fractions/decimals
+S02955,Medium,Average,7,8,8,9,7,6,6,8,7,6,algebra
+S02956,Low,Average,4,2,6,4,5,6,4,5,4,4,perimeter
+S02957,Medium,Average,5,4,2,6,4,6,4,2,4,2,ratio
+S02958,Medium,Very High,7,5,5,5,7,7,4,8,6,8,angles
+S02959,Medium,Average,7,7,6,4,7,6,4,6,5,6,fractions/decimals
+S02960,Medium,Average,6,7,8,6,7,8,9,8,6,9,number sequences
+S02961,Medium,Low,3,5,4,7,5,4,4,3,6,3,number sequences
+S02962,Medium,Average,7,7,7,8,9,7,7,5,9,7,volume and capacity
+S02963,Medium,Average,6,9,6,5,9,8,6,5,9,8,fractions/decimals
+S02964,Medium,Low,8,6,7,8,6,5,4,7,7,8,angles
+S02965,Medium,Average,7,7,9,9,6,6,9,8,5,8,area
+S02966,High,Average,5,5,2,3,4,5,6,6,4,3,ratio
+S02967,Low,Very High,9,9,8,10,9,9,9,7,9,10,volume and capacity
+S02968,Low,Very High,10,7,10,9,10,10,10,10,8,7,perimeter
+S02969,High,Average,4,3,2,3,6,3,5,5,3,4,ratio
+S02970,Medium,High,7,9,7,5,6,8,7,7,5,6,fractions/decimals
+S02971,Medium,High,8,6,5,7,7,6,8,7,8,6,ratio
+S02972,Medium,High,4,8,8,4,8,6,6,8,8,5,number sequences
+S02973,Low,Very High,9,9,7,9,10,8,9,9,10,9,ratio
+S02974,Low,High,7,8,7,8,10,8,10,10,8,8,number sequences
+S02975,High,Low,0,0,0,1,0,0,2,0,0,0,number sequences
+S02976,Low,Very High,9,10,10,9,7,10,7,10,10,10,indices
+S02977,Low,High,8,6,7,9,9,6,6,6,8,6,perimeter
+S02978,Low,Very High,5,7,6,6,8,9,9,8,7,8,number sequences
+S02979,High,Average,2,0,1,0,0,2,3,0,1,0,perimeter
+S02980,Medium,High,5,4,6,2,3,4,3,2,4,2,fractions/decimals
+S02981,Medium,High,2,6,3,4,2,4,6,5,2,5,number sequences
+S02982,High,High,4,4,4,5,5,5,7,6,7,8,number sequences
+S02983,Low,Average,2,4,2,6,2,2,2,6,6,5,number sequences
+S02984,High,Low,3,4,2,3,4,3,4,2,2,2,ratio
+S02985,Medium,High,6,7,5,9,9,8,9,8,6,6,ratio
+S02986,Medium,Average,8,4,7,4,4,4,5,7,4,8,perimeter
+S02987,Medium,Average,4,4,5,6,4,4,4,6,5,2,probability
+S02988,High,Average,2,4,6,4,5,5,4,5,4,6,number sequences
+S02989,High,Average,2,6,6,4,4,4,2,6,5,4,number sequences
+S02990,Medium,Low,5,8,6,5,4,4,8,8,7,4,indices
+S02991,Medium,Average,5,9,8,5,7,8,6,6,5,5,number sequences
+S02992,Low,High,7,9,8,10,8,8,8,9,9,10,number sequences
+S02993,Low,Average,6,2,4,5,5,2,6,2,6,2,perimeter
+S02994,Low,Average,2,3,6,2,2,4,5,2,5,6,number sequences
+S02995,Medium,Very High,6,3,5,6,6,3,4,6,4,5,perimeter
+S02996,Medium,Low,6,5,8,7,5,8,5,9,6,8,perimeter
+S02997,Medium,High,8,5,6,5,8,8,6,4,7,8,volume and capacity
+S02998,Medium,High,5,4,8,5,5,8,8,8,7,4,perimeter
+S02999,High,Low,4,4,2,2,3,6,4,4,4,4,ratio
+S03000,High,Average,5,2,5,2,2,2,4,4,5,3,perimeter

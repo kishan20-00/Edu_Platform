@@ -1,7 +1,7 @@
 import requests
 
 # Define the Flask app URL
-url = "http://127.0.0.1:5000/predict"
+url = "http://127.0.0.1:5003/predict"
 
 # Sample input data
 sample_input = {

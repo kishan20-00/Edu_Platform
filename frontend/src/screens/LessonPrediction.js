@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { TextField, Button, Container, Typography, MenuItem, Grid } from "@mui/material";
+import { TextField, Button, Container, Typography, MenuItem, Grid, CircularProgress } from "@mui/material";
 import axios from "axios";
 
 const featureColumns = [
@@ -14,39 +14,90 @@ const PredictionForm = () => {
   const [predictions, setPredictions] = useState([]);
   const [error, setError] = useState(null);
   const [userEmail, setUserEmail] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  // Simulating getting user email from authentication (adjust based on your setup)
-  const getUserEmail = async () => {
+  // Mapping between user profile fields and Flask app fields
+  const profileToFlaskMapping = {
+    Gender: "Male/Female",
+    numberSequencesMarks: "number sequences marks",
+    numberSequencesTime: "number sequences time(s)",
+    perimeterMarks: "perimeter marks",
+    perimeterTime: "perimeter time(s)",
+    ratioMarks: "ratio marks",
+    ratioTime: "ratio time(s)",
+    fractionsDecimalsMarks: "fractions/decimals marks",
+    fractionsDecimalsTime: "fractions/decimals time(s)",
+    indicesMarks: "indices marks",
+    indicesTime: "indices time(s)",
+    algebraMarks: "algebra marks",
+    algebraTime: "algebra time(s)",
+    anglesMarks: "angles marks",
+    anglesTime: "angles time(s)",
+    volumeCapacityMarks: "volume and capacity marks",
+    volumeCapacityTime: "volume and capacity time(s)",
+    areaMarks: "area marks",
+    areaTime: "area time(s)",
+    probabilityMarks: "probability marks",
+    probabilityTime: "probability time(s)",
+    preferredStudyMethod: "Preferred Study Method",
+    dislikedLesson: "Disliked lesson"
+  };
+
+  // Fetch user profile and populate form data
+  const fetchUserProfile = async () => {
     try {
       const token = localStorage.getItem("token");
       const res = await axios.get("https://edu-platform-ten.vercel.app/api/auth/profile", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUserEmail(res.data.email);
-      console.log(res.data.email);
+
+      // Map user profile data to Flask app fields
+      const mappedData = {};
+      Object.keys(profileToFlaskMapping).forEach((profileField) => {
+        const flaskField = profileToFlaskMapping[profileField];
+
+        // Handle marks and time fields (arrays)
+        if (profileField.includes("Marks") || profileField.includes("Time")) {
+          const arrayValue = res.data[profileField];
+          const lastValue = arrayValue && arrayValue.length > 0 ? arrayValue[arrayValue.length - 1] : 0; // Get last value or default to 0
+
+          // Convert time fields to integers
+          if (profileField.includes("Time")) {
+            mappedData[flaskField] = parseInt(lastValue, 10) || 0; // Ensure it's an integer
+          } else {
+            mappedData[flaskField] = lastValue; // Marks fields remain as-is
+          }
+        } else {
+          // Handle non-array fields (e.g., Gender, Preferred Study Method)
+          mappedData[flaskField] = res.data[profileField] || "";
+        }
+      });
+
+      setFormData(mappedData);
     } catch (error) {
       console.error("Error fetching profile:", error);
+      setError("Failed to fetch user profile.");
     }
   };
 
-  useEffect(() => {
-    getUserEmail();
-  }, []);
-
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    const numericValue = !isNaN(value) && value.trim() !== "" ? Number(value) : value;
-    setFormData({ ...formData, [name]: numericValue });
-  };
-
-  const handleSubmit = async () => {
+  // Function to handle prediction and saving results
+  const handlePrediction = async () => {
     try {
       setError(null);
       setPredictions([]);
+      setLoading(true);
+
+      // Ensure all time fields are integers before sending
+      const finalFormData = { ...formData };
+      Object.keys(finalFormData).forEach((key) => {
+        if (key.includes("time(s)")) {
+          finalFormData[key] = parseInt(finalFormData[key], 10) || 0; // Convert to integer
+        }
+      });
 
       // Step 1: Make prediction request
-      const response = await axios.post("http://127.0.0.1:5001/predict", formData);
+      const response = await axios.post("http://127.0.0.1:5001/predict", finalFormData);
       const data = response.data;
 
       if (data && Array.isArray(data["Top 5 Predicted Lessons"])) {
@@ -65,8 +116,27 @@ const PredictionForm = () => {
     } catch (err) {
       setError("Error making prediction. Please check inputs and try again.");
       console.error("Prediction error:", err);
+    } finally {
+      setLoading(false);
     }
   };
+
+  // Handle form submission
+  const handleSubmit = async () => {
+    await handlePrediction();
+  };
+
+  // Handle form input changes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    const numericValue = !isNaN(value) && value.trim() !== "" ? Number(value) : value;
+    setFormData({ ...formData, [name]: numericValue });
+  };
+
+  // Fetch user profile and perform prediction on component mount (refresh)
+  useEffect(() => {
+    fetchUserProfile();
+  }, []);
 
   return (
     <Container maxWidth="md" sx={{ mt: 5, textAlign: "center" }}>
@@ -96,8 +166,8 @@ const PredictionForm = () => {
         ))}
       </Grid>
 
-      <Button variant="contained" color="primary" sx={{ mt: 3 }} onClick={handleSubmit}>
-        Predict & Save
+      <Button variant="contained" color="primary" sx={{ mt: 3 }} onClick={handleSubmit} disabled={loading}>
+        {loading ? <CircularProgress size={24} /> : "Predict & Save"}
       </Button>
 
       {error && <Typography color="error" sx={{ mt: 2 }}>{error}</Typography>}

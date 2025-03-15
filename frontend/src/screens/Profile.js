@@ -19,6 +19,9 @@ import {
   TableHead,
   TableRow,
   CircularProgress,
+  Grid,
+  Card,
+  CardContent,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -39,12 +42,26 @@ const Profile = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [snackbarSeverity, setSnackbarSeverity] = useState("success");
-  const [stressLevel, setStressLevel] = useState(""); // State for stress level
-  const [prediction, setPrediction] = useState(null); // State for predicted lesson
-  const [loading, setLoading] = useState(false); // State for loading spinner
+  const [stressLevel, setStressLevel] = useState("");
+  const [prediction, setPrediction] = useState(null);
+  const [peerPrediction, setPeerPrediction] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [cognitivePerformance, setCognitivePerformance] = useState("");
   const navigate = useNavigate();
 
-  // Fetch user data and preferences on component mount
+  const timeFieldMapping = {
+    numberSequencesTime: "number sequences time(s)",
+    ratioTime: "ratio time(s)",
+    perimeterTime: "perimeter time(s)",
+    fractionsDecimalsTime: "fractions/decimals time(s)",
+    indicesTime: "indices time(s)",
+    algebraTime: "algebra time(s)",
+    anglesTime: "angles time(s)",
+    volumeCapacityTime: "volume and capacity time(s)",
+    areaTime: "area time(s)",
+    probabilityTime: "probability time(s)",
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       const token = localStorage.getItem("token");
@@ -54,7 +71,6 @@ const Profile = () => {
       }
 
       try {
-        // Fetch user profile
         const profileResponse = await axios.get(
           "https://edu-platform-ten.vercel.app/api/auth/profile",
           {
@@ -70,26 +86,26 @@ const Profile = () => {
           preferredStudyMethod: profileResponse.data.preferredStudyMethod,
           dislikedLesson: profileResponse.data.dislikedLesson,
         });
+        setCognitivePerformance(profileResponse.data.cognitivePerformance || "Average");
 
         const email = profileResponse.data.email;
 
-        // Fetch content preference
         const contentPreferenceResponse = await axios.get(
           `https://edu-platform-ten.vercel.app/api/content?email=${email}`
         );
         setContentPreference(contentPreferenceResponse.data);
 
-        // Fetch lesson preference
         const lessonPreferenceResponse = await axios.get(
           `https://edu-platform-ten.vercel.app/api/lesson?email=${email}`
         );
         setLessonPreference(lessonPreferenceResponse.data);
 
-        // Fetch peer preference
         const peerPreferenceResponse = await axios.get(
           `https://edu-platform-ten.vercel.app/api/peer?email=${email}`
         );
         setPeerPreference(peerPreferenceResponse.data);
+
+        await handlePeerPrediction(profileResponse.data);
       } catch (err) {
         console.error("Error fetching data", err);
         setSnackbarMessage("Failed to fetch data");
@@ -101,7 +117,6 @@ const Profile = () => {
     fetchData();
   }, [navigate]);
 
-  // Handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -110,7 +125,6 @@ const Profile = () => {
     }));
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     const token = localStorage.getItem("token");
@@ -125,7 +139,7 @@ const Profile = () => {
       setSnackbarMessage("Profile updated successfully!");
       setSnackbarSeverity("success");
       setSnackbarOpen(true);
-      setUser(res.data.user); // Update the user state with the latest data
+      setUser(res.data.user);
     } catch (err) {
       console.error("Error updating profile", err);
       setSnackbarMessage("Failed to update profile");
@@ -134,14 +148,12 @@ const Profile = () => {
     }
   };
 
-  // Handle stress level change
   const handleStressLevelChange = async (e) => {
     const selectedStressLevel = e.target.value;
     setStressLevel(selectedStressLevel);
     setLoading(true);
 
     try {
-      // Fetch the latest marks from the user's profile
       const token = localStorage.getItem("token");
       const profileResponse = await axios.get(
         "https://edu-platform-ten.vercel.app/api/auth/profile",
@@ -150,7 +162,6 @@ const Profile = () => {
         }
       );
 
-      // Extract the last value from each marks array
       const marksFields = [
         "numberSequencesMarks",
         "perimeterMarks",
@@ -171,22 +182,19 @@ const Profile = () => {
         processedData[field.replace(/([A-Z])/g, " $1").toLowerCase()] = lastMark;
       });
 
-      // Add stress level and cognitive performance to the data
       processedData.stress_level = selectedStressLevel;
-      processedData.cognitive_performance = contentPreference?.cognitive || "Average";
+      processedData.cognitive_performance = cognitivePerformance;
 
-      // Send data to the Flask backend for prediction
       const response = await axios.post("http://127.0.0.1:5003/predict", processedData);
       const predictedLesson = response.data.predicted_lesson;
       setPrediction(predictedLesson);
 
-      // Save the prediction to the database
       if (user?.email) {
         await axios.post("https://edu-platform-ten.vercel.app/api/content/save", {
           email: user.email,
           preferences: predictedLesson,
           stressLevel: selectedStressLevel,
-          cognitive: contentPreference?.cognitive,
+          cognitive: cognitivePerformance,
         });
       }
     } catch (error) {
@@ -199,12 +207,67 @@ const Profile = () => {
     }
   };
 
-  // Close the snackbar
+  const handlePeerPrediction = async (profileData) => {
+    setLoading(true);
+    try {
+      const marksFields = [
+        "numberSequencesMarks",
+        "ratioMarks",
+        "perimeterMarks",
+        "fractionsDecimalsMarks",
+        "indicesMarks",
+        "algebraMarks",
+        "anglesMarks",
+        "volumeCapacityMarks",
+        "areaMarks",
+        "probabilityMarks",
+      ];
+
+      const processedData = {};
+      marksFields.forEach((field) => {
+        const marksArray = profileData[field];
+        const lastMark = marksArray.length > 0 ? marksArray[marksArray.length - 1] : 0;
+        const mappedField =
+          field === "fractionsDecimalsMarks" ? "fractions/decimals marks" :
+          field === "volumeCapacityMarks" ? "volume and capacity marks" :
+          field.replace(/([A-Z])/g, " $1").toLowerCase();
+        processedData[mappedField] = lastMark;
+      });
+
+      Object.keys(timeFieldMapping).forEach((profileField) => {
+        const flaskField = timeFieldMapping[profileField];
+        const timeValue = profileData[profileField];
+        processedData[flaskField] = parseInt(timeValue) || 0;
+      });
+
+      processedData["Age"] = parseInt(profileData.age) || 0;
+      processedData["Male/Female"] = profileData.Gender;
+      processedData["Preferred Study Method"] = profileData.preferredStudyMethod;
+
+      const response = await axios.post("http://localhost:5002/predict", processedData);
+      const predictedClass = response.data["Predicted Class"];
+      setPeerPrediction(predictedClass);
+
+      if (profileData.email) {
+        await axios.post("https://edu-platform-ten.vercel.app/api/peer/save", {
+          email: profileData.email,
+          preferences: predictedClass,
+        });
+      }
+    } catch (error) {
+      setSnackbarMessage("Error making peer prediction. Please try again.");
+      setSnackbarSeverity("error");
+      setSnackbarOpen(true);
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleSnackbarClose = () => {
     setSnackbarOpen(false);
   };
 
-  // Options for dropdowns
   const genderOptions = ["M", "F"];
   const studyMethodOptions = ["figures", "Only school lessons", "practicing"];
   const dislikedLessonOptions = [
@@ -225,229 +288,240 @@ const Profile = () => {
   ];
   const stressLevelOptions = ["Low", "Medium", "High"];
 
-  // Sort lesson preferences by probability and assign ranks (1-5)
   const sortedLessonPreferences = lessonPreference
     ? lessonPreference.preferences
-        .sort((a, b) => b.probability - a.probability) // Sort by probability (descending)
-        .slice(0, 5) // Limit to top 5 lessons
-        .map((pref, index) => ({ ...pref, rank: index + 1 })) // Add rank (1-5)
+        .sort((a, b) => b.probability - a.probability)
+        .slice(0, 5)
+        .map((pref, index) => ({ ...pref, rank: index + 1 }))
     : [];
 
   return (
-    <Container maxWidth="sm">
-      <Paper elevation={3} sx={{ p: 4, mt: 5 }}>
-        <Typography variant="h4" align="center" gutterBottom>
-          Profile
-        </Typography>
-        {user ? (
-          <Box component="form" onSubmit={handleSubmit}>
-            <TextField
-              fullWidth
-              label="Name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              margin="normal"
-              required
-            />
-            <TextField
-              fullWidth
-              label="Age"
-              name="age"
-              value={formData.age}
-              onChange={handleChange}
-              margin="normal"
-              required
-            />
-            <TextField
-              fullWidth
-              label="Phone Number"
-              name="phoneNum"
-              value={formData.phoneNum}
-              onChange={handleChange}
-              margin="normal"
-              required
-            />
-
-            {/* Gender Dropdown */}
-            <FormControl fullWidth margin="normal" required>
-              <InputLabel>Gender</InputLabel>
-              <Select
-                name="Gender"
-                value={formData.Gender}
-                onChange={handleChange}
-                label="Gender"
-              >
-                {genderOptions.map((option) => (
-                  <MenuItem key={option} value={option}>
-                    {option}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-
-            {/* Preferred Study Method Dropdown */}
-            <FormControl fullWidth margin="normal" required>
-              <InputLabel>Preferred Study Method</InputLabel>
-              <Select
-                name="preferredStudyMethod"
-                value={formData.preferredStudyMethod}
-                onChange={handleChange}
-                label="Preferred Study Method"
-              >
-                {studyMethodOptions.map((option) => (
-                  <MenuItem key={option} value={option}>
-                    {option}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-
-            {/* Disliked Lesson Dropdown */}
-            <FormControl fullWidth margin="normal" required>
-              <InputLabel>Disliked Lesson</InputLabel>
-              <Select
-                name="dislikedLesson"
-                value={formData.dislikedLesson}
-                onChange={handleChange}
-                label="Disliked Lesson"
-              >
-                {dislikedLessonOptions.map((option) => (
-                  <MenuItem key={option} value={option}>
-                    {option}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-
-            
-
-            {/* Loading Spinner */}
-            {loading && (
-              <Box sx={{ mt: 3, textAlign: "center" }}>
-                <CircularProgress />
-              </Box>
-            )}
-
-            <Box sx={{ mt: 3, display: "flex", justifyContent: "space-between" }}>
-              <Button type="submit" variant="contained" color="primary">
-                Update Profile
-              </Button>
-              <Button
-                variant="contained"
-                color="secondary"
-                onClick={() => navigate("/")}
-              >
-                Back to Home
-              </Button>
-            </Box>
-          </Box>
-        ) : (
-          <Typography>Loading...</Typography>
-        )}
-
-        {/* Stress Level Dropdown */}
-        <FormControl fullWidth margin="normal" required>
-              <InputLabel>How are you feeling today?</InputLabel>
-              <Select
-                name="stress_level"
-                value={stressLevel}
-                onChange={handleStressLevelChange}
-                label="How are you feeling today?"
-                disabled={loading}
-              >
-                {stressLevelOptions.map((option) => (
-                  <MenuItem key={option} value={option}>
-                    {option}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-
-            {/* Display Prediction */}
-            {prediction && (
-              <Box sx={{ mt: 3, textAlign: "center" }}>
-                <Typography variant="h6" color="primary">
-                  Predicted Lesson: {prediction}
-                </Typography>
-              </Box>
-            )}
-
-        {/* Display Content Preference */}
-        {contentPreference && (
-          <Box sx={{ mt: 4 }}>
-            <Typography variant="h5" gutterBottom>
-              Content Preference
+    <Container maxWidth="lg" sx={{ mt: 4 }}>
+      <Grid container spacing={4}>
+        {/* Left Side: Update Form */}
+        <Grid item xs={12} md={6}>
+          <Paper elevation={3} sx={{ p: 4 }}>
+            <Typography variant="h4" align="center" gutterBottom>
+              Profile
             </Typography>
-            <TableContainer component={Paper}>
-              <Table>
-                <TableBody>
-                  <TableRow>
-                    <TableCell>Preferences</TableCell>
-                    <TableCell>{contentPreference.preferences}</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Stress Level</TableCell>
-                    <TableCell>{contentPreference.stressLevel}</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Cognitive</TableCell>
-                    <TableCell>{contentPreference.cognitive}</TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </Box>
-        )}
+            {user ? (
+              <Box component="form" onSubmit={handleSubmit}>
+                <TextField
+                  fullWidth
+                  label="Name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  margin="normal"
+                  required
+                />
+                <TextField
+                  fullWidth
+                  label="Age"
+                  name="age"
+                  value={formData.age}
+                  onChange={handleChange}
+                  margin="normal"
+                  required
+                />
+                <TextField
+                  fullWidth
+                  label="Phone Number"
+                  name="phoneNum"
+                  value={formData.phoneNum}
+                  onChange={handleChange}
+                  margin="normal"
+                  required
+                />
 
-        {/* Display Lesson Preference */}
-        {lessonPreference && (
-          <Box sx={{ mt: 4 }}>
-            <Typography variant="h5" gutterBottom>
-              Lesson Preference (Top 5)
-            </Typography>
-            <TableContainer component={Paper}>
-              <Table>
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Rank</TableCell>
-                    <TableCell>Lesson</TableCell>
-                    <TableCell>Probability</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {sortedLessonPreferences.map((pref, index) => (
-                    <TableRow key={index}>
-                      <TableCell>{pref.rank}</TableCell>
-                      <TableCell>{pref.lesson}</TableCell>
-                      <TableCell>{pref.probability}</TableCell>
+                <FormControl fullWidth margin="normal" required>
+                  <InputLabel>Gender</InputLabel>
+                  <Select
+                    name="Gender"
+                    value={formData.Gender}
+                    onChange={handleChange}
+                    label="Gender"
+                  >
+                    {genderOptions.map((option) => (
+                      <MenuItem key={option} value={option}>
+                        {option}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+
+                <FormControl fullWidth margin="normal" required>
+                  <InputLabel>Preferred Study Method</InputLabel>
+                  <Select
+                    name="preferredStudyMethod"
+                    value={formData.preferredStudyMethod}
+                    onChange={handleChange}
+                    label="Preferred Study Method"
+                  >
+                    {studyMethodOptions.map((option) => (
+                      <MenuItem key={option} value={option}>
+                        {option}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+
+                <FormControl fullWidth margin="normal" required>
+                  <InputLabel>Disliked Lesson</InputLabel>
+                  <Select
+                    name="dislikedLesson"
+                    value={formData.dislikedLesson}
+                    onChange={handleChange}
+                    label="Disliked Lesson"
+                  >
+                    {dislikedLessonOptions.map((option) => (
+                      <MenuItem key={option} value={option}>
+                        {option}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+
+                <FormControl fullWidth margin="normal" required>
+                  <InputLabel>How are you feeling today?</InputLabel>
+                  <Select
+                    name="stress_level"
+                    value={stressLevel}
+                    onChange={handleStressLevelChange}
+                    label="How are you feeling today?"
+                    disabled={loading}
+                  >
+                    {stressLevelOptions.map((option) => (
+                      <MenuItem key={option} value={option}>
+                        {option}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+
+                {prediction && (
+                  <Card sx={{ mt: 3, backgroundColor: "#f0f4c3" }}>
+                    <CardContent>
+                      <Typography variant="h6" color="text.primary">
+                        Predicted Lesson: {prediction}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                )}
+
+                {peerPrediction && (
+                  <Card sx={{ mt: 3, backgroundColor: "#ffccbc" }}>
+                    <CardContent>
+                      <Typography variant="h6" color="text.primary">
+                        Predicted Peer Class: {peerPrediction}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                )}
+
+                {loading && (
+                  <Box sx={{ mt: 3, textAlign: "center" }}>
+                    <CircularProgress />
+                  </Box>
+                )}
+
+                <Box sx={{ mt: 3, display: "flex", justifyContent: "space-between" }}>
+                  <Button type="submit" variant="contained" color="primary">
+                    Update Profile
+                  </Button>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    onClick={() => navigate("/")}
+                  >
+                    Back to Home
+                  </Button>
+                </Box>
+              </Box>
+            ) : (
+              <Typography>Loading...</Typography>
+            )}
+          </Paper>
+        </Grid>
+
+        {/* Right Side: Charts and Preferences */}
+        <Grid item xs={12} md={6}>
+          {/* Content Preference */}
+          {contentPreference && (
+            <Paper elevation={3} sx={{ p: 4, mb: 4 }}>
+              <Typography variant="h5" gutterBottom>
+                Content Preference
+              </Typography>
+              <TableContainer>
+                <Table>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell>Preferences</TableCell>
+                      <TableCell>{contentPreference.preferences}</TableCell>
                     </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </Box>
-        )}
+                    <TableRow>
+                      <TableCell>Stress Level</TableCell>
+                      <TableCell>{contentPreference.stressLevel}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>Cognitive</TableCell>
+                      <TableCell>{contentPreference.cognitive}</TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </Paper>
+          )}
 
-        {/* Display Peer Preference */}
-        {peerPreference && (
-          <Box sx={{ mt: 4 }}>
-            <Typography variant="h5" gutterBottom>
-              Peer Preference
-            </Typography>
-            <TableContainer component={Paper}>
-              <Table>
-                <TableBody>
-                  <TableRow>
-                    <TableCell>Preferences</TableCell>
-                    <TableCell>{peerPreference.preferences}</TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </Box>
-        )}
-      </Paper>
+          {/* Lesson Preference */}
+          {lessonPreference && (
+            <Paper elevation={3} sx={{ p: 4, mb: 4 }}>
+              <Typography variant="h5" gutterBottom>
+                Lesson Preference (Top 5)
+              </Typography>
+              <TableContainer>
+                <Table>
+                  <TableHead>
+                    <TableRow>
+                      <TableCell>Rank</TableCell>
+                      <TableCell>Lesson</TableCell>
+                      <TableCell>Probability</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {sortedLessonPreferences.map((pref, index) => (
+                      <TableRow key={index}>
+                        <TableCell>{pref.rank}</TableCell>
+                        <TableCell>{pref.lesson}</TableCell>
+                        <TableCell>{pref.probability}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </Paper>
+          )}
+
+          {/* Peer Preference */}
+          {peerPreference && (
+            <Paper elevation={3} sx={{ p: 4 }}>
+              <Typography variant="h5" gutterBottom>
+                Peer Preference
+              </Typography>
+              <TableContainer>
+                <Table>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell>Preferences</TableCell>
+                      <TableCell>Index No.{peerPreference.preferences}</TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </Paper>
+          )}
+        </Grid>
+      </Grid>
 
       {/* Snackbar for notifications */}
       <Snackbar

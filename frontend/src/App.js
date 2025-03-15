@@ -14,6 +14,7 @@ import AddSpecialization from "./screens/AddSpecialization";
 import AdminDashboard from "./screens/AdminDashboard";
 import CourseDetailsPage from "./screens/CourseDetailsPage";
 import SpecializationDetailPage from "./screens/SpecializationDetail";
+import FilteredCourses from "./screens/FilteredContent";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
           <Route path="/lesson/:id" element={<CourseDetailsPage />} />
           <Route path="/specialization/:specializationId" element={<SpecializationDetailPage />} />
+          <Route path="/filtered" element={<FilteredCourses />} />
         </Routes>
       </Container>
     </Router>
