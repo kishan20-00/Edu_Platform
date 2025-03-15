@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
-import { Box, Typography, Container, TextField, Button, Grid, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import {
+  Box,
+  Typography,
+  Container,
+  TextField,
+  Button,
+  Grid,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+} from '@mui/material';
 import axios from 'axios';
 
 const AddCoursePage = () => {
   const [courseContent, setCourseContent] = useState({
-    contentName: '',
+    lessonName: '', // Changed from contentName to lessonName
     subject: '',
     complexity: '',
     image: '',
@@ -32,11 +43,24 @@ const AddCoursePage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://edu-platform-ten.vercel.app/api/course/add', courseContent);
+      // Prepare the payload
+      const payload = {
+        ...courseContent,
+        quizQuestions: courseContent.quizQuestions.filter((q) => q.trim() !== ''),
+        quizAnswers: courseContent.quizAnswers.filter((a) => a.trim() !== ''),
+      };
+
+      // Send the request
+      const response = await axios.post('https://edu-platform-ten.vercel.app/api/course/add', payload);
       console.log('Course content added successfully:', response.data);
       alert('Course content added successfully!');
+
+      // Reset the form
       setCourseContent({
-        contentName: '',
+        lessonName: '',
+        subject: '',
+        complexity: '',
+        image: '',
         learningMaterial: '',
         source: '',
         heading: '',
@@ -64,9 +88,9 @@ const AddCoursePage = () => {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label="Content Name"
-                name="contentName"
-                value={courseContent.contentName}
+                label="Lesson Name"
+                name="lessonName" // Changed from contentName to lessonName
+                value={courseContent.lessonName}
                 onChange={handleChange}
                 margin="normal"
                 required
@@ -112,7 +136,7 @@ const AddCoursePage = () => {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label="Image"
+                label="Image URL"
                 name="image"
                 value={courseContent.image}
                 onChange={handleChange}
@@ -142,7 +166,9 @@ const AddCoursePage = () => {
             </Grid>
 
             {/* Conditional Fields */}
-            {courseContent.learningMaterial === 'video' || courseContent.learningMaterial === 'audio' || courseContent.learningMaterial === 'pdf' ? (
+            {courseContent.learningMaterial === 'video' ||
+            courseContent.learningMaterial === 'audio' ||
+            courseContent.learningMaterial === 'pdf' ? (
               <Grid item xs={12}>
                 <TextField
                   fullWidth
@@ -224,6 +250,7 @@ const AddCoursePage = () => {
               </>
             ) : null}
 
+            {/* Description Field */}
             <Grid item xs={12}>
               <TextField
                 fullWidth
@@ -238,6 +265,7 @@ const AddCoursePage = () => {
               />
             </Grid>
 
+            {/* Submit Button */}
             <Grid item xs={12}>
               <Button variant="contained" type="submit">
                 Add Course Content

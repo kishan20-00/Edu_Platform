@@ -10,6 +10,7 @@ import PredictionForm from "./screens/LessonPrediction";
 import PeerPrediction from "./screens/PeerPrediction";
 import ContentPrefer from "./screens/ContentPreference";
 import AddCoursePage from "./screens/AddCourse";
+import AddSpecialization from "./screens/AddSpecialization";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/peer" element={<PeerPrediction />} />
           <Route path="/content" element={<ContentPrefer />} />
           <Route path="/addcourse" element={<AddCoursePage />} />
+          <Route path="/addspecial" element={<AddSpecialization />} />
         </Routes>
       </Container>
     </Router>
