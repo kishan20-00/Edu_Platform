@@ -18,6 +18,7 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  CircularProgress,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -38,6 +39,9 @@ const Profile = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [snackbarSeverity, setSnackbarSeverity] = useState("success");
+  const [stressLevel, setStressLevel] = useState(""); // State for stress level
+  const [prediction, setPrediction] = useState(null); // State for predicted lesson
+  const [loading, setLoading] = useState(false); // State for loading spinner
   const navigate = useNavigate();
 
   // Fetch user data and preferences on component mount
@@ -130,6 +134,71 @@ const Profile = () => {
     }
   };
 
+  // Handle stress level change
+  const handleStressLevelChange = async (e) => {
+    const selectedStressLevel = e.target.value;
+    setStressLevel(selectedStressLevel);
+    setLoading(true);
+
+    try {
+      // Fetch the latest marks from the user's profile
+      const token = localStorage.getItem("token");
+      const profileResponse = await axios.get(
+        "https://edu-platform-ten.vercel.app/api/auth/profile",
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+
+      // Extract the last value from each marks array
+      const marksFields = [
+        "numberSequencesMarks",
+        "perimeterMarks",
+        "ratioMarks",
+        "fractionsDecimalsMarks",
+        "indicesMarks",
+        "algebraMarks",
+        "anglesMarks",
+        "volumeCapacityMarks",
+        "areaMarks",
+        "probabilityMarks",
+      ];
+
+      const processedData = {};
+      marksFields.forEach((field) => {
+        const marksArray = profileResponse.data[field];
+        const lastMark = marksArray.length > 0 ? marksArray[marksArray.length - 1] : 0;
+        processedData[field.replace(/([A-Z])/g, " $1").toLowerCase()] = lastMark;
+      });
+
+      // Add stress level and cognitive performance to the data
+      processedData.stress_level = selectedStressLevel;
+      processedData.cognitive_performance = contentPreference?.cognitive || "Average";
+
+      // Send data to the Flask backend for prediction
+      const response = await axios.post("http://127.0.0.1:5003/predict", processedData);
+      const predictedLesson = response.data.predicted_lesson;
+      setPrediction(predictedLesson);
+
+      // Save the prediction to the database
+      if (user?.email) {
+        await axios.post("https://edu-platform-ten.vercel.app/api/content/save", {
+          email: user.email,
+          preferences: predictedLesson,
+          stressLevel: selectedStressLevel,
+          cognitive: contentPreference?.cognitive,
+        });
+      }
+    } catch (error) {
+      setSnackbarMessage("Error making prediction or saving data. Please try again.");
+      setSnackbarSeverity("error");
+      setSnackbarOpen(true);
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   // Close the snackbar
   const handleSnackbarClose = () => {
     setSnackbarOpen(false);
@@ -154,6 +223,7 @@ const Profile = () => {
     "triangles",
     "volume and capacity",
   ];
+  const stressLevelOptions = ["Low", "Medium", "High"];
 
   // Sort lesson preferences by probability and assign ranks (1-5)
   const sortedLessonPreferences = lessonPreference
@@ -250,6 +320,15 @@ const Profile = () => {
               </Select>
             </FormControl>
 
+            
+
+            {/* Loading Spinner */}
+            {loading && (
+              <Box sx={{ mt: 3, textAlign: "center" }}>
+                <CircularProgress />
+              </Box>
+            )}
+
             <Box sx={{ mt: 3, display: "flex", justifyContent: "space-between" }}>
               <Button type="submit" variant="contained" color="primary">
                 Update Profile
@@ -266,6 +345,33 @@ const Profile = () => {
         ) : (
           <Typography>Loading...</Typography>
         )}
+
+        {/* Stress Level Dropdown */}
+        <FormControl fullWidth margin="normal" required>
+              <InputLabel>How are you feeling today?</InputLabel>
+              <Select
+                name="stress_level"
+                value={stressLevel}
+                onChange={handleStressLevelChange}
+                label="How are you feeling today?"
+                disabled={loading}
+              >
+                {stressLevelOptions.map((option) => (
+                  <MenuItem key={option} value={option}>
+                    {option}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+
+            {/* Display Prediction */}
+            {prediction && (
+              <Box sx={{ mt: 3, textAlign: "center" }}>
+                <Typography variant="h6" color="primary">
+                  Predicted Lesson: {prediction}
+                </Typography>
+              </Box>
+            )}
 
         {/* Display Content Preference */}
         {contentPreference && (
