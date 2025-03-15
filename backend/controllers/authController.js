@@ -55,6 +55,7 @@ exports.registerUser = async (req, res) => {
       areaTime: "0",
       probabilityMarks: [],
       probabilityTime: "0",
+      cognitivePerformance: "None",
     });
 
     // Save the user to the database
@@ -130,6 +131,7 @@ exports.updateUserProfile = async (req, res) => {
       "probabilityMarks",
     ];
 
+    let marksUpdated = false; // Track if any marks are updated
     marksFields.forEach((field) => {
       if (updateData[field] !== undefined) {
         // Append the new mark to the array
@@ -138,14 +140,37 @@ exports.updateUserProfile = async (req, res) => {
         // Increment the corresponding time(s) field
         const timeField = field.replace("Marks", "Time");
         user[timeField] = (parseInt(user[timeField]) + 1).toString();
+
+        marksUpdated = true; // Marks have been updated
       }
     });
+
+    // Update cognitive performance if marks are updated
+    if (marksUpdated) {
+      // Calculate the sum of the latest marks
+      const sumOfLatestMarks = marksFields.reduce((sum, field) => {
+        const marksArray = user[field];
+        const lastMark = marksArray.length > 0 ? marksArray[marksArray.length - 1] : 0;
+        return sum + lastMark;
+      }, 0);
+
+      // Determine cognitive performance based on the sum
+      if (sumOfLatestMarks > 750) {
+        user.cognitivePerformance = "Very High";
+      } else if (sumOfLatestMarks >= 500 && sumOfLatestMarks <= 750) {
+        user.cognitivePerformance = "High";
+      } else if (sumOfLatestMarks >= 250 && sumOfLatestMarks < 500) {
+        user.cognitivePerformance = "Average";
+      } else {
+        user.cognitivePerformance = "Low";
+      }
+    }
 
     // Save the updated user
     await user.save();
 
     res.json({ message: "Profile updated successfully", user });
   } catch (error) {
-    res.status(500).json({ message: "Server error" });
+    res.status(500).json({ message: "Server error", error: error.message });
   }
 };

@@ -9,6 +9,7 @@ const userSchema = new mongoose.Schema({
   preferredStudyMethod: { type: String, required: true },
   dislikedLesson: { type: String, required: true },
   password: { type: String, required: true },
+  cognitivePerformance: { type: String },
 
   // New fields for marks and time(s)
   numberSequencesMarks: { type: [Number], default: [] },
