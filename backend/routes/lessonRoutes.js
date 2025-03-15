@@ -58,10 +58,9 @@ router.delete('/delete/:id', async (req, res) => {
 
 // Get all course content by subject
 router.get('/filter/:subject', async (req, res) => {
-  const subject = req.params.subject; // Access subject directly from req.params
-  
+  const { subject } = req.params;
   try {
-    const courses = await Course.find(subject ? { subject } : {}); // Filter by subject if provided
+    const courses = await Course.find({ subject });
     res.json(courses);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -70,19 +69,24 @@ router.get('/filter/:subject', async (req, res) => {
 
 // Get all course content by complexity and learningMaterial
 router.get('/filter/:complexity/:learningMaterial', async (req, res) => {
-  const { complexity, learningMaterial } = req.params; // Access complexity and learningMaterial from req.params
-  
+  const { complexity, learningMaterial } = req.params;
   try {
-    const courses = await Course.find({
-      complexity,
-      learningMaterial,
-    });
+    const courses = await Course.find({ complexity, learningMaterial });
     res.json(courses);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 });
 
-
+// Get all course content by subject, complexity, and learningMaterial
+router.get('/filter/:subject/:complexity/:learningMaterial', async (req, res) => {
+  const { subject, complexity, learningMaterial } = req.params;
+  try {
+    const courses = await Course.find({ subject, complexity, learningMaterial });
+    res.json(courses);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
 module.exports = router;
