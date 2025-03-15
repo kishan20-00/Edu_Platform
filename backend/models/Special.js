@@ -6,7 +6,7 @@ const SpecializationSchema = new mongoose.Schema({
   subject: {type: String, required: true},
   complexity: {type: String, required: true},
   image: { type: String, required: true },
-  courses: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Course' }]
+  courses: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Lesson' }]
 });
 
 const Specialization = mongoose.model('Specialize', SpecializationSchema);
