@@ -29,5 +29,11 @@ app.use("/api/peer", PeerPreference);
 const ContentPreference = require("./routes/contentRoutes");
 app.use("/api/content", ContentPreference);
 
+const courseContentRoutes = require('./routes/lessonRoutes');
+app.use('/api/course', courseContentRoutes);
+
+const specializationRoutes = require('./routes/specialRoutes');
+app.use('/api/special', specializationRoutes);
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
