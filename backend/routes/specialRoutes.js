@@ -1,5 +1,5 @@
 const express = require('express');
-const Specialization = require('../models/Specialization'); // Updated model name
+const Specialization = require('../models/Special'); // Updated model name
 const Course = require('../models/Lesson'); // Assuming you have a Course model
 const router = express.Router();
 const mongoose = require('mongoose');
