@@ -11,6 +11,7 @@ import PeerPrediction from "./screens/PeerPrediction";
 import ContentPrefer from "./screens/ContentPreference";
 import AddCoursePage from "./screens/AddCourse";
 import AddSpecialization from "./screens/AddSpecialization";
+import AdminDashboard from "./screens/AdminDashboard";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/content" element={<ContentPrefer />} />
           <Route path="/addcourse" element={<AddCoursePage />} />
           <Route path="/addspecial" element={<AddSpecialization />} />
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
         </Routes>
       </Container>
     </Router>

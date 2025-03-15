@@ -12,6 +12,12 @@ import {
   Select,
   FormControl,
   InputLabel,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -26,40 +32,69 @@ const Profile = () => {
     preferredStudyMethod: "",
     dislikedLesson: "",
   });
+  const [contentPreference, setContentPreference] = useState(null);
+  const [lessonPreference, setLessonPreference] = useState(null);
+  const [peerPreference, setPeerPreference] = useState(null);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [snackbarSeverity, setSnackbarSeverity] = useState("success");
   const navigate = useNavigate();
 
-  // Fetch user data on component mount
+  // Fetch user data and preferences on component mount
   useEffect(() => {
-    const fetchUser = async () => {
+    const fetchData = async () => {
       const token = localStorage.getItem("token");
       if (!token) {
         navigate("/login");
         return;
       }
+
       try {
-        const res = await axios.get("https://edu-platform-ten.vercel.app/api/auth/profile", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
-        setUser(res.data);
+        // Fetch user profile
+        const profileResponse = await axios.get(
+          "https://edu-platform-ten.vercel.app/api/auth/profile",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
+        setUser(profileResponse.data);
         setFormData({
-          name: res.data.name,
-          age: res.data.age,
-          phoneNum: res.data.phoneNum,
-          Gender: res.data.Gender,
-          preferredStudyMethod: res.data.preferredStudyMethod,
-          dislikedLesson: res.data.dislikedLesson,
+          name: profileResponse.data.name,
+          age: profileResponse.data.age,
+          phoneNum: profileResponse.data.phoneNum,
+          Gender: profileResponse.data.Gender,
+          preferredStudyMethod: profileResponse.data.preferredStudyMethod,
+          dislikedLesson: profileResponse.data.dislikedLesson,
         });
+
+        const email = profileResponse.data.email;
+
+        // Fetch content preference
+        const contentPreferenceResponse = await axios.get(
+          `https://edu-platform-ten.vercel.app/api/content/?email=${email}`
+        );
+        setContentPreference(contentPreferenceResponse.data);
+
+        // Fetch lesson preference
+        const lessonPreferenceResponse = await axios.get(
+          `https://edu-platform-ten.vercel.app/api/lesson/?email=${email}`
+        );
+        setLessonPreference(lessonPreferenceResponse.data);
+
+        // Fetch peer preference
+        const peerPreferenceResponse = await axios.get(
+          `https://edu-platform-ten.vercel.app/api/peer/?email=${email}`
+        );
+        setPeerPreference(peerPreferenceResponse.data);
       } catch (err) {
-        console.error("Error fetching user data", err);
-        setSnackbarMessage("Failed to fetch user data");
+        console.error("Error fetching data", err);
+        setSnackbarMessage("Failed to fetch data");
         setSnackbarSeverity("error");
         setSnackbarOpen(true);
       }
     };
-    fetchUser();
+
+    fetchData();
   }, [navigate]);
 
   // Handle form input changes
@@ -117,8 +152,8 @@ const Profile = () => {
     "simaltaneous equations",
     "triangle theory",
     "triangles",
-    "volume and capacity"
-    ];
+    "volume and capacity",
+  ];
 
   return (
     <Container maxWidth="sm">
@@ -222,6 +257,79 @@ const Profile = () => {
           </Box>
         ) : (
           <Typography>Loading...</Typography>
+        )}
+
+        {/* Display Content Preference */}
+        {contentPreference && (
+          <Box sx={{ mt: 4 }}>
+            <Typography variant="h5" gutterBottom>
+              Content Preference
+            </Typography>
+            <TableContainer component={Paper}>
+              <Table>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>Preferences</TableCell>
+                    <TableCell>{contentPreference.preferences}</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Stress Level</TableCell>
+                    <TableCell>{contentPreference.stressLevel}</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Cognitive</TableCell>
+                    <TableCell>{contentPreference.cognitive}</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </Box>
+        )}
+
+        {/* Display Lesson Preference */}
+        {lessonPreference && (
+          <Box sx={{ mt: 4 }}>
+            <Typography variant="h5" gutterBottom>
+              Lesson Preference
+            </Typography>
+            <TableContainer component={Paper}>
+              <Table>
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Lesson</TableCell>
+                    <TableCell>Probability</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {lessonPreference.preferences.map((pref, index) => (
+                    <TableRow key={index}>
+                      <TableCell>{pref.lesson}</TableCell>
+                      <TableCell>{pref.probability}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </Box>
+        )}
+
+        {/* Display Peer Preference */}
+        {peerPreference && (
+          <Box sx={{ mt: 4 }}>
+            <Typography variant="h5" gutterBottom>
+              Peer Preference
+            </Typography>
+            <TableContainer component={Paper}>
+              <Table>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>Preferences</TableCell>
+                    <TableCell>{peerPreference.preferences}</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </Box>
         )}
       </Paper>
 

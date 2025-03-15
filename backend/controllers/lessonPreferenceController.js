@@ -38,3 +38,22 @@ exports.getLessonPreferences = async (req, res) => {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
+
+// Get content preference by email
+exports.getContentPreference = async (req, res) => {
+  try {
+    const { email } = req.query; // Get email from query parameter
+    if (!email) {
+      return res.status(400).json({ message: "Email is required" });
+    }
+
+    const contentPreference = await LessonPreference.findOne({ email });
+    if (!contentPreference) {
+      return res.status(404).json({ message: "Lesson preference not found" });
+    }
+
+    res.status(200).json(contentPreference);
+  } catch (error) {
+    res.status(500).json({ message: "Failed to fetch lesson preference", error: error.message });
+  }
+};
