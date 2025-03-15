@@ -14,7 +14,7 @@ const AddSpecialization = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await axios.get('https://edu-quest-hfoq.vercel.app/api/content'); // Adjust endpoint as needed
+        const response = await axios.get('https://edu-platform-ten.vercel.app/api/course'); // Adjust endpoint as needed
         setCourses(response.data);
       } catch (error) {
         console.error('Error fetching courses:', error);
@@ -36,7 +36,7 @@ const AddSpecialization = () => {
     }
 
     try {
-      await axios.post('https://edu-quest-hfoq.vercel.app/api/specializations/add', { name, subject, image, complexity, courses: validSelectedCourses });
+      await axios.post('https://edu-platform-ten.vercel.app/api/special/add', { name, subject, image, complexity, courses: validSelectedCourses });
       alert('Specialization added successfully!');
       // Reset the form or show a success message
       setName('');
@@ -71,16 +71,16 @@ const AddSpecialization = () => {
                   onChange={(e) => setSubject(e.target.value)}
                   label="Subject"
                 >
-                  <MenuItem value="Artificial Intelligence and Machine Learning">Artificial Intelligence and Machine Learning</MenuItem>
-                  <MenuItem value="Cloud Computing">Cloud Computing</MenuItem>
-                  <MenuItem value="CyberSecurity">CyberSecurity</MenuItem>
-                  <MenuItem value="Data Science and Analytics">Data Science and Analytics</MenuItem>
-                  <MenuItem value="Database Management">Database Management</MenuItem>
-                  <MenuItem value="Devops and Systems Integration">Devops and Systems Integration</MenuItem>
-                  <MenuItem value="IT Project Management">IT Project Management</MenuItem>
-                  <MenuItem value="Network and System Administration">Network and System Administration</MenuItem>
-                  <MenuItem value="Software Engineering and Development">Software Engineering and Development</MenuItem>
-                  <MenuItem value="Web Development">Web Development</MenuItem>
+                  <MenuItem value="number sequence">Number Sequence</MenuItem>
+                                    <MenuItem value="perimeter">Perimeter</MenuItem>
+                                    <MenuItem value="ratio">Ratio</MenuItem>
+                                    <MenuItem value="fractions/decimals">Fractions</MenuItem>
+                                    <MenuItem value="indices">Indices</MenuItem>
+                                    <MenuItem value="algebra">Algebra</MenuItem>
+                                    <MenuItem value="angles">Angles</MenuItem>
+                                    <MenuItem value="volume and capacity">Volume and capacity</MenuItem>
+                                    <MenuItem value="area">Area</MenuItem>
+                                    <MenuItem value="probability">Probability</MenuItem>
                 </Select>
               </FormControl>
               <FormControl fullWidth margin="normal" required>
