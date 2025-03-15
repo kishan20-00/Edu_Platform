@@ -26,7 +26,7 @@ const Home = () => {
 
         // Fetch specializations
         const specializationsResponse = await axios.get(
-          "https://edu-platform-ten.vercel.app/api/special"
+          "https://edu-platform-ten.vercel.app/api/specialize"
         );
         setSpecializations(specializationsResponse.data);
         console.log(specializationsResponse.data);
