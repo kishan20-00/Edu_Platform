@@ -71,19 +71,19 @@ const Profile = () => {
 
         // Fetch content preference
         const contentPreferenceResponse = await axios.get(
-          `https://edu-platform-ten.vercel.app/api/content/?email=${email}`
+          `https://edu-platform-ten.vercel.app/api/content?email=${email}`
         );
         setContentPreference(contentPreferenceResponse.data);
 
         // Fetch lesson preference
         const lessonPreferenceResponse = await axios.get(
-          `https://edu-platform-ten.vercel.app/api/lesson/?email=${email}`
+          `https://edu-platform-ten.vercel.app/api/lesson?email=${email}`
         );
         setLessonPreference(lessonPreferenceResponse.data);
 
         // Fetch peer preference
         const peerPreferenceResponse = await axios.get(
-          `https://edu-platform-ten.vercel.app/api/peer/?email=${email}`
+          `https://edu-platform-ten.vercel.app/api/peer?email=${email}`
         );
         setPeerPreference(peerPreferenceResponse.data);
       } catch (err) {
@@ -154,6 +154,14 @@ const Profile = () => {
     "triangles",
     "volume and capacity",
   ];
+
+  // Sort lesson preferences by probability and assign ranks (1-5)
+  const sortedLessonPreferences = lessonPreference
+    ? lessonPreference.preferences
+        .sort((a, b) => b.probability - a.probability) // Sort by probability (descending)
+        .slice(0, 5) // Limit to top 5 lessons
+        .map((pref, index) => ({ ...pref, rank: index + 1 })) // Add rank (1-5)
+    : [];
 
   return (
     <Container maxWidth="sm">
@@ -290,19 +298,21 @@ const Profile = () => {
         {lessonPreference && (
           <Box sx={{ mt: 4 }}>
             <Typography variant="h5" gutterBottom>
-              Lesson Preference
+              Lesson Preference (Top 5)
             </Typography>
             <TableContainer component={Paper}>
               <Table>
                 <TableHead>
                   <TableRow>
+                    <TableCell>Rank</TableCell>
                     <TableCell>Lesson</TableCell>
                     <TableCell>Probability</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {lessonPreference.preferences.map((pref, index) => (
+                  {sortedLessonPreferences.map((pref, index) => (
                     <TableRow key={index}>
+                      <TableCell>{pref.rank}</TableCell>
                       <TableCell>{pref.lesson}</TableCell>
                       <TableCell>{pref.probability}</TableCell>
                     </TableRow>

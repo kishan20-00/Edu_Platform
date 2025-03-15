@@ -36,22 +36,45 @@ function LessonPrediction() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Fetch user email from authentication
-  const getUserEmail = async () => {
+  // Fetch user email and marks from profile
+  const fetchUserProfile = async () => {
     try {
       const token = localStorage.getItem("token");
       const res = await axios.get("https://edu-platform-ten.vercel.app/api/auth/profile", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUserEmail(res.data.email);
+
+      // Extract the last value from each marks array
+      const marksFields = [
+        "numberSequencesMarks",
+        "perimeterMarks",
+        "ratioMarks",
+        "fractionsDecimalsMarks",
+        "indicesMarks",
+        "algebraMarks",
+        "anglesMarks",
+        "volumeCapacityMarks",
+        "areaMarks",
+        "probabilityMarks",
+      ];
+
+      const updatedFormData = { ...formData };
+      marksFields.forEach((field) => {
+        const marksArray = res.data[field];
+        const lastMark = marksArray.length > 0 ? marksArray[marksArray.length - 1] : 0;
+        updatedFormData[field.replace(/([A-Z])/g, " $1").toLowerCase()] = lastMark;
+      });
+
+      setFormData(updatedFormData);
     } catch (error) {
       console.error("Error fetching profile:", error);
-      setError("Failed to fetch user email. Please try again.");
+      setError("Failed to fetch user profile. Please try again.");
     }
   };
 
   useEffect(() => {
-    getUserEmail();
+    fetchUserProfile();
   }, []);
 
   // Define categorical options

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import axios from "axios";
 import {
   Box,
   Container,
@@ -10,45 +10,70 @@ import {
   CardContent,
   CardMedia,
   CircularProgress,
-} from '@mui/material';
+} from "@mui/material";
 
-const SpecializationDetail = () => {
+const SpecializationDetailPage = () => {
   const { specializationId } = useParams(); // Retrieve specializationId from URL
   const [specialization, setSpecialization] = useState(null);
   const navigate = useNavigate();
 
+  // Fetch specialization details on component mount
   useEffect(() => {
+    const fetchSpecialization = async () => {
+      try {
+        const response = await axios.get(
+          `https://edu-platform-ten.vercel.app/api/specialize/${specializationId}`
+        );
+        setSpecialization(response.data);
+      } catch (error) {
+        console.error("Error fetching specialization details:", error);
+      }
+    };
+
     fetchSpecialization();
   }, [specializationId]);
 
-  const fetchSpecialization = async () => {
-    try {
-      const response = await axios.get(`https://edu-quest-hfoq.vercel.app/api/specializations/${specializationId}`);
-      setSpecialization(response.data);
-    } catch (error) {
-      console.error('Error fetching specialization details:', error);
-    }
+  // Handle course click
+  const handleCourseClick = (courseId) => {
+    navigate(`/lesson/${courseId}`);
   };
 
   if (!specialization) {
     return (
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh",
+        }}
+      >
         <CircularProgress />
       </Box>
     );
   }
 
-  const handleCourseClick = (courseId) => {
-    navigate(`/course/${courseId}`);
-  };
-
   return (
-    <Box sx={{ minHeight: '100vh', paddingTop: 8, paddingBottom: 4, backgroundColor: '#f9f9f9' }}>
+    <Box
+      sx={{
+        minHeight: "100vh",
+        paddingTop: 8,
+        paddingBottom: 4,
+        backgroundColor: "#f9f9f9",
+      }}
+    >
       <Container>
-        <Typography variant="h4" component="h1" gutterBottom sx={{ fontWeight: 'bold' }}>
+        {/* Specialization Name */}
+        <Typography
+          variant="h4"
+          component="h1"
+          gutterBottom
+          sx={{ fontWeight: "bold" }}
+        >
           {specialization.name}
         </Typography>
-        
+
+        {/* Specialization Image */}
         {specialization.image && (
           <CardMedia
             component="img"
@@ -59,7 +84,18 @@ const SpecializationDetail = () => {
           />
         )}
 
-        <Typography variant="h6" component="h2" gutterBottom sx={{ fontWeight: 'bold' }}>
+        {/* Specialization Description */}
+        <Typography variant="body1" gutterBottom>
+          {specialization.description}
+        </Typography>
+
+        {/* Courses in this Specialization */}
+        <Typography
+          variant="h6"
+          component="h2"
+          gutterBottom
+          sx={{ fontWeight: "bold", mt: 4 }}
+        >
           Courses in this Specialization:
         </Typography>
 
@@ -69,30 +105,36 @@ const SpecializationDetail = () => {
               <Card
                 onClick={() => handleCourseClick(course._id)}
                 sx={{
-                  cursor: 'pointer',
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
+                  cursor: "pointer",
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
                   boxShadow: 3,
-                  '&:hover': {
+                  "&:hover": {
                     boxShadow: 6,
-                    transform: 'scale(1.02)',
-                    transition: '0.3s',
+                    transform: "scale(1.02)",
+                    transition: "0.3s",
                   },
                 }}
               >
+                {/* Course Image */}
                 {course.image && (
                   <CardMedia
                     component="img"
                     height="140"
                     image={course.image}
-                    alt={course.contentName}
-                    sx={{ borderRadius: '2px 2px 0 0' }}
+                    alt={course.lessonName}
+                    sx={{ borderRadius: "2px 2px 0 0" }}
                   />
                 )}
+
+                {/* Course Details */}
                 <CardContent>
-                  <Typography variant="h6" noWrap sx={{ fontWeight: 'bold' }}>
-                    {course.contentName}
+                  <Typography variant="h6" noWrap sx={{ fontWeight: "bold" }}>
+                    {course.lessonName}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Subject: {course.subject}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     Complexity: {course.complexity}
@@ -110,4 +152,4 @@ const SpecializationDetail = () => {
   );
 };
 
-export default SpecializationDetail;
+export default SpecializationDetailPage;
