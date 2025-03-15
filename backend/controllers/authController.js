@@ -3,23 +3,71 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 // Register User
+// Register User
 exports.registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
-    const existingUser = await User.findOne({ email });
-    if (existingUser) return res.status(400).json({ message: "User already exists" });
 
+    // Validate required fields
+    if (!name || !email || !password) {
+      return res.status(400).json({ message: "Name, email, and password are required" });
+    }
+
+    // Check if user already exists
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ message: "User already exists" });
+    }
+
+    // Hash the password
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    const newUser = new User({ name, email, password: hashedPassword });
+    // Create a new user
+    const newUser = new User({
+      name,
+      email,
+      password: hashedPassword,
+      // Default values for other fields
+      age: "0",
+      phoneNum: "0",
+      Gender: "Other",
+      preferredStudyMethod: "None",
+      dislikedLesson: "None",
+      // Initialize marks and time(s) fields
+      numberSequencesMarks: [],
+      numberSequencesTime: "0",
+      perimeterMarks: [],
+      perimeterTime: "0",
+      ratioMarks: [],
+      ratioTime: "0",
+      fractionsDecimalsMarks: [],
+      fractionsDecimalsTime: "0",
+      indicesMarks: [],
+      indicesTime: "0",
+      algebraMarks: [],
+      algebraTime: "0",
+      anglesMarks: [],
+      anglesTime: "0",
+      volumeCapacityMarks: [],
+      volumeCapacityTime: "0",
+      areaMarks: [],
+      areaTime: "0",
+      probabilityMarks: [],
+      probabilityTime: "0",
+    });
+
+    // Save the user to the database
     await newUser.save();
 
+    // Respond with success message
     res.status(201).json({ message: "User registered successfully" });
   } catch (error) {
-    res.status(500).json({ message: "Server error" });
+    console.error("Error during registration:", error);
+    res.status(500).json({ message: "Server error", error: error.message });
   }
 };
+
 
 // Login User
 exports.loginUser = async (req, res) => {

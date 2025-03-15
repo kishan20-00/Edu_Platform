@@ -63,7 +63,7 @@ const AddSpecialization = () => {
       };
 
       // Send the request
-      await axios.post('https://edu-platform-ten.vercel.app/api/special/add', payload);
+      await axios.post('https://edu-platform-ten.vercel.app/api/specialize/add', payload);
       alert('Specialization added successfully!');
 
       // Reset the form
