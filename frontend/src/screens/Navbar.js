@@ -21,16 +21,29 @@ const Navbar = () => {
           sx={{ flexGrow: 1, cursor: "pointer" }}
           onClick={() => navigate("/")}
         >
-          Edu Platform
+          Edu Platform 💫
         </Typography>
 
         {/* Conditional Rendering */}
         {isLoggedIn ? (
           <>
+            {/* Filtered Courses Button (Left Side) */}
+            <Button color="inherit" onClick={() => navigate("/lesson")}>
+              Lesson Prediction
+            </Button>
+
+            <Button color="inherit" onClick={() => navigate("/filtered")}>
+              Filtered Courses
+            </Button>
+
+            {/* Spacer to push remaining buttons to the right */}
+            <div style={{ flexGrow: 15 }}></div>
+
             {/* Profile Button */}
             <Button color="inherit" onClick={() => navigate("/profile")}>
               Profile
             </Button>
+
             {/* Logout Button */}
             <Button color="inherit" onClick={handleLogout}>
               Logout

@@ -1,7 +1,18 @@
 import React, { useState } from "react";
-import { TextField, Button, Typography, Box, Link } from "@mui/material";
+import {
+  TextField,
+  Button,
+  Typography,
+  Box,
+  Link,
+  Paper,
+  Container,
+  CssBaseline,
+  Avatar,
+} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined"; // Icon for the login form
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -31,28 +42,69 @@ const Login = () => {
   };
 
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", gap: 2, mt: 5 }}>
-      <Typography variant="h4" align="center">Login</Typography>
-      <TextField
-        label="Email"
-        fullWidth
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <TextField
-        label="Password"
-        type="password"
-        fullWidth
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <Button variant="contained" color="primary" onClick={handleLogin}>
-        Login
-      </Button>
-      <Typography align="center">
-        Don't have an account? <Link href="/signup">Sign Up</Link>
-      </Typography>
-    </Box>
+    <Container component="main" maxWidth="xs">
+      <CssBaseline />
+      <Paper
+        elevation={3}
+        sx={{
+          marginTop: 15,
+          padding: 4,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          borderRadius: 2, // Rounded corners
+        }}
+      >
+        {/* Avatar Icon */}
+        <Avatar sx={{ m: 1, bgcolor: "primary.main" }}>
+          <LockOutlinedIcon />
+        </Avatar>
+
+        {/* Title */}
+        <Typography component="h1" variant="h5" sx={{ mb: 3 }}>
+          Login
+        </Typography>
+
+        {/* Email Field */}
+        <TextField
+          label="Email"
+          fullWidth
+          margin="normal"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          sx={{ mb: 2 }} // Add margin bottom
+        />
+
+        {/* Password Field */}
+        <TextField
+          label="Password"
+          type="password"
+          fullWidth
+          margin="normal"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          sx={{ mb: 3 }} // Add margin bottom
+        />
+
+        {/* Login Button */}
+        <Button
+          variant="contained"
+          fullWidth
+          onClick={handleLogin}
+          sx={{ mb: 2 }} // Add margin bottom
+        >
+          Login
+        </Button>
+
+        {/* Sign Up Link */}
+        <Typography align="center">
+          Don't have an account?{" "}
+          <Link href="/signup" underline="hover" sx={{ fontWeight: "bold" }}>
+            Sign Up
+          </Link>
+        </Typography>
+      </Paper>
+    </Container>
   );
 };
 
