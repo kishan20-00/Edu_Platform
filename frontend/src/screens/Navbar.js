@@ -29,7 +29,7 @@ const Navbar = () => {
           <>
             {/* Filtered Courses Button (Left Side) */}
             <Button color="inherit" onClick={() => navigate("/lesson")}>
-              Lesson Prediction
+              Lesson Plan
             </Button>
 
             <Button color="inherit" onClick={() => navigate("/filtered")}>
