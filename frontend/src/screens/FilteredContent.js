@@ -45,11 +45,9 @@ const FilteredCourses = () => {
         console.log(contentPreferenceResponse.data.preferences);
         setSubject(subjectName);
 
-        const encodedSubject = encodeURIComponent(subjectName);
-
         // Fetch courses by subject using the backend endpoint
         const coursesResponse = await axios.get(
-          `https://edu-platform-ten.vercel.app/api/course/filter/${encodedSubject}`
+          `https://edu-platform-ten.vercel.app/api/course/filter/${subjectName}`
         );
         setCourses(coursesResponse.data);
       } catch (error) {

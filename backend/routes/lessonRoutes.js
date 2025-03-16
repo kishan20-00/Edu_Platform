@@ -60,7 +60,6 @@ router.delete('/delete/:id', async (req, res) => {
 // Get all course content by subject
 router.get('/filter/:subject', async (req, res) => {
   const { subject } = req.params;
-  const decodedSubject = decodeURIComponent(subject);
   const { email } = req.query; // Get email from query parameters
 
   try {
@@ -69,7 +68,7 @@ router.get('/filter/:subject', async (req, res) => {
     const cognitivePerformance = contentPreference ? contentPreference.cognitive : null;
 
     // Fetch courses by subject
-    const courses = await Course.find({ decodedSubject });
+    const courses = await Course.find({ subject });
 
     // Sort courses based on cognitive performance and learningMaterial
     const sortedCourses = courses.sort((a, b) => {

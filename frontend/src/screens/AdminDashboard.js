@@ -7,7 +7,6 @@ import {
   CardActions,
   Button,
   Grid,
-  Paper,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -52,20 +51,20 @@ const AdminDashboard = () => {
       {/* Navigation Cards */}
       <Grid container spacing={3} sx={{ mb: 4 }}>
         <Grid item xs={12} sm={6} md={4}>
-          <Card elevation={3}>
-            <CardContent>
+          <Card elevation={3} sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
+            <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="h6" gutterBottom>
-                View All Courses
+                Add New Lessons
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Manage all courses available on the platform.
+                Create new lessons available on the platform.
               </Typography>
             </CardContent>
             <CardActions>
               <Button
                 size="small"
                 color="primary"
-                onClick={() => navigate("/admin-courses")}
+                onClick={() => navigate("/addcourse")}
               >
                 Go to Courses
               </Button>
@@ -73,20 +72,20 @@ const AdminDashboard = () => {
           </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Card elevation={3}>
-            <CardContent>
+          <Card elevation={3} sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
+            <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="h6" gutterBottom>
-                View All Specializations
+                Add New Specializations
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Manage all specializations available on the platform.
+                Add new specializations available on the platform.
               </Typography>
             </CardContent>
             <CardActions>
               <Button
                 size="small"
                 color="primary"
-                onClick={() => navigate("/admin-specializations")}
+                onClick={() => navigate("/addspecial")}
               >
                 Go to Specializations
               </Button>
@@ -102,8 +101,8 @@ const AdminDashboard = () => {
       <Grid container spacing={3}>
         {users.map((user) => (
           <Grid item key={user._id} xs={12} sm={6} md={4}>
-            <Card elevation={3}>
-              <CardContent>
+            <Card elevation={3} sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
+              <CardContent sx={{ flexGrow: 1 }}>
                 <Typography variant="h6">{user.name}</Typography>
                 <Typography variant="body2" color="text.secondary">
                   Email: {user.email}
@@ -115,25 +114,6 @@ const AdminDashboard = () => {
                   Gender: {user.Gender}
                 </Typography>
               </CardContent>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => {
-                    // Add navigation or action for editing user
-                    console.log("Edit User:", user._id);
-                  }}
-                >
-                  Edit
-                </Button>
-                <Button
-                  size="small"
-                  color="error"
-                  onClick={() => handleDeleteUser(user._id)}
-                >
-                  Delete
-                </Button>
-              </CardActions>
             </Card>
           </Grid>
         ))}
