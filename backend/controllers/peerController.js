@@ -1,6 +1,6 @@
 const PeerPreference = require("../models/Peer");
 
-// Save peer preferences
+// Save or update peer preferences
 exports.savePeerPreference = async (req, res) => {
   try {
     const { email, preferences } = req.body;
@@ -10,15 +10,27 @@ exports.savePeerPreference = async (req, res) => {
       return res.status(400).json({ message: "Email and preferences are required." });
     }
 
-    // Create a new preference entry
-    const newPreference = new PeerPreference({ email, preferences });
-    await newPreference.save();
+    // Check if a record with the email already exists
+    const existingPreference = await PeerPreference.findOne({ email });
 
-    res.status(201).json({ message: "Preferences saved successfully!" });
+    if (existingPreference) {
+      // Update the existing record
+      existingPreference.preferences = preferences;
+      await existingPreference.save();
+
+      return res.status(200).json({ message: "Preferences updated successfully!" });
+    } else {
+      // Create a new preference entry
+      const newPreference = new PeerPreference({ email, preferences });
+      await newPreference.save();
+
+      return res.status(201).json({ message: "Preferences saved successfully!" });
+    }
   } catch (error) {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
+
 
 // Get peer preferences for a specific email
 exports.getPeerPreferences = async (req, res) => {
