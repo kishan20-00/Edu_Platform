@@ -60,6 +60,7 @@ router.delete('/delete/:id', async (req, res) => {
 // Get all course content by subject
 router.get('/filter/:subject', async (req, res) => {
   const { subject } = req.params;
+  const decodedSubject = decodeURIComponent(subject);
   const { email } = req.query; // Get email from query parameters
 
   try {
@@ -68,16 +69,16 @@ router.get('/filter/:subject', async (req, res) => {
     const cognitivePerformance = contentPreference ? contentPreference.cognitive : null;
 
     // Fetch courses by subject
-    const courses = await Course.find({ subject });
+    const courses = await Course.find({ decodedSubject });
 
     // Sort courses based on cognitive performance and learningMaterial
     const sortedCourses = courses.sort((a, b) => {
-      if (cognitivePerformance === 'Very High') {
-        // If cognitive is Very High, prioritize quiz
+      if (cognitivePerformance === 'Very High' || cognitivePerformance === 'High') {
+        // If cognitive is Very High or High, prioritize quiz
         if (a.learningMaterial === 'quiz' && b.learningMaterial !== 'quiz') return -1;
         if (a.learningMaterial !== 'quiz' && b.learningMaterial === 'quiz') return 1;
       } else {
-        // If cognitive is not Very High, move quiz to the bottom
+        // If cognitive is not Very High or High, move quiz to the bottom
         if (a.learningMaterial === 'quiz' && b.learningMaterial !== 'quiz') return 1;
         if (a.learningMaterial !== 'quiz' && b.learningMaterial === 'quiz') return -1;
       }
