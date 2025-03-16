@@ -1,18 +1,31 @@
 const LessonPreference = require("../models/LessonPreference");
 
-// Save lesson preferences
+// Save or update peer preferences
 exports.saveLessonPreference = async (req, res) => {
   try {
     const { email, preferences } = req.body;
 
-    if (!email || !preferences || !Array.isArray(preferences)) {
-      return res.status(400).json({ message: "Invalid input data." });
+    // Validate input
+    if (!email || !preferences) {
+      return res.status(400).json({ message: "Email and preferences are required." });
     }
 
-    const newPreference = new LessonPreference({ email, preferences });
-    await newPreference.save();
-    
-    res.status(201).json({ message: "Preferences saved successfully!" });
+    // Check if a record with the email already exists
+    const existingPreference = await LessonPreference.findOne({ email });
+
+    if (existingPreference) {
+      // Update the existing record
+      existingPreference.preferences = preferences;
+      await existingPreference.save();
+
+      return res.status(200).json({ message: "Preferences updated successfully!" });
+    } else {
+      // Create a new preference entry
+      const newPreference = new LessonPreference({ email, preferences });
+      await newPreference.save();
+
+      return res.status(201).json({ message: "Preferences saved successfully!" });
+    }
   } catch (error) {
     res.status(500).json({ message: "Server error", error: error.message });
   }
