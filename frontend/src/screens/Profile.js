@@ -48,6 +48,7 @@ const Profile = () => {
   const [loading, setLoading] = useState(false);
   const [cognitivePerformance, setCognitivePerformance] = useState("");
   const navigate = useNavigate();
+  const [lessonPredictions, setLessonPredictions] = useState([]);
 
   const timeFieldMapping = {
     numberSequencesTime: "number sequences time(s)",
@@ -60,6 +61,61 @@ const Profile = () => {
     volumeCapacityTime: "volume and capacity time(s)",
     areaTime: "area time(s)",
     probabilityTime: "probability time(s)",
+  };
+
+  const handleLessonPrediction = async (profileData) => {
+    setLoading(true);
+    try {
+      // Map profile data to the format expected by the lesson prediction model
+      const mappedData = {
+        "Male/Female": profileData.Gender,
+        "number sequences marks": profileData.numberSequencesMarks?.slice(-1)[0] || 0,
+        "number sequences time(s)": parseInt(profileData.numberSequencesTime) || 0,
+        "perimeter marks": profileData.perimeterMarks?.slice(-1)[0] || 0,
+        "perimeter time(s)": parseInt(profileData.perimeterTime) || 0,
+        "ratio marks": profileData.ratioMarks?.slice(-1)[0] || 0,
+        "ratio time(s)": parseInt(profileData.ratioTime) || 0,
+        "fractions/decimals marks": profileData.fractionsDecimalsMarks?.slice(-1)[0] || 0,
+        "fractions/decimals time(s)": parseInt(profileData.fractionsDecimalsTime) || 0,
+        "indices marks": profileData.indicesMarks?.slice(-1)[0] || 0,
+        "indices time(s)": parseInt(profileData.indicesTime) || 0,
+        "algebra marks": profileData.algebraMarks?.slice(-1)[0] || 0,
+        "algebra time(s)": parseInt(profileData.algebraTime) || 0,
+        "angles marks": profileData.anglesMarks?.slice(-1)[0] || 0,
+        "angles time(s)": parseInt(profileData.anglesTime) || 0,
+        "volume and capacity marks": profileData.volumeCapacityMarks?.slice(-1)[0] || 0,
+        "volume and capacity time(s)": parseInt(profileData.volumeCapacityTime) || 0,
+        "area marks": profileData.areaMarks?.slice(-1)[0] || 0,
+        "area time(s)": parseInt(profileData.areaTime) || 0,
+        "probability marks": profileData.probabilityMarks?.slice(-1)[0] || 0,
+        "probability time(s)": parseInt(profileData.probabilityTime) || 0,
+        "Preferred Study Method": profileData.preferredStudyMethod,
+        "Disliked lesson": profileData.dislikedLesson
+      };
+
+      // Make prediction request
+      const response = await axios.post("http://127.0.0.1:5001/predict", mappedData);
+      const data = response.data;
+
+      if (data && Array.isArray(data["Top 5 Predicted Lessons"])) {
+        setLessonPredictions(data["Top 5 Predicted Lessons"]);
+        
+        // Save predictions to backend
+        if (profileData.email) {
+          await axios.post("https://edu-platform-ten.vercel.app/api/lesson/save", {
+            email: profileData.email,
+            preferences: data["Top 5 Predicted Lessons"],
+          });
+        }
+      }
+    } catch (error) {
+      console.error("Error making lesson prediction:", error);
+      setSnackbarMessage("Error making lesson prediction");
+      setSnackbarSeverity("error");
+      setSnackbarOpen(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -90,6 +146,7 @@ const Profile = () => {
 
         const email = profileResponse.data.email;
 
+        // Fetch existing preferences
         const contentPreferenceResponse = await axios.get(
           `https://edu-platform-ten.vercel.app/api/content?email=${email}`
         );
@@ -105,6 +162,8 @@ const Profile = () => {
         );
         setPeerPreference(peerPreferenceResponse.data);
 
+        // Make new predictions
+        await handleLessonPrediction(profileResponse.data);
         await handlePeerPrediction(profileResponse.data);
       } catch (err) {
         console.error("Error fetching data", err);
@@ -247,6 +306,7 @@ const Profile = () => {
       const response = await axios.post("http://localhost:5002/predict", processedData);
       const predictedClass = response.data["Predicted Class"];
       setPeerPrediction(predictedClass);
+      console.log(predictedClass);
 
       if (profileData.email) {
         await axios.post("https://edu-platform-ten.vercel.app/api/peer/save", {
@@ -447,6 +507,33 @@ const Profile = () => {
         {/* Right Side: Charts and Preferences */}
         <Grid item xs={12} md={6}>
           {/* Content Preference */}
+          {lessonPredictions.length > 0 && (
+            <Paper elevation={3} sx={{ p: 4, mb: 4 }}>
+              <Typography variant="h5" gutterBottom>
+                Latest Lesson Predictions (Top 5)
+              </Typography>
+              <TableContainer>
+                <Table>
+                  <TableHead>
+                    <TableRow>
+                      <TableCell>Rank</TableCell>
+                      <TableCell>Lesson</TableCell>
+                      <TableCell>Probability</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {lessonPredictions.map((prediction, index) => (
+                      <TableRow key={index}>
+                        <TableCell>{index + 1}</TableCell>
+                        <TableCell>{prediction.lesson}</TableCell>
+                        <TableCell>{Math.round(prediction.probability * 100)}%</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </Paper>
+          )}
           {contentPreference && (
             <Paper elevation={3} sx={{ p: 4, mb: 4 }}>
               <Typography variant="h5" gutterBottom>

@@ -27,13 +27,9 @@ const Navbar = () => {
         {/* Conditional Rendering */}
         {isLoggedIn ? (
           <>
-            {/* Filtered Courses Button (Left Side) */}
-            <Button color="inherit" onClick={() => navigate("/lesson")}>
-              Lesson Plan
-            </Button>
 
             <Button color="inherit" onClick={() => navigate("/filtered")}>
-              Filtered Courses
+              Course Materials For You
             </Button>
 
             {/* Spacer to push remaining buttons to the right */}

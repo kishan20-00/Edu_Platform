@@ -18,6 +18,7 @@ def load_pickle(file_name):
 
 try:
     model = load_pickle("best_model_peer.pkl")
+    print("Model features:", model.feature_names_in_)
     encoders = load_pickle("label_encoders_peer.pkl")
     scaler = load_pickle("scaler_peer.pkl")
     y_encoder = load_pickle("y_encoders_peer.pkl")  # Load target variable encoder

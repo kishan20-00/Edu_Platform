@@ -59,29 +59,28 @@ router.delete('/delete/:id', async (req, res) => {
 
 // Get all course content by subject
 router.get('/filter/:subject', async (req, res) => {
-  const { subject } = req.params;
-  const { email } = req.query; // Get email from query parameters
+  const subject = decodeURIComponent(req.params.subject);
+  const { email } = req.query;
 
   try {
-    // Fetch user's cognitive performance from the content backend
+    // Fetch user's cognitive performance
     const contentPreference = await ContentPreference.findOne({ email });
     const cognitivePerformance = contentPreference ? contentPreference.cognitive : null;
 
     // Fetch courses by subject
     const courses = await Course.find({ subject });
 
-    // Sort courses based on cognitive performance and learningMaterial
+    // Define sorting order based on cognitive performance
     const sortedCourses = courses.sort((a, b) => {
-      if (cognitivePerformance === 'Very High' || cognitivePerformance === 'High') {
-        // If cognitive is Very High or High, prioritize quiz
-        if (a.learningMaterial === 'quiz' && b.learningMaterial !== 'quiz') return -1;
-        if (a.learningMaterial !== 'quiz' && b.learningMaterial === 'quiz') return 1;
-      } else {
-        // If cognitive is not Very High or High, move quiz to the bottom
-        if (a.learningMaterial === 'quiz' && b.learningMaterial !== 'quiz') return 1;
-        if (a.learningMaterial !== 'quiz' && b.learningMaterial === 'quiz') return -1;
-      }
-      return 0; // Maintain original order for other cases
+      const isHighCognitive = ['Very High', 'High'].includes(cognitivePerformance);
+      
+      // Define priority orders
+      const highCognitiveOrder = ['quiz', 'assignment', 'video', 'audio', 'text', 'pdf'];
+      const normalCognitiveOrder = ['video', 'audio', 'pdf', 'assignment', 'text', 'quiz'];
+      
+      const order = isHighCognitive ? highCognitiveOrder : normalCognitiveOrder;
+      
+      return order.indexOf(a.learningMaterial) - order.indexOf(b.learningMaterial);
     });
 
     res.json(sortedCourses);
