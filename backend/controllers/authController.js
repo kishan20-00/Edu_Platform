@@ -106,6 +106,7 @@ exports.getUserProfile = async (req, res) => {
 };
 
 // Update User Profile and Marks
+// Update User Profile and Marks
 exports.updateUserProfile = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -123,7 +124,27 @@ exports.updateUserProfile = async (req, res) => {
       }
     });
 
-    // Update marks and time fields
+    // Update time fields independently
+    const timeFields = [
+      "numberSequencesTime",
+      "perimeterTime", 
+      "ratioTime",
+      "fractionsDecimalsTime",
+      "indicesTime",
+      "algebraTime",
+      "anglesTime",
+      "volumeCapacityTime",
+      "areaTime",
+      "probabilityTime"
+    ];
+
+    timeFields.forEach((field) => {
+      if (updateData[field] !== undefined) {
+        user[field] = updateData[field];
+      }
+    });
+
+    // Update marks and cognitive performance (existing code)
     const marksFields = [
       "numberSequences",
       "perimeter", 
@@ -141,32 +162,20 @@ exports.updateUserProfile = async (req, res) => {
     
     marksFields.forEach((topic) => {
       const marksField = `${topic}Marks`;
-      const timeField = `${topic}Time`;
       
-      // If marks are provided for this topic
       if (updateData[marksField] !== undefined) {
-        // Append the new mark to the array
         user[marksField].push(updateData[marksField]);
-        
-        // Update the time with the value from frontend (not increment)
-        if (updateData[timeField] !== undefined) {
-          user[timeField] = updateData[timeField]; // Store the actual time value
-        }
-        
         marksUpdated = true;
       }
     });
 
-    // Update cognitive performance if marks are updated
     if (marksUpdated) {
-      // Calculate the sum of the latest marks
       const sumOfLatestMarks = marksFields.reduce((sum, topic) => {
         const marksArray = user[`${topic}Marks`];
         const lastMark = marksArray.length > 0 ? marksArray[marksArray.length - 1] : 0;
         return sum + lastMark;
       }, 0);
 
-      // Determine cognitive performance based on the sum
       if (sumOfLatestMarks > 750) {
         user.cognitivePerformance = "Very High";
       } else if (sumOfLatestMarks >= 500 && sumOfLatestMarks <= 750) {
@@ -178,9 +187,7 @@ exports.updateUserProfile = async (req, res) => {
       }
     }
 
-    // Save the updated user
     await user.save();
-
     res.json({ message: "Profile updated successfully", user });
   } catch (error) {
     res.status(500).json({ message: "Server error", error: error.message });
