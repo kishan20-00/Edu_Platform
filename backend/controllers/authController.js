@@ -106,7 +106,6 @@ exports.getUserProfile = async (req, res) => {
 };
 
 // Update User Profile and Marks
-// Update User Profile and Marks
 exports.updateUserProfile = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -124,7 +123,7 @@ exports.updateUserProfile = async (req, res) => {
       }
     });
 
-    // Update time fields
+    // Update time fields independently
     const timeFields = [
       "numberSequencesTime",
       "perimeterTime", 
@@ -144,42 +143,43 @@ exports.updateUserProfile = async (req, res) => {
       }
     });
 
-    // Update marks and cognitive performance
+    // Update marks and cognitive performance (existing code)
     const marksFields = [
-      "numberSequencesMarks",
-      "perimeterMarks", 
-      "ratioMarks",
-      "fractionsDecimalsMarks",
-      "indicesMarks",
-      "algebraMarks",
-      "anglesMarks",
-      "volumeCapacityMarks",
-      "areaMarks",
-      "probabilityMarks"
+      "numberSequences",
+      "perimeter", 
+      "ratio",
+      "fractionsDecimals",
+      "indices",
+      "algebra",
+      "angles",
+      "volumeCapacity",
+      "area",
+      "probability"
     ];
 
     let marksUpdated = false;
-    let totalScore = 0;
     
-    // Update marks fields (as single values)
-    marksFields.forEach((field) => {
-      if (updateData[field] !== undefined) {
-        user[field] = updateData[field]; // Store as single value
+    marksFields.forEach((topic) => {
+      const marksField = `${topic}Marks`;
+      
+      if (updateData[marksField] !== undefined) {
+        user[marksField].push(updateData[marksField]);
         marksUpdated = true;
-        
-        // Convert to number and add to total score
-        const markValue = parseInt(updateData[field]) || 0;
-        totalScore += markValue;
       }
     });
 
-    // Update cognitive performance based on new thresholds
     if (marksUpdated) {
-      if (totalScore > 75) {
+      const sumOfLatestMarks = marksFields.reduce((sum, topic) => {
+        const marksArray = user[`${topic}Marks`];
+        const lastMark = marksArray.length > 0 ? marksArray[marksArray.length - 1] : 0;
+        return sum + lastMark;
+      }, 0);
+
+      if (sumOfLatestMarks > 750) {
         user.cognitivePerformance = "Very High";
-      } else if (totalScore >= 50 && totalScore <= 75) {
+      } else if (sumOfLatestMarks >= 500 && sumOfLatestMarks <= 750) {
         user.cognitivePerformance = "High";
-      } else if (totalScore >= 25 && totalScore < 50) {
+      } else if (sumOfLatestMarks >= 250 && sumOfLatestMarks < 500) {
         user.cognitivePerformance = "Average";
       } else {
         user.cognitivePerformance = "Low";

@@ -91,20 +91,30 @@ const CourseDetailsPage = () => {
       const timeField = getTimeField(course.subject);
       if (!timeField) return;
   
-      await axios.put(
+      // Send both the time and marks if quiz was submitted
+      const updateData = {
+        [timeField]: timeSpent.toString()
+      };
+  
+      if (quizSubmitted) {
+        updateData[getMarksField(course.subject)] = quizScore;
+      }
+  
+      const response = await axios.put(
         "https://edu-platform-ten.vercel.app/api/auth/updateProfile",
-        {
-          [timeField]: timeSpent.toString()
-        },
+        updateData,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
+  
+      console.log("Time update response:", response.data);
+      return response.data;
     } catch (error) {
       console.error("Error updating time spent:", error);
+      throw error;
     }
   };
-  
 
   // Handle course completion
   const handleComplete = async () => {
@@ -155,39 +165,37 @@ const CourseDetailsPage = () => {
         alert("Please log in to submit the quiz.");
         return;
       }
-  
+
       // Check if correct answers are available
       if (!course.quizAnswers || course.quizQuestions.length !== course.quizAnswers.length) {
         alert("Quiz answers are not available. Please contact support.");
         return;
       }
-  
+
       // Compare user answers with correct answers
       const results = userAnswers.map((answer, index) => 
         answer === course.quizAnswers[index].toLowerCase()
       );
       setCorrectAnswers(results);
-  
-      // Calculate quiz score (20 points per correct answer)
+
+      // Calculate quiz score (5 points per correct answer)
       const score = results.reduce((acc, isCorrect) => acc + (isCorrect ? 20 : 0), 0);
       setQuizScore(score);
-  
-      // Update both time and marks in a single request
+
+      // Update user profile with quiz marks
       const updateResponse = await axios.put(
         "https://edu-platform-ten.vercel.app/api/auth/updateProfile",
         {
-          [getTimeField(course.subject)]: timeSpent.toString(),
-          [getMarksField(course.subject)]: score.toString() // Send as string
+          [getMarksField(course.subject)]: score, // Update the corresponding marks field
         },
         {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-  
+
       if (updateResponse.data.message === "Profile updated successfully") {
         setQuizSubmitted(true);
-        setTimerActive(false); // Stop the timer after submission
-        alert(`Quiz submitted successfully! You scored ${score} points. Time spent: ${formatTime(timeSpent)}`);
+        alert(`Quiz submitted successfully! You scored ${score} points.`);
       } else {
         alert("Failed to update quiz marks.");
       }
