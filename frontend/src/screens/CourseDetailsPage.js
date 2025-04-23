@@ -93,15 +93,13 @@ const CourseDetailsPage = () => {
       const timeField = getTimeField(course.subject);
       if (!timeField) return;
   
-      // Prepare update data - only time by default
+      // Send both the time and marks if quiz was submitted
       const updateData = {
         [timeField]: timeSpent.toString()
       };
   
-      // Only include marks if quiz was just submitted and not already saved
-      if (quizSubmitted && !localStorage.getItem(`quizSaved-${id}`)) {
+      if (quizSubmitted) {
         updateData[getMarksField(course.subject)] = quizScore;
-        localStorage.setItem(`quizSaved-${id}`, "true");
       }
   
       const response = await axios.put(
@@ -121,21 +119,21 @@ const CourseDetailsPage = () => {
   };
 
   // Handle course completion
-  const handleComplete = async () => {
-    try {
-      setTimerActive(false);
-      const result = await updateTimeSpent();
-      if (result && result.message === "Profile updated successfully") {
-        setIsCompleted(true);
-        alert("Course marked as completed! Time saved: " + formatTime(timeSpent));
-        navigate('/');
-      } else {
-        alert("Failed to save time data");
-      }
-    } catch (error) {
-      alert("Error completing course: " + error.message);
+ const handleComplete = async () => {
+  try {
+    setTimerActive(false);
+    const result = await updateTimeSpent();
+    if (result && result.message === "Profile updated successfully") {
+      setIsCompleted(true);
+      alert("Course marked as completed! Time saved: " + formatTime(timeSpent));
+      navigate('/');
+    } else {
+      alert("Failed to save time data");
     }
-  };
+  } catch (error) {
+    alert("Error completing course: " + error.message);
+  }
+};
 
   // Helper function to map subject to the corresponding time field
   const getTimeField = (subject) => {
@@ -169,41 +167,37 @@ const CourseDetailsPage = () => {
         alert("Please log in to submit the quiz.");
         return;
       }
-  
-      if (quizSubmitted) {
-        alert("Quiz already submitted!");
-        return;
-      }
-  
+
+      // Check if correct answers are available
       if (!course.quizAnswers || course.quizQuestions.length !== course.quizAnswers.length) {
         alert("Quiz answers are not available. Please contact support.");
         return;
       }
-  
+
+      // Compare user answers with correct answers
       const results = userAnswers.map((answer, index) => 
         answer === course.quizAnswers[index].toLowerCase()
       );
       setCorrectAnswers(results);
-  
+
+      // Calculate quiz score (5 points per correct answer)
       const score = results.reduce((acc, isCorrect) => acc + (isCorrect ? 20 : 0), 0);
       setQuizScore(score);
-      setQuizSubmitted(true);
-  
-      // Immediately send the score to backend
-      const response = await axios.put(
+
+      // Update user profile with quiz marks
+      const updateResponse = await axios.put(
         "https://edu-platform-ten.vercel.app/api/auth/updateProfile",
         {
-          [getMarksField(course.subject)]: score,
-          [getTimeField(course.subject)]: timeSpent.toString()
+          [getMarksField(course.subject)]: score, // Update the corresponding marks field
         },
         {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-  
-      if (response.data.message === "Profile updated successfully") {
+
+      if (updateResponse.data.message === "Profile updated successfully") {
+        setQuizSubmitted(true);
         alert(`Quiz submitted successfully! You scored ${score} points.`);
-        setTimerActive(false); // Stop timer after submission
       } else {
         alert("Failed to update quiz marks.");
       }
