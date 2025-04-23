@@ -160,13 +160,14 @@ exports.updateUserProfile = async (req, res) => {
     let marksUpdated = false;
     
     marksFields.forEach((topic) => {
-      const marksField = `${topic}Marks`;
-      
-      if (updateData[marksField] !== undefined) {
-        user[marksField].push(updateData[marksField]);
-        marksUpdated = true;
-      }
-    });
+  const marksField = `${topic}Marks`;
+  
+  if (updateData[marksField] !== undefined) {
+    // Replace the entire array instead of pushing
+    user[marksField] = updateData[marksField];
+    marksUpdated = true;
+  }
+});
 
     if (marksUpdated) {
       const sumOfLatestMarks = marksFields.reduce((sum, topic) => {
