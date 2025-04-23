@@ -106,7 +106,6 @@ exports.getUserProfile = async (req, res) => {
 };
 
 // Update User Profile and Marks
-// Update User Profile and Marks
 exports.updateUserProfile = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -116,15 +115,7 @@ exports.updateUserProfile = async (req, res) => {
     const user = await User.findById(userId);
     if (!user) return res.status(404).json({ message: "User not found" });
 
-    // Update profile fields
-    const profileFields = ["name", "age", "phoneNum", "Gender", "preferredStudyMethod", "dislikedLesson"];
-    profileFields.forEach((field) => {
-      if (updateData[field] !== undefined) {
-        user[field] = updateData[field];
-      }
-    });
-
-    // Update time fields independently
+    // Update time fields
     const timeFields = [
       "numberSequencesTime",
       "perimeterTime", 
@@ -144,31 +135,33 @@ exports.updateUserProfile = async (req, res) => {
       }
     });
 
-    // Update marks and cognitive performance (existing code)
+    // Update marks only if they're provided and not already existing
     const marksFields = [
-      "numberSequences",
-      "perimeter", 
-      "ratio",
-      "fractionsDecimals",
-      "indices",
-      "algebra",
-      "angles",
-      "volumeCapacity",
-      "area",
-      "probability"
+      "numberSequencesMarks",
+      "perimeterMarks", 
+      "ratioMarks",
+      "fractionsDecimalsMarks",
+      "indicesMarks",
+      "algebraMarks",
+      "anglesMarks",
+      "volumeCapacityMarks",
+      "areaMarks",
+      "probabilityMarks"
     ];
 
     let marksUpdated = false;
     
-    marksFields.forEach((topic) => {
-      const marksField = `${topic}Marks`;
-      
-      if (updateData[marksField] !== undefined) {
-        user[marksField].push(updateData[marksField]);
-        marksUpdated = true;
+    marksFields.forEach((field) => {
+      if (updateData[field] !== undefined) {
+        // Only add if not already in the array
+        const lastMark = user[field].length > 0 ? user[field][user[field].length - 1] : null;
+        if (lastMark !== updateData[field]) {
+          user[field].push(updateData[field]);
+          marksUpdated = true;
+        }
       }
     });
-
+    
     if (marksUpdated) {
       const sumOfLatestMarks = marksFields.reduce((sum, topic) => {
         const marksArray = user[`${topic}Marks`];

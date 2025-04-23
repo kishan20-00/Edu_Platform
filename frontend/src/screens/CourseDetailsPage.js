@@ -91,13 +91,15 @@ const CourseDetailsPage = () => {
       const timeField = getTimeField(course.subject);
       if (!timeField) return;
   
-      // Send both the time and marks if quiz was submitted
+      // Prepare update data - only time by default
       const updateData = {
         [timeField]: timeSpent.toString()
       };
   
-      if (quizSubmitted) {
+      // Only include marks if quiz was just submitted and not already saved
+      if (quizSubmitted && !localStorage.getItem(`quizSaved-${id}`)) {
         updateData[getMarksField(course.subject)] = quizScore;
+        localStorage.setItem(`quizSaved-${id}`, "true");
       }
   
       const response = await axios.put(
@@ -165,40 +167,31 @@ const CourseDetailsPage = () => {
         alert("Please log in to submit the quiz.");
         return;
       }
-
+  
+      // Check if already submitted
+      if (quizSubmitted) {
+        alert("Quiz already submitted!");
+        return;
+      }
+  
       // Check if correct answers are available
       if (!course.quizAnswers || course.quizQuestions.length !== course.quizAnswers.length) {
         alert("Quiz answers are not available. Please contact support.");
         return;
       }
-
+  
       // Compare user answers with correct answers
       const results = userAnswers.map((answer, index) => 
         answer === course.quizAnswers[index].toLowerCase()
       );
       setCorrectAnswers(results);
-
+  
       // Calculate quiz score (5 points per correct answer)
       const score = results.reduce((acc, isCorrect) => acc + (isCorrect ? 20 : 0), 0);
       setQuizScore(score);
-
-      // Update user profile with quiz marks
-      const updateResponse = await axios.put(
-        "https://edu-platform-ten.vercel.app/api/auth/updateProfile",
-        {
-          [getMarksField(course.subject)]: score, // Update the corresponding marks field
-        },
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
-
-      if (updateResponse.data.message === "Profile updated successfully") {
-        setQuizSubmitted(true);
-        alert(`Quiz submitted successfully! You scored ${score} points.`);
-      } else {
-        alert("Failed to update quiz marks.");
-      }
+      setQuizSubmitted(true);
+  
+      alert(`Quiz submitted successfully! You scored ${score} points.`);
     } catch (error) {
       console.error("Error submitting quiz:", error);
       alert("Failed to submit quiz.");
