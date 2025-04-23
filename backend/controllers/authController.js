@@ -115,7 +115,15 @@ exports.updateUserProfile = async (req, res) => {
     const user = await User.findById(userId);
     if (!user) return res.status(404).json({ message: "User not found" });
 
-    // Update time fields
+    // Update profile fields
+    const profileFields = ["name", "age", "phoneNum", "Gender", "preferredStudyMethod", "dislikedLesson"];
+    profileFields.forEach((field) => {
+      if (updateData[field] !== undefined) {
+        user[field] = updateData[field];
+      }
+    });
+
+    // Update time fields independently
     const timeFields = [
       "numberSequencesTime",
       "perimeterTime", 
@@ -135,33 +143,31 @@ exports.updateUserProfile = async (req, res) => {
       }
     });
 
-    // Update marks only if they're provided and not already existing
+    // Update marks and cognitive performance (existing code)
     const marksFields = [
-      "numberSequencesMarks",
-      "perimeterMarks", 
-      "ratioMarks",
-      "fractionsDecimalsMarks",
-      "indicesMarks",
-      "algebraMarks",
-      "anglesMarks",
-      "volumeCapacityMarks",
-      "areaMarks",
-      "probabilityMarks"
+      "numberSequences",
+      "perimeter", 
+      "ratio",
+      "fractionsDecimals",
+      "indices",
+      "algebra",
+      "angles",
+      "volumeCapacity",
+      "area",
+      "probability"
     ];
 
     let marksUpdated = false;
     
-    marksFields.forEach((field) => {
-      if (updateData[field] !== undefined) {
-        // Only add if not already in the array
-        const lastMark = user[field].length > 0 ? user[field][user[field].length - 1] : null;
-        if (lastMark !== updateData[field]) {
-          user[field].push(updateData[field]);
-          marksUpdated = true;
-        }
+    marksFields.forEach((topic) => {
+      const marksField = `${topic}Marks`;
+      
+      if (updateData[marksField] !== undefined) {
+        user[marksField].push(updateData[marksField]);
+        marksUpdated = true;
       }
     });
-    
+
     if (marksUpdated) {
       const sumOfLatestMarks = marksFields.reduce((sum, topic) => {
         const marksArray = user[`${topic}Marks`];

@@ -60,13 +60,11 @@ const CourseDetailsPage = () => {
         setTimeSpent((prevTime) => prevTime + 1);
       }, 1000);
     }
-  
+
     return () => {
       if (interval) clearInterval(interval);
-      // Remove the quiz saved flag when component unmounts
-      localStorage.removeItem(`quizSaved-${id}`);
     };
-  }, [timerActive, id]);
+  }, [timerActive]);
 
   // Stop timer when navigating away
   useEffect(() => {
@@ -119,21 +117,21 @@ const CourseDetailsPage = () => {
   };
 
   // Handle course completion
- const handleComplete = async () => {
-  try {
-    setTimerActive(false);
-    const result = await updateTimeSpent();
-    if (result && result.message === "Profile updated successfully") {
-      setIsCompleted(true);
-      alert("Course marked as completed! Time saved: " + formatTime(timeSpent));
-      navigate('/');
-    } else {
-      alert("Failed to save time data");
+  const handleComplete = async () => {
+    try {
+      setTimerActive(false);
+      const result = await updateTimeSpent();
+      if (result && result.message === "Profile updated successfully") {
+        setIsCompleted(true);
+        alert("Course marked as completed! Time saved: " + formatTime(timeSpent));
+        navigate('/');
+      } else {
+        alert("Failed to save time data");
+      }
+    } catch (error) {
+      alert("Error completing course: " + error.message);
     }
-  } catch (error) {
-    alert("Error completing course: " + error.message);
-  }
-};
+  };
 
   // Helper function to map subject to the corresponding time field
   const getTimeField = (subject) => {
