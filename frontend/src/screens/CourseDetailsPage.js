@@ -25,7 +25,6 @@ const CourseDetailsPage = () => {
   const [correctAnswers, setCorrectAnswers] = useState([]); // Store correct/incorrect results
   const [quizScore, setQuizScore] = useState(0); // Store quiz score
   const [quizSubmitted, setQuizSubmitted] = useState(false); // Track quiz submission
-  const [isUpdating, setIsUpdating] = useState(false); // Track update state
   const navigate = useNavigate();
   const [timeSpent, setTimeSpent] = useState(0); // Time in seconds
   const [timerActive, setTimerActive] = useState(true);
@@ -85,37 +84,27 @@ const CourseDetailsPage = () => {
   }, [timerActive, timeSpent, course?.subject]);
 
   const updateTimeSpent = async () => {
-    if (isUpdating) return; // Prevent multiple updates
-    
-    setIsUpdating(true);
     try {
       const token = localStorage.getItem("token");
       if (!token || !course?.subject) return;
-
+  
       const timeField = getTimeField(course.subject);
       if (!timeField) return;
-
-      // Prepare update data
-      const updateData = {
-        [timeField]: timeSpent.toString()
-      };
-
+  
       await axios.put(
         "https://edu-platform-ten.vercel.app/api/auth/updateProfile",
-        updateData,
+        {
+          [timeField]: timeSpent.toString()
+        },
         {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-
-      console.log("Time update successful");
     } catch (error) {
       console.error("Error updating time spent:", error);
-      throw error;
-    } finally {
-      setIsUpdating(false);
     }
   };
+  
 
   // Handle course completion
   const handleComplete = async () => {
@@ -166,37 +155,39 @@ const CourseDetailsPage = () => {
         alert("Please log in to submit the quiz.");
         return;
       }
-
+  
+      // Check if correct answers are available
       if (!course.quizAnswers || course.quizQuestions.length !== course.quizAnswers.length) {
         alert("Quiz answers are not available. Please contact support.");
         return;
       }
-
+  
       // Compare user answers with correct answers
       const results = userAnswers.map((answer, index) => 
         answer === course.quizAnswers[index].toLowerCase()
       );
       setCorrectAnswers(results);
-
+  
       // Calculate quiz score (20 points per correct answer)
       const score = results.reduce((acc, isCorrect) => acc + (isCorrect ? 20 : 0), 0);
       setQuizScore(score);
-
-      // Update user profile with quiz marks (as a single value, not array push)
-      const marksField = getMarksField(course.subject);
+  
+      // Update both time and marks in a single request
       const updateResponse = await axios.put(
         "https://edu-platform-ten.vercel.app/api/auth/updateProfile",
         {
-          [marksField]: [score], // Send as new array with single score
+          [getTimeField(course.subject)]: timeSpent.toString(),
+          [getMarksField(course.subject)]: score.toString() // Send as string
         },
         {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-
+  
       if (updateResponse.data.message === "Profile updated successfully") {
         setQuizSubmitted(true);
-        alert(`Quiz submitted successfully! You scored ${score} points.`);
+        setTimerActive(false); // Stop the timer after submission
+        alert(`Quiz submitted successfully! You scored ${score} points. Time spent: ${formatTime(timeSpent)}`);
       } else {
         alert("Failed to update quiz marks.");
       }

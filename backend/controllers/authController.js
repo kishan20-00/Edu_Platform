@@ -106,6 +106,7 @@ exports.getUserProfile = async (req, res) => {
 };
 
 // Update User Profile and Marks
+// Update User Profile and Marks
 exports.updateUserProfile = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -123,7 +124,7 @@ exports.updateUserProfile = async (req, res) => {
       }
     });
 
-    // Update time fields independently
+    // Update time fields
     const timeFields = [
       "numberSequencesTime",
       "perimeterTime", 
@@ -143,44 +144,42 @@ exports.updateUserProfile = async (req, res) => {
       }
     });
 
-    // Update marks and cognitive performance (existing code)
+    // Update marks and cognitive performance
     const marksFields = [
-      "numberSequences",
-      "perimeter", 
-      "ratio",
-      "fractionsDecimals",
-      "indices",
-      "algebra",
-      "angles",
-      "volumeCapacity",
-      "area",
-      "probability"
+      "numberSequencesMarks",
+      "perimeterMarks", 
+      "ratioMarks",
+      "fractionsDecimalsMarks",
+      "indicesMarks",
+      "algebraMarks",
+      "anglesMarks",
+      "volumeCapacityMarks",
+      "areaMarks",
+      "probabilityMarks"
     ];
 
     let marksUpdated = false;
+    let totalScore = 0;
     
-    marksFields.forEach((topic) => {
-  const marksField = `${topic}Marks`;
-  
-  if (updateData[marksField] !== undefined) {
-    // Replace the entire array instead of pushing
-    user[marksField] = updateData[marksField];
-    marksUpdated = true;
-  }
-});
+    // Update marks fields (as single values)
+    marksFields.forEach((field) => {
+      if (updateData[field] !== undefined) {
+        user[field] = updateData[field]; // Store as single value
+        marksUpdated = true;
+        
+        // Convert to number and add to total score
+        const markValue = parseInt(updateData[field]) || 0;
+        totalScore += markValue;
+      }
+    });
 
+    // Update cognitive performance based on new thresholds
     if (marksUpdated) {
-      const sumOfLatestMarks = marksFields.reduce((sum, topic) => {
-        const marksArray = user[`${topic}Marks`];
-        const lastMark = marksArray.length > 0 ? marksArray[marksArray.length - 1] : 0;
-        return sum + lastMark;
-      }, 0);
-
-      if (sumOfLatestMarks > 750) {
+      if (totalScore > 75) {
         user.cognitivePerformance = "Very High";
-      } else if (sumOfLatestMarks >= 500 && sumOfLatestMarks <= 750) {
+      } else if (totalScore >= 50 && totalScore <= 75) {
         user.cognitivePerformance = "High";
-      } else if (sumOfLatestMarks >= 250 && sumOfLatestMarks < 500) {
+      } else if (totalScore >= 25 && totalScore < 50) {
         user.cognitivePerformance = "Average";
       } else {
         user.cognitivePerformance = "Low";
