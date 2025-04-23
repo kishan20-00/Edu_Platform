@@ -26,6 +26,8 @@ const CourseDetailsPage = () => {
   const [quizScore, setQuizScore] = useState(0); // Store quiz score
   const [quizSubmitted, setQuizSubmitted] = useState(false); // Track quiz submission
   const navigate = useNavigate();
+  const [timeSpent, setTimeSpent] = useState(0); // Time in seconds
+  const [timerActive, setTimerActive] = useState(true);
 
   // Fetch course details and reviews on component mount
   useEffect(() => {
@@ -51,11 +53,82 @@ const CourseDetailsPage = () => {
     fetchCourse();
   }, [id]);
 
+  useEffect(() => {
+    let interval;
+    if (timerActive) {
+      interval = setInterval(() => {
+        setTimeSpent((prevTime) => prevTime + 1);
+      }, 1000);
+    }
+
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [timerActive]);
+
+  // Stop timer when navigating away
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      if (timerActive) {
+        updateTimeSpent();
+      }
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      if (timerActive) {
+        updateTimeSpent();
+      }
+    };
+  }, [timerActive, timeSpent, course?.subject]);
+
+  const updateTimeSpent = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      if (!token || !course?.subject) return;
+
+      const timeField = getTimeField(course.subject);
+      if (!timeField) return;
+
+      await axios.put(
+        "https://edu-platform-ten.vercel.app/api/auth/updateProfile",
+        {
+          [timeField]: timeSpent.toString(),
+        },
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+    } catch (error) {
+      console.error("Error updating time spent:", error);
+    }
+  };
+
   // Handle course completion
-  const handleComplete = () => {
+  const handleComplete = async () => {
+    setTimerActive(false);
+    await updateTimeSpent();
     setIsCompleted(true);
     alert("Course marked as completed!");
-    navigate('/');
+    navigate("/");
+  };
+
+  // Helper function to map subject to the corresponding time field
+  const getTimeField = (subject) => {
+    const subjectToFieldMap = {
+      "number sequence": "numberSequencesTime",
+      perimeter: "perimeterTime",
+      ratio: "ratioTime",
+      "fractions/decimals": "fractionsDecimalsTime",
+      indices: "indicesTime",
+      algebra: "algebraTime",
+      angles: "anglesTime",
+      "volume and capacity": "volumeCapacityTime",
+      area: "areaTime",
+      probability: "probabilityTime",
+    };
+    return subjectToFieldMap[subject] || "";
   };
 
   // Handle quiz answer input change
@@ -75,19 +148,25 @@ const CourseDetailsPage = () => {
       }
 
       // Check if correct answers are available
-      if (!course.quizAnswers || course.quizQuestions.length !== course.quizAnswers.length) {
+      if (
+        !course.quizAnswers ||
+        course.quizQuestions.length !== course.quizAnswers.length
+      ) {
         alert("Quiz answers are not available. Please contact support.");
         return;
       }
 
       // Compare user answers with correct answers
-      const results = userAnswers.map((answer, index) => 
-        answer === course.quizAnswers[index].toLowerCase()
+      const results = userAnswers.map(
+        (answer, index) => answer === course.quizAnswers[index].toLowerCase()
       );
       setCorrectAnswers(results);
 
       // Calculate quiz score (5 points per correct answer)
-      const score = results.reduce((acc, isCorrect) => acc + (isCorrect ? 20 : 0), 0);
+      const score = results.reduce(
+        (acc, isCorrect) => acc + (isCorrect ? 20 : 0),
+        0
+      );
       setQuizScore(score);
 
       // Update user profile with quiz marks
@@ -117,15 +196,15 @@ const CourseDetailsPage = () => {
   const getMarksField = (subject) => {
     const subjectToFieldMap = {
       "number sequence": "numberSequencesMarks",
-      "perimeter": "perimeterMarks",
-      "ratio": "ratioMarks",
+      perimeter: "perimeterMarks",
+      ratio: "ratioMarks",
       "fractions/decimals": "fractionsDecimalsMarks",
-      "indices": "indicesMarks",
-      "algebra": "algebraMarks",
-      "angles": "anglesMarks",
+      indices: "indicesMarks",
+      algebra: "algebraMarks",
+      angles: "anglesMarks",
       "volume and capacity": "volumeCapacityMarks",
-      "area": "areaMarks",
-      "probability": "probabilityMarks",
+      area: "areaMarks",
+      probability: "probabilityMarks",
     };
     return subjectToFieldMap[subject] || "";
   };
@@ -169,7 +248,24 @@ const CourseDetailsPage = () => {
 
   return (
     <Box sx={{ padding: 4, backgroundColor: "#f5f5f5", minHeight: "100vh" }}>
-      <Paper elevation={3} sx={{ padding: 3, marginBottom: 4, marginTop: 4, position: "relative" }}>
+      <Paper
+        elevation={3}
+        sx={{ padding: 3, marginBottom: 4, marginTop: 4, position: "relative" }}
+      >
+        <Typography
+          variant="body1"
+          sx={{
+            position: "absolute",
+            top: 16,
+            left: 16,
+            backgroundColor: "#f0f0f0",
+            padding: "4px 8px",
+            borderRadius: "4px",
+          }}
+        >
+          Time spent: {formatTime(timeSpent)}
+        </Typography>
+
         {/* Complete Button */}
         <Button
           variant="contained"
@@ -184,7 +280,9 @@ const CourseDetailsPage = () => {
 
         {/* Course Content Header */}
         <Box sx={{ display: "flex", alignItems: "center", marginBottom: 2 }}>
-          <DescriptionIcon sx={{ fontSize: 30, color: "primary.main", marginRight: 1 }} />
+          <DescriptionIcon
+            sx={{ fontSize: 30, color: "primary.main", marginRight: 1 }}
+          />
           <Typography variant="h4" sx={{ fontWeight: "bold" }}>
             {course.lessonName}
           </Typography>
@@ -209,7 +307,9 @@ const CourseDetailsPage = () => {
         <iframe
           width="100%"
           height="315"
-          src={`https://www.youtube.com/embed/${course.source.split("/").pop()}`}
+          src={`https://www.youtube.com/embed/${course.source
+            .split("/")
+            .pop()}`}
           title="Course Video"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -227,7 +327,12 @@ const CourseDetailsPage = () => {
       )}
 
       {course.learningMaterial === "pdf" && (
-        <iframe src={course.source} width="100%" height="600px" style={{ marginBottom: 24 }} />
+        <iframe
+          src={course.source}
+          width="100%"
+          height="600px"
+          style={{ marginBottom: 24 }}
+        />
       )}
 
       {course.learningMaterial === "text" && (
@@ -240,7 +345,9 @@ const CourseDetailsPage = () => {
       )}
 
       {course.learningMaterial === "assignment" && (
-        <Typography variant="h6">Assignment Content: {course.assignmentContent}</Typography>
+        <Typography variant="h6">
+          Assignment Content: {course.assignmentContent}
+        </Typography>
       )}
 
       {course.learningMaterial === "quiz" && course.quizQuestions && (
@@ -272,7 +379,11 @@ const CourseDetailsPage = () => {
             </Box>
           ))}
           {!quizSubmitted && (
-            <Button variant="contained" color="primary" onClick={handleQuizSubmit}>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={handleQuizSubmit}
+            >
               Submit Quiz
             </Button>
           )}
@@ -295,7 +406,11 @@ const CourseDetailsPage = () => {
             <Typography variant="body2">{review.comment}</Typography>
           </Box>
         ))}
-        <Box component="form" sx={{ marginTop: 2 }} onSubmit={handleReviewSubmit}>
+        <Box
+          component="form"
+          sx={{ marginTop: 2 }}
+          onSubmit={handleReviewSubmit}
+        >
           <Typography variant="h6">Leave a Review:</Typography>
           <Rating
             name="simple-controlled"
@@ -318,6 +433,19 @@ const CourseDetailsPage = () => {
       </Box>
     </Box>
   );
+};
+
+// Helper function to format seconds into HH:MM:SS
+const formatTime = (seconds) => {
+  const hrs = Math.floor(seconds / 3600);
+  const mins = Math.floor((seconds % 3600) / 60);
+  const secs = seconds % 60;
+
+  return [
+    hrs.toString().padStart(2, "0"),
+    mins.toString().padStart(2, "0"),
+    secs.toString().padStart(2, "0"),
+  ].join(":");
 };
 
 export default CourseDetailsPage;

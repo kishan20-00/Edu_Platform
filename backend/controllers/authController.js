@@ -3,14 +3,15 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 // Register User
-// Register User
 exports.registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
     // Validate required fields
     if (!name || !email || !password) {
-      return res.status(400).json({ message: "Name, email, and password are required" });
+      return res
+        .status(400)
+        .json({ message: "Name, email, and password are required" });
     }
 
     // Check if user already exists
@@ -69,7 +70,6 @@ exports.registerUser = async (req, res) => {
   }
 };
 
-
 // Login User
 exports.loginUser = async (req, res) => {
   try {
@@ -78,11 +78,17 @@ exports.loginUser = async (req, res) => {
     if (!user) return res.status(400).json({ message: "Invalid credentials" });
 
     const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch) return res.status(400).json({ message: "Invalid credentials" });
+    if (!isMatch)
+      return res.status(400).json({ message: "Invalid credentials" });
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+      expiresIn: "1h",
+    });
 
-    res.json({ token, user: { id: user._id, name: user.name, email: user.email } });
+    res.json({
+      token,
+      user: { id: user._id, name: user.name, email: user.email },
+    });
   } catch (error) {
     res.status(500).json({ message: "Server error" });
   }
@@ -117,39 +123,45 @@ exports.updateUserProfile = async (req, res) => {
       }
     });
 
-    // Update marks and time(s) fields
+    // Update marks and time fields
     const marksFields = [
-      "numberSequencesMarks",
-      "perimeterMarks",
-      "ratioMarks",
-      "fractionsDecimalsMarks",
-      "indicesMarks",
-      "algebraMarks",
-      "anglesMarks",
-      "volumeCapacityMarks",
-      "areaMarks",
-      "probabilityMarks",
+      "numberSequences",
+      "perimeter", 
+      "ratio",
+      "fractionsDecimals",
+      "indices",
+      "algebra",
+      "angles",
+      "volumeCapacity",
+      "area",
+      "probability"
     ];
 
-    let marksUpdated = false; // Track if any marks are updated
-    marksFields.forEach((field) => {
-      if (updateData[field] !== undefined) {
+    let marksUpdated = false;
+    
+    marksFields.forEach((topic) => {
+      const marksField = `${topic}Marks`;
+      const timeField = `${topic}Time`;
+      
+      // If marks are provided for this topic
+      if (updateData[marksField] !== undefined) {
         // Append the new mark to the array
-        user[field].push(updateData[field]);
-
-        // Increment the corresponding time(s) field
-        const timeField = field.replace("Marks", "Time");
-        user[timeField] = (parseInt(user[timeField]) + 1).toString();
-
-        marksUpdated = true; // Marks have been updated
+        user[marksField].push(updateData[marksField]);
+        
+        // Update the time with the value from frontend (not increment)
+        if (updateData[timeField] !== undefined) {
+          user[timeField] = updateData[timeField]; // Store the actual time value
+        }
+        
+        marksUpdated = true;
       }
     });
 
     // Update cognitive performance if marks are updated
     if (marksUpdated) {
       // Calculate the sum of the latest marks
-      const sumOfLatestMarks = marksFields.reduce((sum, field) => {
-        const marksArray = user[field];
+      const sumOfLatestMarks = marksFields.reduce((sum, topic) => {
+        const marksArray = user[`${topic}Marks`];
         const lastMark = marksArray.length > 0 ? marksArray[marksArray.length - 1] : 0;
         return sum + lastMark;
       }, 0);
@@ -181,6 +193,8 @@ exports.getAllUsers = async (req, res) => {
     const users = await User.find().select("-password"); // Exclude passwords
     res.status(200).json(users);
   } catch (error) {
-    res.status(500).json({ message: "Failed to fetch users", error: error.message });
+    res
+      .status(500)
+      .json({ message: "Failed to fetch users", error: error.message });
   }
 };
