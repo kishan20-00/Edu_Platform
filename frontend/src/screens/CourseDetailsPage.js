@@ -60,11 +60,13 @@ const CourseDetailsPage = () => {
         setTimeSpent((prevTime) => prevTime + 1);
       }, 1000);
     }
-
+  
     return () => {
       if (interval) clearInterval(interval);
+      // Remove the quiz saved flag when component unmounts
+      localStorage.removeItem(`quizSaved-${id}`);
     };
-  }, [timerActive]);
+  }, [timerActive, id]);
 
   // Stop timer when navigating away
   useEffect(() => {
@@ -168,30 +170,43 @@ const CourseDetailsPage = () => {
         return;
       }
   
-      // Check if already submitted
       if (quizSubmitted) {
         alert("Quiz already submitted!");
         return;
       }
   
-      // Check if correct answers are available
       if (!course.quizAnswers || course.quizQuestions.length !== course.quizAnswers.length) {
         alert("Quiz answers are not available. Please contact support.");
         return;
       }
   
-      // Compare user answers with correct answers
       const results = userAnswers.map((answer, index) => 
         answer === course.quizAnswers[index].toLowerCase()
       );
       setCorrectAnswers(results);
   
-      // Calculate quiz score (5 points per correct answer)
       const score = results.reduce((acc, isCorrect) => acc + (isCorrect ? 20 : 0), 0);
       setQuizScore(score);
       setQuizSubmitted(true);
   
-      alert(`Quiz submitted successfully! You scored ${score} points.`);
+      // Immediately send the score to backend
+      const response = await axios.put(
+        "https://edu-platform-ten.vercel.app/api/auth/updateProfile",
+        {
+          [getMarksField(course.subject)]: score,
+          [getTimeField(course.subject)]: timeSpent.toString()
+        },
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+  
+      if (response.data.message === "Profile updated successfully") {
+        alert(`Quiz submitted successfully! You scored ${score} points.`);
+        setTimerActive(false); // Stop timer after submission
+      } else {
+        alert("Failed to update quiz marks.");
+      }
     } catch (error) {
       console.error("Error submitting quiz:", error);
       alert("Failed to submit quiz.");
@@ -255,19 +270,21 @@ const CourseDetailsPage = () => {
   return (
     <Box sx={{ padding: 4, backgroundColor: "#f5f5f5", minHeight: "100vh" }}>
       <Paper elevation={3} sx={{ padding: 3, marginBottom: 4, marginTop: 4, position: "relative" }}>
-      <Typography 
-          variant="body1" 
-          sx={{ 
-            position: "absolute", 
-            top: 16, 
-            left: 16,
-            backgroundColor: '#f0f0f0',
-            padding: '4px 8px',
-            borderRadius: '4px'
-          }}
-        >
-          Time spent: {formatTime(timeSpent)}
-        </Typography>
+      <Box sx={{ 
+    position: "absolute", 
+    top: -30, 
+    left: "50%", 
+    transform: "translateX(-50%)",
+    backgroundColor: '#f0f0f0',
+    padding: '4px 16px',
+    borderRadius: '4px',
+    boxShadow: 1,
+    zIndex: 1
+  }}>
+    <Typography variant="body1">
+      Time spent: {formatTime(timeSpent)}
+    </Typography>
+  </Box>
         
         {/* Complete Button */}
         <Button

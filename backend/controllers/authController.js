@@ -108,11 +108,12 @@ exports.getUserProfile = async (req, res) => {
 // Update User Profile and Marks
 exports.updateUserProfile = async (req, res) => {
   try {
+    console.log("Received update data:", req.body); // Debug log
+    
     const userId = req.user.id;
     const updateData = req.body;
-
-    // Find the user
     const user = await User.findById(userId);
+    
     if (!user) return res.status(404).json({ message: "User not found" });
 
     // Update time fields
@@ -131,6 +132,7 @@ exports.updateUserProfile = async (req, res) => {
 
     timeFields.forEach((field) => {
       if (updateData[field] !== undefined) {
+        console.log(`Updating ${field} to ${updateData[field]}`); // Debug log
         user[field] = updateData[field];
       }
     });
@@ -153,15 +155,17 @@ exports.updateUserProfile = async (req, res) => {
     
     marksFields.forEach((field) => {
       if (updateData[field] !== undefined) {
+        console.log(`Attempting to update ${field} with ${updateData[field]}`); // Debug log
         // Only add if not already in the array
         const lastMark = user[field].length > 0 ? user[field][user[field].length - 1] : null;
         if (lastMark !== updateData[field]) {
           user[field].push(updateData[field]);
           marksUpdated = true;
+          console.log(`Added new mark to ${field}`); // Debug log
         }
       }
     });
-    
+
     if (marksUpdated) {
       const sumOfLatestMarks = marksFields.reduce((sum, topic) => {
         const marksArray = user[`${topic}Marks`];
@@ -181,6 +185,7 @@ exports.updateUserProfile = async (req, res) => {
     }
 
     await user.save();
+    console.log("User updated successfully"); // Debug log
     res.json({ message: "Profile updated successfully", user });
   } catch (error) {
     res.status(500).json({ message: "Server error", error: error.message });
