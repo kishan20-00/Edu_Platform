@@ -28,6 +28,7 @@ const CourseDetailsPage = () => {
   const navigate = useNavigate();
   const [timeSpent, setTimeSpent] = useState(0); // Time in seconds
   const [timerActive, setTimerActive] = useState(true);
+  const [hasUpdatedMarks, setHasUpdatedMarks] = useState(false); // Track if marks were updated
 
   // Fetch course details and reviews on component mount
   useEffect(() => {
@@ -91,13 +92,14 @@ const CourseDetailsPage = () => {
       const timeField = getTimeField(course.subject);
       if (!timeField) return;
   
-      // Send both the time and marks if quiz was submitted
       const updateData = {
         [timeField]: timeSpent.toString()
       };
   
-      if (quizSubmitted) {
+      // Only include marks if quiz was submitted AND marks haven't been updated yet
+      if (quizSubmitted && !hasUpdatedMarks) {
         updateData[getMarksField(course.subject)] = quizScore;
+        setHasUpdatedMarks(true); // Mark that we've updated the marks
       }
   
       const response = await axios.put(
@@ -166,27 +168,26 @@ const CourseDetailsPage = () => {
         return;
       }
 
-      // Check if correct answers are available
       if (!course.quizAnswers || course.quizQuestions.length !== course.quizAnswers.length) {
         alert("Quiz answers are not available. Please contact support.");
         return;
       }
 
-      // Compare user answers with correct answers
       const results = userAnswers.map((answer, index) => 
         answer === course.quizAnswers[index].toLowerCase()
       );
       setCorrectAnswers(results);
 
-      // Calculate quiz score (5 points per correct answer)
       const score = results.reduce((acc, isCorrect) => acc + (isCorrect ? 20 : 0), 0);
       setQuizScore(score);
 
-      // Update user profile with quiz marks
+      // Reset the marks update flag before submitting
+      setHasUpdatedMarks(false);
+
       const updateResponse = await axios.put(
         "https://edu-platform-ten.vercel.app/api/auth/updateProfile",
         {
-          [getMarksField(course.subject)]: score, // Update the corresponding marks field
+          [getMarksField(course.subject)]: score,
         },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -195,6 +196,7 @@ const CourseDetailsPage = () => {
 
       if (updateResponse.data.message === "Profile updated successfully") {
         setQuizSubmitted(true);
+        setHasUpdatedMarks(true); // Mark that we've updated the marks
         alert(`Quiz submitted successfully! You scored ${score} points.`);
       } else {
         alert("Failed to update quiz marks.");
