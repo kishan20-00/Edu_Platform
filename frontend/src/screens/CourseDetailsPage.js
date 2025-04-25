@@ -119,20 +119,9 @@ const CourseDetailsPage = () => {
   };
 
   // Handle course completion
-  const handleComplete = async () => {
-    try {
-      setTimerActive(false);
-      const result = await updateTimeSpent();
-      if (result && result.message === "Profile updated successfully") {
-        setIsCompleted(true);
-        alert("Course marked as completed! Time saved: " + formatTime(timeSpent));
-        navigate('/');
-      } else {
-        alert("Failed to save time data");
-      }
-    } catch (error) {
-      alert("Error completing course: " + error.message);
-    }
+  const handleComplete = () => {
+    setIsCompleted(true);
+    navigate('/');
   };
 
   // Helper function to map subject to the corresponding time field
@@ -168,38 +157,41 @@ const CourseDetailsPage = () => {
         return;
       }
 
+      // Validate quiz answers
       if (!course.quizAnswers || course.quizQuestions.length !== course.quizAnswers.length) {
         alert("Quiz answers are not available. Please contact support.");
         return;
       }
 
+      // Calculate score
       const results = userAnswers.map((answer, index) => 
         answer === course.quizAnswers[index].toLowerCase()
       );
       setCorrectAnswers(results);
-
       const score = results.reduce((acc, isCorrect) => acc + (isCorrect ? 20 : 0), 0);
       setQuizScore(score);
 
-      // Reset the marks update flag before submitting
-      setHasUpdatedMarks(false);
+      // Stop the timer
+      setTimerActive(false);
 
+      // Prepare update data
+      const updateData = {
+        [getMarksField(course.subject)]: score,
+        [getTimeField(course.subject)]: timeSpent.toString()
+      };
+
+      // Send update to backend
       const updateResponse = await axios.put(
         "https://edu-platform-ten.vercel.app/api/auth/updateProfile",
-        {
-          [getMarksField(course.subject)]: score,
-        },
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
+        updateData,
+        { headers: { Authorization: `Bearer ${token}` } }
       );
 
       if (updateResponse.data.message === "Profile updated successfully") {
         setQuizSubmitted(true);
-        setHasUpdatedMarks(true); // Mark that we've updated the marks
-        alert(`Quiz submitted successfully! You scored ${score} points.`);
+        alert(`Quiz submitted! Score: ${score} | Time: ${formatTime(timeSpent)}`);
       } else {
-        alert("Failed to update quiz marks.");
+        alert("Failed to update quiz data.");
       }
     } catch (error) {
       console.error("Error submitting quiz:", error);
@@ -381,15 +373,29 @@ const CourseDetailsPage = () => {
               )}
             </Box>
           ))}
-          {!quizSubmitted && (
-            <Button variant="contained" color="primary" onClick={handleQuizSubmit}>
+          {!quizSubmitted ? (
+            <Button 
+              variant="contained" 
+              color="primary" 
+              onClick={handleQuizSubmit}
+            >
               Submit Quiz
             </Button>
-          )}
-          {quizSubmitted && (
-            <Typography variant="body1" sx={{ color: "green", marginTop: 2 }}>
-              Quiz submitted successfully! You scored {quizScore} points.
-            </Typography>
+          ) : (
+            <>
+              <Typography variant="body1" sx={{ color: "green", marginTop: 2 }}>
+                Quiz submitted! Score: {quizScore} | Time: {formatTime(timeSpent)}
+              </Typography>
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={handleComplete}
+                sx={{ marginTop: 2 }}
+                startIcon={<CheckCircleIcon />}
+              >
+                Complete Course
+              </Button>
+            </>
           )}
         </>
       )}
